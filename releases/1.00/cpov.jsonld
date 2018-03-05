@@ -26,7 +26,7 @@
 		},
 		"spatial": {
 			"@id": "http://purl.org/dc/terms/spatial",
-			"@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+			"@type": "http://purl.org/dc/terms/Location"
 		},
 		"purpose": {
 			"@id": "http://www.w3.org/ns/org#purpose",
