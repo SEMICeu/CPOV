@@ -1,0 +1,251 @@
+@prefix adms: <http://www.w3.org/ns/adms#> . 
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix cv: <http://data.europa.eu/m8g/> . 
+@prefix dct: <http://purl.org/dc/terms/> . 
+@prefix foaf: <http://xmlns.com/foaf/0.1/> . 
+@prefix locn: <http://www.w3.org/ns/locn#> . 
+@prefix org: <http://www.w3.org/ns/org#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix schema: <http://schema.org/> . 
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://data.europa.eu/m8g/cpov>
+  a owl:Ontology, adms:Asset ;
+  dct:title "Core Public Organisation Vocabulary"@en ;
+  dct:description "The Core Public Organization Vocabulary is designed to describe the organization itself. Whilst the vocabulary may support links to descriptions of public services, members of staff or other resources such as relevant legislation, policies and jurisdictional coverage, it will not describe those resources in detail. Public organizations involve elected representatives but these descriptions are out of scope for the current work but may be the focus of future work once the vocabulary is established and used."@en ;
+  dct:created "2016-11-10"^^xsd:date ;
+  vann:preferredNamespacePrefix "cpov" ;
+  foaf:homepage <https://joinup.ec.europa.eu/asset/cpov/home> ;
+  dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
+  dct:creator <http://publications.europa.eu/resource/authority/corporate-body/DIGIT> ;
+  dct:type <http://purl.org/adms/assettype/Ontology> ;
+  dct:status <http://purl.org/adms/status/Completed> .
+
+#-------------------------------------->
+#----- Public Orgnaisation Class ------>
+#-------------------------------------->
+  
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/PublicOrganisation> a rdfs:Class ;
+  rdfs:label "PublicOrganisation"@en ;
+  rdfs:comment "The Public Organization class represents the organization. One organization may comprise several sub-organizations and any organization may have one or more organizational units. Each of these is described using the same properties and relationships."@en ;
+  rdfs:subClassof org:Organization .
+  
+#-- Properties definition -->  
+  
+<http://www.w3.org/2004/02/skos/core#prefLabel> a rdf:Property ;
+  rdfs:label "preferred label"@en ;
+  vann:usageNote "As defined in the ORG Ontology, a preferred label is used to provide the primary, legally recognised name of the organization. An organization may only have one such name in any given language. Primary names may be provided in multiple languages with multiple instances of the preferred label property."@en .
+
+<http://www.w3.org/2004/02/skos/core#altLabel> a rdf:Property ;
+  rdfs:label "alternative label"@en ;
+  vann:usageNote "In line with ORG and SKOS itself, an organization may have any number of alternative or informal names, irrespective of language."@en .
+
+<http://www.w3.org/ns/org#identifier> a rdf:Property ;
+  rdfs:label "identifier"@en ;
+  vann:usageNote "Many organizations are referred to by an acronym or some other identifier. For example, among the EU institutions, the ECB is the identifier for the European Central Bank, OLAF for the European Anti-Fraud Office, and so on. These are formally recognised by the European Commission which provides a list of such acronyms . Analogous lists should be used in other contexts."@en .
+
+<http://purl.org/dc/terms/description> a rdf:Property ;
+  rdfs:label "description"@en ;
+  vann:usageNote "This property provides a textual description of the organization."@en .
+  
+<http://purl.org/dc/terms/spatial> a rdf:Property ;
+  rdfs:label "spatial"@en ;
+  vann:usageNote "This property links an organization to the administrative region(s) that it covers. The value of the properly should be the URI of the region as defined in an authoritative list of regions. In Europe, this is likely to be the Administrative Territorial Units  Named Authority List maintained by the Publications Office's Metadata Registry. The ATU list does not include a geometry. That is, the territory is only identified by its name not its spatial coordinates. This is likely to be the case for similar lists. If geometries are available for the Public Organization's territory, they can be linked from the territorial unit using the Location Core Vocabulary's locn:geometry property."@en .
+  
+<http://www.w3.org/ns/org#purpose> a rdf:Property ;
+  rdfs:label "purpose"@en ;
+  vann:usageNote "This property links an organization to its function(s) which are expressed as a SKOS Concept Scheme. The ORG ontology suggests that this property can also be thought of as meaning 'remit' or 'responsibility.' Ideally this will link to a COFOG code but where this isn't possible or appropriate, other controlled vocabularies may be used."@en ;
+  rdfs:domain cv:PublicOrganisation .
+  
+<http://www.w3.org/ns/org#classification> a rdf:Property ;
+  rdfs:label "classification"@en ;
+  vann:usageNote "This property links an organization to a SKOS Concept that provides a classification. As an example, the Publications Office of the European Union provides a Named Authority list of Organization Types  which is appropriate for European institutions. Other classification schemes should be used at other levels of public organization."@en .
+  
+<http://xmlns.com/foaf/0.1/homepage> a rdf:Property ;
+  rdfs:label "homepage"@en ;
+  vann:usageNote "A property to link an organization to its website homepage. The value of this property is a URL irrespective of the serialisation of the data."@en .
+  
+<http://schema.org/logo> a rdf:Property ;
+  rdfs:label "logo"@en ;
+  vann:usageNote "A property to link an organization to its logo. The value of this property can simply be the URL of the logo but it is better for developers if it links to an object that provides the URL of the image and essential metadata about it, notably its dimensions. In the RDF release of the CPOV, this property is bound to schema:logo which takes either a URL or a schema:ImageObject as its value."@en .
+  
+<http://www.w3.org/ns/org#hasSubOrganization> a rdf:Property ;
+  rdfs:label "has SubOrganization"@en ;
+  vann:usageNote "Public Organizations are often large and complex and may be a collection of smaller organizations, each of which has a specific identity that may be legally defined. The hasSubOrganization and subOrganizationOf properties express the relationships between organizations in a hierarchical structure. In contrast, hasUnit and unitOf are used to link to operational departments within an organization that may not generally exist in their own right. In the RDF release of the CPOV, hasSubOrganization is bound to org:hasSubOrganization and subOrganizationOf is bound to org:subOrganizationOf."@en .
+  
+<http://www.w3.org/ns/org#subOrganizationOf> a rdf:Property ;
+  rdfs:label "SubOrganization of"@en ;
+  vann:usageNote "Public Organizations are often large and complex and may be a collection of smaller organizations, each of which has a specific identity that may be legally defined. The hasSubOrganization and subOrganizationOf properties express the relationships between organizations in a hierarchical structure. In contrast, hasUnit and unitOf are used to link to operational departments within an organization that may not generally exist in their own right."@en .
+  
+<http://www.w3.org/ns/org#hasUnit> a rdf:Property ;
+  rdfs:label "has unit"@en ;
+  vann:usageNote "Organizations typically comprise many departments, units, teams etc. Each of these is modelled in the CPOV as a unit that is linked from the parent organization with hasUnit and to the parent with unitOf. An Organizational Unit is a sub class of Organization but conceptually does not exist in its own right. This is in contrast to a sub organization that, although part of the larger organization, may be legally distinct or otherwise enjoy a degree of autonomy."@en .
+
+<http://www.w3.org/ns/org#unitOf> a rdf:Property ;
+  rdfs:label "unit of"@en ;
+  vann:usageNote "Organizations typically comprise many departments, units, teams etc. Each of these is modelled in the CPOV as a unit that is linked from the parent organization with hasUnit and to the parent with unitOf. An Organizational Unit is a sub class of Organization but conceptually does not exist in its own right. This is in contrast to a sub organization that, although part of the larger organization, may be legally distinct or otherwise enjoy a degree of autonomy."@en .
+  
+<http://www.w3.org/ns/org#memberOf> a rdf:Property ;
+  rdfs:label "member of"@en ;
+  vann:usageNote "One organization may be a member of another without being a sub organization, i.e. they are independent entities. These properties allow such relationships to be captured. The memberOf and hasMember properties are very simple and don't support statements describing the nature of the membership. The W3C Organization Ontology provides both this simple method and a more sophisticated model  that does make it possible to, for example, provide information about the period of time in which one organization was a member of another, the level of membership etc. That more sophisticated model should be used where necessary and may be used in addition to the simple memberOf/hasMember properties."@en .
+  
+<http://www.w3.org/ns/org#hasMember> a rdf:Property ;
+  rdfs:label "has member"@en ;
+  vann:usageNote "One organization may be a member of another without being a sub organization, i.e. they are independent entities. These properties allow such relationships to be captured. The memberOf and hasMember properties are very simple and don't support statements describing the nature of the membership. The W3C Organization Ontology provides both this simple method and a more sophisticated model  that does make it possible to, for example, provide information about the period of time in which one organization was a member of another, the level of membership etc. That more sophisticated model should be used where necessary and may be used in addition to the simple memberOf/hasMember properties."@en .
+  
+<http://schema.org/contactPoint> a rdf:Property ;
+  rdfs:label "contact point"@en ;
+  vann:usageNote "The contact point property links to a Contact Point that provides contact information, in particular a phone number and e-mail address. Other contact methods may be included, including online contact information, but this is conceptually distinct from the organization's homepage that may or may not provide contact information."@en .
+  
+<http://www.w3.org/ns/locn#address> a rdf:Property ;
+  rdfs:label "address"@en ;
+  vann:usageNote "A property to link a public organization to its address. For consistency with INSPIRE, the Location Core Vocabulary's Address class should be used."@en .
+  
+<http://www.w3.org/1999/xhtml/vocab#prev> a rdf:Property ;
+  rdfs:label "prev"@en ;
+  vann:usageNote "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."@en .
+ 
+<http://www.w3.org/1999/xhtml/vocab#next> a rdf:Property ;
+  rdfs:label "prev"@en ;
+  vann:usageNote "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."@en .
+
+#------------------------------->
+#----- Change Event Class ------>
+#------------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/org#ChangeEvent> a rdfs:Class ;
+  rdfs:label "Change Event"@en ;
+  vann:usageNote "Public organizations are formed and changed in response to events. This may be the result of new legislation, new policies, taking on new obligations etc. The CPOV captures this in its Change Event class but recognises the specific case of an organization's foundation as being sufficiently distinct to require a sub class of Change Event."@en .
+
+#-- Properties definition -->
+
+<http://www.w3.org/ns/org#resultingOrganization> a rdf:Property ;
+  rdfs:label "resulting organization"@en ;
+  vann:usageNote "This property links a Change Event or a Foundation Event to the organization that resulted from it."@en .
+
+<http://www.w3.org/ns/org#resultedFrom> a rdf:Property ;
+  rdfs:label "resulted from"@en ;
+  vann:usageNote "This property links a Change Event or a Foundation Event to the organization that resulted from it."@en .
+  
+<http://www.w3.org/ns/org#originalOrganization> a rdf:Property ;
+  rdfs:label "original organization"@en ;
+  vann:usageNote "The originalOrganization property links a Change Event to the organization that existed before the change. Although the Foundation Event class is defined as a sub class of Change Event, it is inappropriate to use the originalOrganization property with the Foundation Event class."@en .
+  
+<http://www.w3.org/ns/org#changedBy> a rdf:Property ;
+  rdfs:label "changed by"@en ;
+  vann:usageNote "The originalOrganization property links a Change Event to the organization that existed before the change. Although the Foundation Event class is defined as a sub class of Change Event, it is inappropriate to use the originalOrganization property with the Foundation Event class."@en .
+
+<http://data.europa.eu/m8g/hasFormalFramework> a rdf:Property ;
+  rdfs:label "has formal framework"@en ;
+  vann:usageNote "hasFormalFramework links a Change Event or Foundation Event to a piece of legislation or a policy document that prompted the change. These concepts and properties are defined in the Core Public Service Vocabulary (CPSV)."@en ;
+  rdfs:domain org:ChangeEvent .
+  
+<http://purl.org/vocab/cpsv#implements> a rdf:Property ;
+  rdfs:label "implements"@en ;
+  vann:usageNote "hasFormalFramework links a Change Event or Foundation Event to a piece of legislation or a policy document that prompted the change. These concepts and properties are defined in the Core Public Service Vocabulary (CPSV)."@en .
+  
+#----------------------------------->
+#----- Foundation Event Class ------>
+#----------------------------------->
+
+#-- Class definition -->
+
+<http://data.europa.eu/m8g/FoundationEvent> a rdfs:Class ;
+  rdfs:label "Foundation Event"@en ;
+  rdfs:comment "Public organizations are formed and changed in response to events. This may be the result of new legislation, new policies, taking on new obligations etc. The CPOV captures this in its Change Event class but recognises the specific case of an organization's foundation as being sufficiently distinct to require a sub class of Change Event."@en .
+
+#-- Properties definition -->
+
+<http://www.w3.org/ns/org#resultingOrganization> a rdf:Property ;
+  rdfs:label "resulting organization"@en ;
+  vann:usageNote "This property links a Change Event or a Foundation Event to the organization that resulted from it."@en .
+
+<http://www.w3.org/ns/org#resultedFrom> a rdf:Property ;
+  rdfs:label "resulted from"@en ;
+  vann:usageNote "This property links a Change Event or a Foundation Event to the organization that resulted from it."@en .
+  
+<http://www.w3.org/ns/org#originalOrganization> a rdf:Property ;
+  rdfs:label "original organization"@en ;
+  vann:usageNote "The originalOrganization property links a Change Event to the organization that existed before the change. Although the Foundation Event class is defined as a sub class of Change Event, it is inappropriate to use the originalOrganization property with the Foundation Event class."@en .
+  
+<http://www.w3.org/ns/org#changedBy> a rdf:Property ;
+  rdfs:label "changed by"@en ;
+  vann:usageNote "The originalOrganization property links a Change Event to the organization that existed before the change. Although the Foundation Event class is defined as a sub class of Change Event, it is inappropriate to use the originalOrganization property with the Foundation Event class."@en .
+
+<http://data.europa.eu/m8g/hasFormalFramework> a rdf:Property ;
+  rdfs:label "has formal framework"@en ;
+  vann:usageNote "hasFormalFramework links a Change Event or Foundation Event to a piece of legislation or a policy document that prompted the change. These concepts and properties are defined in the Core Public Service Vocabulary (CPSV)."@en ;
+  rdfs:domain cv:FoundationEvent .
+  
+<http://purl.org/vocab/cpsv#implements> a rdf:Property ;
+  rdfs:label "implements"@en ;
+  vann:usageNote "hasFormalFramework links a Change Event or Foundation Event to a piece of legislation or a policy document that prompted the change. These concepts and properties are defined in the Core Public Service Vocabulary (CPSV)."@en .
+  
+#----------------------------------->
+#----- Formal Framework Class ------>
+#----------------------------------->
+
+#-- Class definition -->
+
+<http://purl.org/vocab/cpsv#FormalFramework> a rdfs:Class ;
+  rdfs:label "Formal Framework"@en ;
+  vann:usageNote "This class and its properties are defined in the Core Public Service Vocabulary and may represent legislation or official policy that leads to a change event, including the establishment of the organization."@en .
+
+#-- Properties defined in the CPSV-AP Specifications: https://joinup.ec.europa.eu/asset/cpsv-ap/home -->
+ 
+#-------------------------->
+#----- Address Class ------>
+#-------------------------->
+
+#-- Class definition -->
+
+<http://www.w3.org/ns/locn#Address> a rdfs:Class ;
+  rdfs:label "Address"@en ;
+  vann:usageNote "The Address class is defined in the Location Core Vocabulary . Its properties are closely bound to the INSPIRE data model for addresses. In particular, it separates out building names and numbers from the name of the thoroughfare. This is in contrast to VCard which conflates them into 'street address.' The Location Core Vocabulary does, however, borrow the fullAddress property from VCard as a means of providing the full text of the address as a literal."@en .
+
+#-------------------------------->
+#----- Contact Point Class ------>
+#-------------------------------->
+
+#-- Class definition -->
+
+<http://schema.org/ContactPoint> a rdfs:Class ;
+  rdfs:label "Contact Point"@en ;
+  vann:usageNote "A class representing a point of contact for the organization. The Core Public Organization Vocabulary defines properties for telephone number, e-mail address and opening hours although it is noteworthy that the class is based on schema.org’s ContactPoint class (http://schema.org/ContactPoint) that has additional properties that some implementations may find useful."@en .
+
+#-- Properties definition -->
+
+<http://schema.org/email> a rdf:Property ;
+  rdfs:label "has email"@en ;
+  vann:usageNote "A property through which an e-mail address for the Public Organisation, or a representative of it, can be contacted."@en .
+
+<http://schema.org/telephone> a rdf:Property ;
+  rdfs:label "has telephone"@en ;
+  vann:usageNote "A property through which a phone number for the Public Organization, or a representative of it, can be contacted."@en .
+  
+<http://schema.org/openingHours> a rdf:Property ;
+  rdfs:label "opening hours"@en ;
+  vann:usageNote "The value of this property is structured text that gives the hours at which the contact point is normally available. Days are specified using two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. For example, if the contact point is open Monday-Friday, 9 -5, the value of the openingHours property would be Mo-Fr 09:00-17:00. If the Contact Point is only available on Tuesday and Thursday between 6 and 8pm, the value would be Tu,Th 16:00-20:00."@en .
+  
+<http://schema.org/hoursAvailable> a rdf:Property ;
+  rdfs:label "availability restriction"@en ;
+  vann:usageNote "The availabilityRestriction property links a Contact Point to details of specific details of its opening hours that override the general case."@en .
+ 
+#---------------------------------------------->
+#----- Opening Hours Specification Class ------>
+#---------------------------------------------->
+
+#-- Class definition -->
+
+<http://schema.org/OpeningHoursSpecification> a rdfs:Class ;
+  rdfs:label "opening hours specification"@en ;
+  vann:usageNote "The Core Public Organization Vocabulary makes full use of schema.org’s openingHours property to provide details of regular operations. The Opening Hours Specification  class can be used to provide details of exceptional circumstances, such as being closed on public holidays. Note that the property schema:opens is not used, therefore the contact point is closed. More specific closures can be indicated by including the schema:validFrom and schema:validThrough properties."@en .
