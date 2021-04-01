@@ -8,8 +8,6 @@ Public organisations involve elected representatives but these descriptions are 
 
 The Core Public Organisation Vocabulary is designed to describe the organisation itself. Whilst the vocabulary may support links to descriptions of public services, members of staff or other resources such as relevant legislation, policies and jurisdictional coverage, it will not describe those resources in detail. 
 
-Copyright © 2016 European Union. This vocabulary is published under the ISA Open Metadata Licence v1.1, https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11
-
-The current version of the Core Public Organisation Vocabulary can be downloaded from https://joinup.ec.europa.eu/release/core-public-organisation-vocabulary-v100.
+The current version of the Core Public Organisation Vocabulary can be downloaded from https://semiceu.github.io/CPOV/releases/2.00/.
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the Core Public Organisation Vocabulary repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/CPOV/wiki.
