@@ -10,4 +10,6 @@ The Core Public Organisation Vocabulary is designed to describe the organisation
 
 The current version of the Core Public Organisation Vocabulary can be downloaded from https://semiceu.github.io/CPOV/releases/2.00/.
 
+Discussions about the version 2.0.0 of CPOV took place during the webinar of the 20th of May 2021[https://www.youtube.com/watch?v=Bg70I5q6uPI]
+
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the Core Public Organisation Vocabulary repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/CPOV/wiki.
