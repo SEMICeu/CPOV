@@ -15,7 +15,6 @@ If you are submitting a new USE CASE, please use the template below. Otherwise, 
 Name: 
 Status: [In application] ; [Tested] ; [Under development] ; [Idea]
 
-Identifier:
 
 Creator: (your name)
 
