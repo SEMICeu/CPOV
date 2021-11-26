@@ -11,7 +11,8 @@ assignees: ''
 If you are submitting a new USE CASE, please use the template below. Otherwise, delete the use case template before submitting your contribution.
 
 ---
-### Use case name
+# Use case
+Name: 
 Status: [In application] ; [Tested] ; [Under development] ; [Idea]
 
 Identifier:
