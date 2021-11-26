@@ -13,7 +13,7 @@ If you are submitting a new USE CASE, please use the template below. Otherwise, 
 ---
 # Use case
 Name: 
-Status: [In application] ; [Tested] ; [Under development] ; [Idea]
+Status: [Idea] ; [In application] ; [Tested] ; [Under development]
 
 
 Creator: (your name)
