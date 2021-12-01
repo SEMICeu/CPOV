@@ -28,7 +28,7 @@ body:
     id: usecase_creator
     attributes:
       label: Use case creator
-      description: Please insert your name 
+      description: Please insert your first and last name 
     validations:
       required: true
   - type: textarea
