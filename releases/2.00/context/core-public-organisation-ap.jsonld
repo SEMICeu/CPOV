@@ -88,7 +88,7 @@
       "@id": "http://www.w3.org/ns/prov#startedAtTime",
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "ContactPoint": "http://data.europa.e/m8g/ContactPoint",
+    "ContactPoint": "http://data.europa.eu/m8g/ContactPoint",
     "ContactPoint.availabilityRestriction": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hoursAvailable",
