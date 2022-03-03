@@ -100,7 +100,7 @@
     shacl:path prov:endedAtTime
   ], [
     shacl:class <http://data.europa.eu/m8g/ReferenceFramework>;
-    shacl:description "The property hasFormalFramework links a Change Event or Foundation Event to a piece of legislation or a policy document that prompted the change."@en;
+    shacl:description "A piece of legislation or a policy document that prompted the change."@en;
     shacl:name "has formal framework"@en;
     shacl:path <http://data.europa.eu/m8g/hasFormalFramework>
   ], [
@@ -276,11 +276,6 @@
     shacl:name "identifier"@en;
     shacl:path org:identifier
   ], [
-    shacl:class <http://data.europa.eu/88u/dataset/atu-type>;
-    shacl:description "This property links an Organization to the Administrative Region(s) that it covers."@en;
-    shacl:name "jurisdiction"@en;
-    shacl:path dc:spatial
-  ], [
     shacl:class <http://data.europa.eu/m8g/ImageObject>;
     shacl:description "A graphic symbol to represent the Public Oorganization."@en;
     shacl:name "logo"@en;
@@ -302,7 +297,7 @@
     shacl:path skos:prefLabel
   ], [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and"@en;
+    shacl:description "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed"@en;
     shacl:name "prev"@en;
     shacl:path xhv:prev
   ], [
@@ -315,6 +310,11 @@
     shacl:description "A Change Event from which the Public Organisation resulted."@en;
     shacl:name "resulted from"@en;
     shacl:path org:resultedFrom
+  ], [
+    shacl:class <http://data.europa.eu/88u/dataset/atu-type>;
+    shacl:description "This property links an Organization to the Administrative Region(s) that it covers."@en;
+    shacl:name "spatial"@en;
+    shacl:path dc:spatial
   ], [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description "An Organization of which the Public Organization is a sub organization."@en;

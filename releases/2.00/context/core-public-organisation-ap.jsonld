@@ -216,11 +216,6 @@
       "@id": "http://www.w3.org/ns/org#identifier",
       "@type": "@id"
     },
-    "PublicOrganisation.jurisdiction": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "@id"
-    },
     "PublicOrganisation.logo": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/logo",
@@ -254,6 +249,11 @@
     "PublicOrganisation.resultedFrom": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/org#resultedFrom",
+      "@type": "@id"
+    },
+    "PublicOrganisation.spatial": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
       "@type": "@id"
     },
     "PublicOrganisation.subOrganizationOf": {

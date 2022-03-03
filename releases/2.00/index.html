@@ -191,7 +191,7 @@
               <div class="head" role="metainfo" id="metainfo">
               <dl>
               <dt>Source</dt><dd><a href="https://github.com/SEMICeu/CPOV/tree/master/releases/2.00">https://github.com/SEMICeu/CPOV/tree/master/releases/2.00</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/e8405e9ac525da6fefa0437422910673af1abf50/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/e8405e9ac525da6fefa0437422910673af1abf50/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/95d1d592d91fde1ac4194bd9b0452bd9eead43eb/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/95d1d592d91fde1ac4194bd9b0452bd9eead43eb/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/CPOV/issues">https://github.com/SEMICeu/CPOV/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="CPOV">CPOV</a></dd>-->
 
@@ -342,7 +342,9 @@ This specification was heavily based on the INSPIRE Address Representation data 
 - addressID (a unique identifier for the address)
 The first of these allows publishers to simply provide the complete Address as one string, with or without formatting. This is analogous to <a href="http://www.w3.org/2006/vcard/ns#label">vCard's label property</a>.
 
-The addressID is part of the INSPIRE guidelines and provides a hook that can be used to link the Address to an alternative representation, such as vCard or OASIS xAL.</dd>
+The addressID is part of the INSPIRE guidelines and provides a hook that can be used to link the Address to an alternative representation, such as vCard or OASIS xAL.
+
+This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Address">Core Location Vocabulary</a></dd>
                     
 		    
                     <dt>Properties</dt>
@@ -413,11 +415,11 @@ The addressID is part of the INSPIRE guidelines and provides a hook that can be 
                         <td property="rdfs:comment">A globally unique identifier for each instance of an Address.</td>
                         <td property="skos:scopeNote">The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary.
 
-The INSPIRE method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the Location Core Vocabulary the reverse is not true since the Core Vocabulary allows much greater flexibility.
+The INSPIRE method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the Core  Location Vocabulary the reverse is not true since the Core Vocabulary allows much greater flexibility.
 
 Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
 
-To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the Location Core Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.</td>
+To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the  Core Location Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.</td>
                         <td></td>
                       </tr>
                     
@@ -436,7 +438,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                           
                         </td>
                         <td property="rdfs:comment">The name of the uppermost level of the address, almost always a country.</td>
-                        <td property="skos:scopeNote">Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.</td>
+                        <td property="skos:scopeNote">Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.</td>
                         <td></td>
                       </tr>
                     
@@ -455,7 +457,7 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                           
                         </td>
                         <td property="rdfs:comment">The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.</td>
-                        <td property="skos:scopeNote">Some recommended codelists from the EU Publications Office include: <a href="https://op.europa.eu/fr/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">Administrative Territorial Units (ATU)</a>, <a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS</a> and <a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as "http://publications.europa.eu/resource/authority/atu/FRA\_AR\_PAR01" in the ATU controlled vocabulary.</td>
+                        <td property="skos:scopeNote">Some recommended codelists from the EU Publications Office and Eurostat include: <a href="https://op.europa.eu/fr/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu">Administrative Territorial Units (ATU)</a>, <a href="https://ec.europa.eu/eurostat/web/nuts/background">NUTS</a> and <a href="https://ec.europa.eu/eurostat/web/nuts/local-administrative-units">Local Administrative Units (LAU)</a>. The first arrondissement of Paris is for example expressed as "http://publications.europa.eu/resource/authority/atu/FRA\_AR\_PAR01" in the ATU controlled vocabulary.</td>
                         <td></td>
                       </tr>
                     
@@ -704,8 +706,8 @@ The key difference between a locator and a locator name is that the latter is a 
 			    
                           
                         </td>
-                        <td property="rdfs:comment">The property hasFormalFramework links a Change Event or Foundation Event to a piece of legislation or a policy document that prompted the change.</td>
-                        <td property="skos:scopeNote"></td>
+                        <td property="rdfs:comment">A piece of legislation or a policy document that prompted the change.</td>
+                        <td property="skos:scopeNote">The property hasFormalFramework links a Change Event or Foundation Event to a piece of legislation or a policy document that prompted the change.</td>
                         <td></td>
                       </tr>
                     
@@ -762,7 +764,7 @@ The key difference between a locator and a locator name is that the latter is a 
                           
                         </td>
                         <td property="rdfs:comment">The time instant when the state of the organisation update was initiated.</td>
-                        <td property="skos:scopeNote">If only one time is known and it is unclear whether it represents the start or end time, use only the startedAtTime property.</td>
+                        <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
                     
@@ -1263,7 +1265,6 @@ This definition is consistent with the more detailed definition of a "public sec
                       <a href="#Public%20Organisation%3Ahas%20unit">has unit</a>, 
                       <a href="#Public%20Organisation%3Ahomepage">homepage</a>, 
                       <a href="#Public%20Organisation%3Aidentifier">identifier</a>, 
-                      <a href="#Public%20Organisation%3Ajurisdiction">jurisdiction</a>, 
                       <a href="#Public%20Organisation%3Alogo">logo</a>, 
                       <a href="#Public%20Organisation%3Amember%20of">member of</a>, 
                       <a href="#Public%20Organisation%3Anext">next</a>, 
@@ -1271,6 +1272,7 @@ This definition is consistent with the more detailed definition of a "public sec
                       <a href="#Public%20Organisation%3Aprev">prev</a>, 
                       <a href="#Public%20Organisation%3Apurpose">purpose</a>, 
                       <a href="#Public%20Organisation%3Aresulted%20from">resulted from</a>, 
+                      <a href="#Public%20Organisation%3Aspatial">spatial</a>, 
                       <a href="#Public%20Organisation%3Asub%20organization%20of">sub organization of</a>.</dd>
                     
                   </dl>
@@ -1419,7 +1421,7 @@ This definition is consistent with the more detailed definition of a "public sec
                           
                         </td>
                         <td property="rdfs:comment">An Organization which is a member of another without being a sub organization, they are independent entities.</td>
-                        <td property="skos:scopeNote">The memberOf and hasMember properties are very simple and don't support statements describing the nature of the membership. The W3C Organization Ontology provides both this simple method and a more sophisticated model25 [ADD REFERENCE] that does make it possible to, for example, provide information about the period of time in which one Organization was a member of another, the level of membership etc. That more sophisticated model should be used where necessary and may be used in addition to the simple memberOf/hasMember properties.
+                        <td property="skos:scopeNote">The memberOf and hasMember properties are very simple and don't support statements describing the nature of the membership. The <a href="https://www.w3.org/TR/vocab-org/>W3C Organization Ontology</a> provides both this simple method and a more sophisticated model that does make it possible to, for example, provide information about the period of time in which one Organization was a member of another, the level of membership etc. That more sophisticated model should be used where necessary and may be used in addition to the simple memberOf/hasMember properties.
 
 An example of memberships are the EU member states and other partners which could be represented via different legal entities as members of EFSA, the European Food Safety Agency:  https://www.efsa.europa.eu/en/partnersnetworks/euinstitutions</td>
                         <td></td>
@@ -1497,38 +1499,7 @@ An example of memberships are the EU member states and other partners which coul
                           
                         </td>
                         <td property="rdfs:comment">The unambiguous structured reference for the Public Organization.</td>
-                        <td property="skos:scopeNote">Public organizations identifiers are often using (but not limited to) acronyms. For example, among the EU institutions, the ECB is the identifier for the European Central Bank, OLAF for the European Anti-Fraud Office, and so on. These are formally recognised by the European</td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Public%20Organisation%3Ajurisdiction" typeof="rdfs:Property" resource="http://purl.org/dc/terms/spatial">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://purl.org/dc/terms/spatial" data-toggle="tooltip" data-content="http://purl.org/dc/terms/spatial" data-placement="right">
-                            jurisdiction</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Administrative Territorial Unit" data-placement="right">Administrative Territorial Unit</a>
-			    
-                          
-                        </td>
-                        <td property="rdfs:comment">This property links an Organization to the Administrative Region(s) that it covers.</td>
-                        <td property="skos:scopeNote"><p>
-The value of the properly should be the URI of the region as defined in an authoritative
-list of regions. In Europe, this is likely to be the Administrative Territorial Units
-Named Authority List maintained by the Publications Office's Metadata Registry.
-</p></br>
-
-<p>
-The ATU list does not include a geometry. That is, the territory is only identified by
-its name not its spatial coordinates. This is likely to be the case for similar lists. If
-geometries are available for the Public Organization's territory, they can be linked
-from the territorial unit using the Core Location Vocabulary's locn:geometry
-property.
-</p></td>
+                        <td property="skos:scopeNote">Public organizations identifiers are often using (but not limited to) acronyms. For example, among the EU institutions, the ECB is the identifier for the European Central Bank, OLAF for the European Anti-Fraud Office, and so on. These are formally recognised by the European Commission which provides a <a href="https://ec.europa.eu/eurostat/ramon/cybernews/abbreviations.htm"> list</a> of such acronyms.</td>
                         <td></td>
                       </tr>
                     
@@ -1624,7 +1595,7 @@ An example of memberships are the EU member states and other partners which coul
 			    
                           
                         </td>
-                        <td property="rdfs:comment">In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and</td>
+                        <td property="rdfs:comment">In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed</td>
                         <td property="skos:scopeNote">Examples of events leading to sequences could be renaming, splitting or merging of public organizations.</td>
                         <td></td>
                       </tr>
@@ -1667,6 +1638,37 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
+                      <tr id="Public%20Organisation%3Aspatial" typeof="rdfs:Property" resource="http://purl.org/dc/terms/spatial">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/spatial" data-toggle="tooltip" data-content="http://purl.org/dc/terms/spatial" data-placement="right">
+                            spatial</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Administrative Territorial Unit" data-placement="right">Administrative Territorial Unit</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">This property links an Organization to the Administrative Region(s) that it covers.</td>
+                        <td property="skos:scopeNote"><p>
+The value of the properly should be the URI of the region as defined in an authoritative
+list of regions. In Europe, this is likely to be the Administrative Territorial Units
+Named Authority List maintained by the Publications Office's Metadata Registry.
+</p></br>
+
+<p>
+The ATU list does not include a geometry. That is, the territory is only identified by
+its name not its spatial coordinates. This is likely to be the case for similar lists. If
+geometries are available for the Public Organization's territory, they can be linked
+from the territorial unit using the Core Location Vocabulary's locn:geometry
+property.
+</p></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Public%20Organisation%3Asub%20organization%20of" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#subOrganizationOf">
                         <td>
                           <code property="rdfs:label">
@@ -1682,7 +1684,7 @@ An example of memberships are the EU member states and other partners which coul
                           
                         </td>
                         <td property="rdfs:comment">An Organization of which the Public Organization is a sub organization.</td>
-                        <td property="skos:scopeNote">Public Organizations are often large and complex and may be a collection of smaller Organizations, each of which has a specific identity that may be legally defined. The hasSubOrganization and subOrganizationOf properties express the relationships between</td>
+                        <td property="skos:scopeNote">Public Organizations are often large and complex and may be a collection of smaller Organizations, each of which has a specific identity that may be legally defined. The hasSubOrganization and subOrganizationOf properties express the relationships between Organizations in a hierarchical structure.</td>
                         <td></td>
                       </tr>
                     

@@ -43,7 +43,6 @@
       <xs:element name="hasUnit" ref="OrganizationalUnit" maxOccurs="unbounded" minOccurs="0"/>
       <xs:element name="homepage" ref="Document" maxOccurs="unbounded" minOccurs="0"/>
       <xs:element name="identifier" ref="Identifier" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="jurisdiction" ref="AdministrativeTerritorialUnit" maxOccurs="unbounded" minOccurs="0"/>
       <xs:element name="logo" ref="ImageObject" maxOccurs="unbounded" minOccurs="0"/>
       <xs:element name="memberOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
       <xs:element name="next" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
@@ -51,6 +50,7 @@
       <xs:element name="prev" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
       <xs:element name="purpose" maxOccurs="unbounded" minOccurs="0"/>
       <xs:element name="resultedFrom" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="spatial" ref="AdministrativeTerritorialUnit" maxOccurs="unbounded" minOccurs="0"/>
       <xs:element name="subOrganizationOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
