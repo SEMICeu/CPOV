@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="https://data.europa.eu/m8g/xml/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://data.europa.eu/m8g/xml/" version="2.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:cv="https://data.europa.eu/m8g/xml/">
+  <xs:element name="ContactPoint" type="ContactPointType"/>
+  <xs:element name="ImageObject" type="ImageObjectType"/>
+  <xs:element name="OpeningHoursSpecification" type="OpeningHoursSpecificationType"/>
+  <xs:element name="PublicOrganisation" type="PublicOrganisationType"/>
+  <xs:element name="ReferenceFramework" type="ReferenceFrameworkType"/>
+  <xs:element name="AdministrativeTerritorialUnit" type="AdministrativeTerritorialUnitType"/>
+  <xs:element name="Identifier" type="IdentifierType"/>
+  <xs:element name="Address" type="AddressType"/>
+  <xs:element name="ChangeEvent" type="ChangeEventType"/>
+  <xs:element name="OrganizationalUnit" type="OrganizationalUnitType"/>
+  <xs:element name="Organization" type="OrganizationType"/>
+  <xs:element name="Document" type="DocumentType"/>
+  <xs:complexType name="ContactPointType">
+    <xs:sequence>
+      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasEmail" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasTelephone" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="openingHours" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ImageObjectType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="OpeningHoursSpecificationType">
+    <xs:sequence>
+      <xs:element name="dayOfWeek" type="http://www.w3.org/2001/XMLSchema#anyURI" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="validFrom" type="http://www.w3.org/2001/XMLSchema#dateTime" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="validThrough" type="http://www.w3.org/2001/XMLSchema#dateTime" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PublicOrganisationType">
+    <xs:sequence>
+      <xs:element name="address" ref="Address" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="alternativeLabel" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="changedBy" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="classification" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="contactPoint" ref="ContactPoint" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasMember" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasSubOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasUnit" ref="OrganizationalUnit" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="homepage" ref="Document" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="identifier" ref="Identifier" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="jurisdiction" ref="AdministrativeTerritorialUnit" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="logo" ref="ImageObject" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="memberOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="next" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="preferredLabel" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="prev" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="purpose" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="resultedFrom" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="subOrganizationOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReferenceFrameworkType">
+    <xs:sequence>
+      <xs:element name="identifier" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="implements" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdministrativeTerritorialUnitType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="IdentifierType">
+    <xs:sequence>
+      <xs:element name="dateOfIssue" type="http://www.w3.org/2001/XMLSchema#date" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="issuingAuthorityName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="notation" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="schemeName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="schemeUri" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressType">
+    <xs:sequence>
+      <xs:element name="addressArea" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="addressId" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="administrativeUnitLevel1 (country)" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="administrativeUnitLevel2 (country/region/state)" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="fullAddress" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="locatorDesignator" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="locatorName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postOfficeBox" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postCode" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="postName (city)" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="thoroughfare" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ChangeEventType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="endedAtTime" type="http://www.w3.org/2001/XMLSchema#dateTime" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="hasFormalFramework" ref="ReferenceFramework" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="originalOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="resultingOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="startedAtTime" type="http://www.w3.org/2001/XMLSchema#dateTime" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrganizationalUnitType">
+    <xs:sequence>
+      <xs:element name="unitOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OrganizationType">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="DocumentType">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
