@@ -35,12 +35,12 @@
     shacl:name "address ID"@en;
     shacl:path <http://www.w3.org/ns/locn#addressID>
   ], [
-    shacl:class skos:Concept;
+    shacl:datatype rdf:langString;
     shacl:description "The name of the uppermost level of the address, almost always a country."@en;
     shacl:name "administrative unit level 1 (country)"@en;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
   ], [
-    shacl:class skos:Concept;
+    shacl:datatype rdf:langString;
     shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
     shacl:name "administrative unit level 2 (country/region/state)"@en;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
@@ -287,7 +287,7 @@
     shacl:path org:memberOf
   ], [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and"@en;
+    shacl:description "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."@en;
     shacl:name "next"@en;
     shacl:path xhv:next
   ], [

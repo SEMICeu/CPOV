@@ -12,100 +12,383 @@
   <xs:element name="OrganizationalUnit" type="OrganizationalUnitType"/>
   <xs:element name="Organization" type="OrganizationType"/>
   <xs:element name="Document" type="DocumentType"/>
+  <xs:complexType name="langstring">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="lang" type="xs:language"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ConceptType">
+    <xs:simpleContent>
+      <xs:extension base="xs:token">
+        <xs:attribute name="ref" type="xs:IDREF"/>
+        <xs:attribute name="conceptSchemeRef" type="xs:IDREF"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
   <xs:complexType name="ContactPointType">
     <xs:sequence>
-      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="hasEmail" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="hasTelephone" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="openingHours" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="availabilityRestriction" ref="OpeningHoursSpecification" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The time interval during which the Contact Point is not available.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasEmail" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An electronic address through which the Contact Point can be contacted.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasTelephone" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A telephone number through which the Contact Point can be contacted.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="openingHours" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The (structured) hours at which the contact point is normally available.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute name="ContactPointRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to ContactPoint ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="ImageObjectType">
     <xs:sequence/>
+    <xs:attribute name="ImageObjectRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to ImageObject ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="OpeningHoursSpecificationType">
     <xs:sequence>
-      <xs:element name="dayOfWeek" type="http://www.w3.org/2001/XMLSchema#anyURI" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="validFrom" type="http://www.w3.org/2001/XMLSchema#dateTime" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="validThrough" type="http://www.w3.org/2001/XMLSchema#dateTime" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="dayOfWeek" type="xs:anyURI" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The day of the week for which these opening hours are valid.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="validFrom" type="xs:dateTime" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The date when the Opening Hours Specification becomes valid.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="validThrough" type="xs:dateTime" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The date after when the Opening Hours Specification is not valid.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute name="OpeningHoursSpecificationRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to OpeningHoursSpecification ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="PublicOrganisationType">
     <xs:sequence>
-      <xs:element name="address" ref="Address" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="alternativeLabel" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="changedBy" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="classification" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="contactPoint" ref="ContactPoint" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="hasMember" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="hasSubOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="hasUnit" ref="OrganizationalUnit" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="homepage" ref="Document" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="identifier" ref="Identifier" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="logo" ref="ImageObject" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="memberOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="next" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="preferredLabel" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="prev" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="purpose" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="resultedFrom" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="spatial" ref="AdministrativeTerritorialUnit" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="subOrganizationOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="address" ref="Address" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The Address of a Public Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="alternativeLabel" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An alternative or informal name(s) of a Public Organization, irrespective of language.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="changedBy" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The Change Event that changed the Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="classification" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The categorisation of the Public Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="contactPoint" ref="ContactPoint" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The Contact Point that provides contact information of the Public Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The textual description of the Public Organization</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasMember" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An Organization which is a member of another without being a sub organization, they are independent entities.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasSubOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An Organization which is a sub-part or child of the Pulic Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasUnit" ref="OrganizationalUnit" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An operational department within the Public Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="homepage" ref="Document" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The official home page of the Public Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="identifier" ref="Identifier" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The unambiguous structured reference for the Public Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="logo" ref="ImageObject" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A graphic symbol to represent the Public Oorganization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="memberOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="next" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="preferredLabel" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="prev" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="purpose" type="ConceptType" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">This property describes the reasons of existence of an Organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="resultedFrom" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A Change Event from which the Public Organisation resulted.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="spatial" ref="AdministrativeTerritorialUnit" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">This property links an Organization to the Administrative Region(s) that it covers.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="subOrganizationOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An Organization of which the Public Organization is a sub organization.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute name="PublicOrganisationRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to PublicOrganisation ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="ReferenceFrameworkType">
     <xs:sequence>
-      <xs:element name="identifier" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="implements" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="identifier" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">An unambiguous reference to a Reference Framework.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="implements" ref="ChangeEvent" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A Change Event linked to relevant legislation or policy documents.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute name="ReferenceFrameworkRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to ReferenceFramework ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="AdministrativeTerritorialUnitType">
     <xs:sequence/>
+    <xs:attribute name="AdministrativeTerritorialUnitRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to AdministrativeTerritorialUnit ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="IdentifierType">
     <xs:sequence>
-      <xs:element name="dateOfIssue" type="http://www.w3.org/2001/XMLSchema#date" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="issuingAuthorityName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="notation" type="http://www.w3.org/2000/01/rdf-schema#Literal" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="schemeName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="schemeUri" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="dateOfIssue" type="xs:date" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The date on which the Identifier was assigned.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="issuingAuthorityName" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The name of the agency responsible for issuing the Identifier.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="notation" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A string of characters to uniquely identify a concept.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="schemeName" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Name of the scheme used to construct the identifier.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="schemeUri" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">URI of the scheme used to construct the identifier.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute name="IdentifierRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to Identifier ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="AddressType">
     <xs:sequence>
-      <xs:element name="addressArea" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="addressId" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="administrativeUnitLevel1 (country)" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="administrativeUnitLevel2 (country/region/state)" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="fullAddress" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="locatorDesignator" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="locatorName" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="postOfficeBox" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="postCode" type="http://www.w3.org/2001/XMLSchema#string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="postName (city)" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="thoroughfare" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="addressArea" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The name of a geographic area that groups Addresses.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="addressId" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A globally unique identifier for each instance of an Address.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="administrativeUnitLevel1country" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The name of the uppermost level of the address, almost always a country.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="administrativeUnitLevel2countryregionstate" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="fullAddress" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The complete address written as a string.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="locatorDesignator" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A number or sequence of characters that uniquely identifies the locator within the relevant scope.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="locatorName" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Proper noun(s) applied to the real world entity identified by the locator.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="postOfficeBox" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A location designator for a postal delivery point at a post office, usually a number.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="postCode" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="postNamecity" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="thoroughfare" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The name of a passage or way through from one location to another.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute name="AddressRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to Address ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="ChangeEventType">
     <xs:sequence>
-      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="endedAtTime" type="http://www.w3.org/2001/XMLSchema#dateTime" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="hasFormalFramework" ref="ReferenceFramework" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="originalOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="resultingOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
-      <xs:element name="startedAtTime" type="http://www.w3.org/2001/XMLSchema#dateTime" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A textual explanation of the event.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="endedAtTime" type="xs:dateTime" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The time instant when the state of the organisation update was terminated.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hasFormalFramework" ref="ReferenceFramework" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">A piece of legislation or a policy document that prompted the change.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="originalOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The Organization that existed before the change.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="resultingOrganization" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">This property links a Change Event or a Foundation Event to the Organization that resulted from it.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startedAtTime" type="xs:dateTime" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The time instant when the state of the organisation update was initiated.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute name="ChangeEventRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to ChangeEvent ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="OrganizationalUnitType">
     <xs:sequence>
-      <xs:element name="unitOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="unitOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">The Public Organisation of which the Organizational Unit is an operational department.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute name="OrganizationalUnitRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to OrganizationalUnit ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="OrganizationType">
     <xs:sequence/>
+    <xs:attribute name="OrganizationRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to Organization ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
   <xs:complexType name="DocumentType">
     <xs:sequence/>
+    <xs:attribute name="DocumentRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to Document ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
 </xs:schema>
