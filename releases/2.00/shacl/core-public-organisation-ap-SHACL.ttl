@@ -247,7 +247,7 @@
     shacl:path <http://data.europa.eu/m8g/contactPoint>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "The textual description of the Public Organization"@en;
+    shacl:description "The textual description of the Public Organization."@en;
     shacl:name "description"@en;
     shacl:path dc:description
   ], [

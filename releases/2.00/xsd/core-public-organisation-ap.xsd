@@ -117,7 +117,7 @@
       </xs:element>
       <xs:element name="description" type="xs:string" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation xml:lang="en">The textual description of the Public Organization</xs:documentation>
+          <xs:documentation xml:lang="en">The textual description of the Public Organization.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="hasMember" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
