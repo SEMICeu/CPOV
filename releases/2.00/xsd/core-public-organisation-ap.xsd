@@ -9,8 +9,8 @@
   <xs:element name="Identifier" type="IdentifierType"/>
   <xs:element name="Address" type="AddressType"/>
   <xs:element name="ChangeEvent" type="ChangeEventType"/>
-  <xs:element name="OrganizationalUnit" type="OrganizationalUnitType"/>
   <xs:element name="Organization" type="OrganizationType"/>
+  <xs:element name="OrganizationalUnit" type="OrganizationalUnitType"/>
   <xs:element name="Document" type="DocumentType"/>
   <xs:complexType name="langstring">
     <xs:simpleContent>
@@ -361,6 +361,14 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
+  <xs:complexType name="OrganizationType">
+    <xs:sequence/>
+    <xs:attribute name="OrganizationRef" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="en">Reference to Organization ID</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
   <xs:complexType name="OrganizationalUnitType">
     <xs:sequence>
       <xs:element name="unitOf" ref="PublicOrganisation" maxOccurs="unbounded" minOccurs="0">
@@ -372,14 +380,6 @@
     <xs:attribute name="OrganizationalUnitRef" type="xs:IDREF">
       <xs:annotation>
         <xs:documentation xml:lang="en">Reference to OrganizationalUnit ID</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:complexType>
-  <xs:complexType name="OrganizationType">
-    <xs:sequence/>
-    <xs:attribute name="OrganizationRef" type="xs:IDREF">
-      <xs:annotation>
-        <xs:documentation xml:lang="en">Reference to Organization ID</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>

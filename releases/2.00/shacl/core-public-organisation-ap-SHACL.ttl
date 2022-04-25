@@ -18,8 +18,8 @@
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#IdentifierShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AddressShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ChangeEventShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationalUnitShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationShape>,
+    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationalUnitShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#DocumentShape> .
 
 <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AddressShape> a shacl:NodeShape;
@@ -33,7 +33,7 @@
     shacl:datatype xsd:string;
     shacl:description "A globally unique identifier for each instance of an Address."@en;
     shacl:name "address ID"@en;
-    shacl:path <http://www.w3.org/ns/locn#addressID>
+    shacl:path <http://www.w3.org/ns/locn#addressId>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "The name of the uppermost level of the address, almost always a country."@en;
@@ -206,7 +206,7 @@
 
 <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass org:organization .
+  shacl:targetClass org:Organization .
 
 <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationalUnitShape> a shacl:NodeShape;
   shacl:closed false;
@@ -274,7 +274,7 @@
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "The unambiguous structured reference for the Public Organization."@en;
     shacl:name "identifier"@en;
-    shacl:path org:identifier
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     shacl:class <http://data.europa.eu/m8g/ImageObject>;
     shacl:description "A graphic symbol to represent the Public Oorganization."@en;
