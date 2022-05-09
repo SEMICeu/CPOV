@@ -171,7 +171,7 @@
     shacl:datatype rdf:langString;
     shacl:description "Name of the scheme used to construct the identifier."@en;
     shacl:name "scheme name"@en;
-    shacl:path dc:conformsTo
+    shacl:path rdfs:label
   ], [
     shacl:datatype rdf:langString;
     shacl:description "URI of the scheme used to construct the identifier."@en;
@@ -224,7 +224,7 @@
     shacl:class <http://www.w3.org/ns/locn#Address>;
     shacl:description "The Address of a Public Organization."@en;
     shacl:name "address"@en;
-    shacl:path <http://w3.org/ns/locn#address>
+    shacl:path <http://www.w3.org/ns/locn#address>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "An alternative or informal name(s) of a Public Organization, irrespective of language."@en;
