@@ -1,0 +1,656 @@
+{
+  "@context": {
+    "@vocab": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qb:codeList": {
+      "@type": "@id"
+    },
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sh:class": {
+      "@type": "@id"
+    },
+    "sh:datatype": {
+      "@type": "@id"
+    },
+    "sh:description": {
+      "@container": "@language"
+    },
+    "sh:maxCount": {
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:minCount": {
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:name": {
+      "@container": "@language"
+    },
+    "sh:path": {
+      "@type": "@id"
+    },
+    "sh:property": {
+      "@type": "@id"
+    },
+    "sh:targetClass": {
+      "@type": "@id"
+    },
+    "shapes": {
+      "@type": "@id"
+    },
+    "vl": "https://data.vlaanderen.be/ns/shacl#"
+  },
+  "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en",
+  "shapes": [
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ContactPointShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
+          "sh:description": {
+            "en": "The time during which the Contact Point is not available."
+          },
+          "sh:name": {
+            "en": "availability restriction"
+          },
+          "sh:path": "http://data.europa.eu/m8g/specialOpeningHoursSpecification"
+        },
+        {
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A web page that could be used to reach out the Contact Point."
+          },
+          "sh:name": {
+            "en": "contact page"
+          },
+          "sh:path": "http://data.europa.eu/m8g/contactPage"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": {
+            "en": "An electronic address through which the Contact Point can be contacted."
+          },
+          "sh:name": {
+            "en": "has email"
+          },
+          "sh:path": "http://data.europa.eu/m8g/email"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": {
+            "en": "A telephone number through which the Contact Point can be contacted."
+          },
+          "sh:name": {
+            "en": "has telephone"
+          },
+          "sh:path": "http://data.europa.eu/m8g/telephone"
+        },
+        {
+          "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
+          "sh:description": {
+            "en": "The time at which the Contact Point is normally available."
+          },
+          "sh:name": {
+            "en": "opening hours"
+          },
+          "sh:path": "http://data.europa.eu/m8g/openingHours"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/ContactPoint"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ImageObjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/m8g/ImageObject"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#PublicOrganisationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://www.w3.org/ns/locn#Address",
+          "sh:description": {
+            "en": "The Address of a Public Organization."
+          },
+          "sh:name": {
+            "en": "address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#address"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "An alternative or informal name(s) of a Public Organization, irrespective of language."
+          },
+          "sh:name": {
+            "en": "alternative label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#altLabel"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
+          "sh:description": {
+            "en": "The Change Event that changed the Organization."
+          },
+          "sh:name": {
+            "en": "changed by"
+          },
+          "sh:path": "http://www.w3.org/ns/org#changedBy"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The categorisation of the Public Organization."
+          },
+          "sh:name": {
+            "en": "classification"
+          },
+          "sh:path": "http://www.w3.org/ns/org#classification"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/ContactPoint",
+          "sh:description": {
+            "en": "The main contact information of the resource."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://data.europa.eu/m8g/contactPoint"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "An Organization which is a member of another without being a sub organization, they are independent entities."
+          },
+          "sh:name": {
+            "en": "has member"
+          },
+          "sh:path": "http://www.w3.org/ns/org#hasMember"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "An Organization which is a sub-part or child of the Pulic Organization."
+          },
+          "sh:name": {
+            "en": "has sub organization"
+          },
+          "sh:path": "http://www.w3.org/ns/org#hasSubOrganization"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/org#OrganizationalUnit",
+          "sh:description": {
+            "en": "An operational department within the Public Organization."
+          },
+          "sh:name": {
+            "en": "has unit"
+          },
+          "sh:path": "http://www.w3.org/ns/org#hasUnit"
+        },
+        {
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "The official home page of the Public Organization."
+          },
+          "sh:name": {
+            "en": "homepage"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/homepage"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/adms#Identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference for the Public Organization."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/ImageObject",
+          "sh:description": {
+            "en": "A graphic symbol to represent the Public Oorganization."
+          },
+          "sh:name": {
+            "en": "logo"
+          },
+          "sh:path": "http://data.europa.eu/m8g/logo"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities."
+          },
+          "sh:name": {
+            "en": "member of"
+          },
+          "sh:path": "http://www.w3.org/ns/org#memberOf"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."
+          },
+          "sh:name": {
+            "en": "next"
+          },
+          "sh:path": "http://www.w3.org/1999/xhtml/vocab#next"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed"
+          },
+          "sh:name": {
+            "en": "prev"
+          },
+          "sh:path": "http://www.w3.org/1999/xhtml/vocab#prev"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "This property describes the reasons of existence of an Organization."
+          },
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "http://www.w3.org/ns/org#purpose"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
+          "sh:description": {
+            "en": "A Change Event from which the Public Organisation resulted."
+          },
+          "sh:name": {
+            "en": "resulted from"
+          },
+          "sh:path": "http://www.w3.org/ns/org#resultedFrom"
+        },
+        {
+          "sh:class": "http://data.europa.eu/88u/dataset/atu-type",
+          "sh:description": {
+            "en": "This property links an Organization to the Administrative Region(s) that it covers."
+          },
+          "sh:name": {
+            "en": "spatial"
+          },
+          "sh:path": "http://purl.org/dc/terms/spatial"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "An Organization of which the Public Organization is a sub organization."
+          },
+          "sh:name": {
+            "en": "sub organization of"
+          },
+          "sh:path": "http://www.w3.org/ns/org#subOrganizationOf"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ReferenceFrameworkShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": {
+            "en": "An unambiguous reference to a Reference Framework."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
+          "sh:description": {
+            "en": "A Change Event linked to relevant legislation or policy documents."
+          },
+          "sh:name": {
+            "en": "implements"
+          },
+          "sh:path": "http://purl.org/vocab/cpsv#implements"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/ReferenceFramework"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AdministrativeTerritorialUnitShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/88u/dataset/atu-type"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#TemporalEntityShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A  textual representation of the Temporal Entity."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The recurrence of an instant or period."
+          },
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:path": "http://data.europa.eu/m8g/frequency"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/2006/time#TemporalEntity"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#IdentifierShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#date",
+          "sh:description": {
+            "en": "The date on which the Identifier was assigned."
+          },
+          "sh:name": {
+            "en": "date of issue"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of the agency responsible for issuing the Identifier."
+          },
+          "sh:name": {
+            "en": "issuing authority name"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#schemeAgency"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": {
+            "en": "A string of characters to uniquely identify a concept."
+          },
+          "sh:name": {
+            "en": "notation"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "Name of the scheme used to construct the identifier."
+          },
+          "sh:name": {
+            "en": "scheme name"
+          },
+          "sh:path": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "URI of the scheme used to construct the identifier."
+          },
+          "sh:name": {
+            "en": "scheme URI"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/adms#Identifier"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AddressShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressArea"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": {
+            "en": "A globally unique identifier for each instance of an Address."
+          },
+          "sh:name": {
+            "en": "address ID"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressId"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": {
+            "en": "A number or sequence of characters that uniquely identifies the locator within the relevant scope."
+          },
+          "sh:name": {
+            "en": "locator designator"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorDesignator"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator."
+          },
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorName"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": {
+            "en": "A location designator for a postal delivery point at a post office, usually a number."
+          },
+          "sh:name": {
+            "en": "post office box"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#poBox"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": {
+            "en": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post code"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postCode"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postName"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/locn#Address"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ChangeEventShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A textual explanation of the event."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "The time instant when the state of the organisation update was terminated."
+          },
+          "sh:name": {
+            "en": "ended at time"
+          },
+          "sh:path": "http://www.w3.org/ns/prov#endedAtTime"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/ReferenceFramework",
+          "sh:description": {
+            "en": "A piece of legislation or a policy document that prompted the change."
+          },
+          "sh:name": {
+            "en": "has formal framework"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasFormalFramework"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "The Organization that existed before the change."
+          },
+          "sh:name": {
+            "en": "original organization"
+          },
+          "sh:path": "http://www.w3.org/ns/org#originalOrganization"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "This property links a Change Event or a Foundation Event to the Organization that resulted from it."
+          },
+          "sh:name": {
+            "en": "resulting organization"
+          },
+          "sh:path": "http://www.w3.org/ns/org#resultingOrganization"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "The time instant when the state of the organisation update was initiated."
+          },
+          "sh:name": {
+            "en": "started at time"
+          },
+          "sh:path": "http://www.w3.org/ns/prov#startedAtTime"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/org#ChangeEvent"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/org#Organization"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationalUnitShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "The Public Organisation of which the Organizational Unit is an operational department."
+          },
+          "sh:name": {
+            "en": "unit of"
+          },
+          "sh:path": "http://www.w3.org/ns/org#unitOf"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/org#OrganizationalUnit"
+    },
+    {
+      "@id": "https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#DocumentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
+    }
+  ]
+}
