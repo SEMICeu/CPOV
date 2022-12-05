@@ -51,7 +51,7 @@ The table below gives an overview of the classes (and their definitions) within 
 | P3 | Identifier.issuingAuthorityURI                    | Identifier.issuingAuthorityURI: Agent            | the range of the property has been made more generic        |                                                                                                                            |
 | D1 | Identifier.dateOfIssue: DateTime                  | Identifier.dateOfIssue: Date                     | the property is more generic                                |
 
-## Changes since December 20202 
+## Changes since December 2022 
 
 ### Terms
 | Nr | Core Public Organisation Vocabulary v2.0.0 2022                | Core Public Organisation Vocabulary v2.1.0 2022     | Rationale                                                                          | GitHub/Change                                                        |
