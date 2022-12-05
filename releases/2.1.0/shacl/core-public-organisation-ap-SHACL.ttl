@@ -11,10 +11,10 @@
 
 <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en> <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_enshapes> <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ContactPointShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ImageObjectShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OpeningHoursSpecificationShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#PublicOrganisationShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ReferenceFrameworkShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AdministrativeTerritorialUnitShape>,
+    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#TemporalEntityShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#IdentifierShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AddressShape>,
     <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ChangeEventShape>,
@@ -30,19 +30,19 @@
     shacl:name "address area"@en;
     shacl:path <http://www.w3.org/ns/locn#addressArea>
   ], [
-    shacl:datatype xsd:string;
+    shacl:datatype rdfs:Literal;
     shacl:description "A globally unique identifier for each instance of an Address."@en;
     shacl:name "address ID"@en;
     shacl:path <http://www.w3.org/ns/locn#addressId>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "The name of the uppermost level of the address, almost always a country."@en;
-    shacl:name "administrative unit level 1 (country)"@en;
+    shacl:name "administrative unit level 1"@en;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
-    shacl:name "administrative unit level 2 (country/region/state)"@en;
+    shacl:name "administrative unit level 2"@en;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
   ], [
     shacl:datatype rdf:langString;
@@ -50,7 +50,7 @@
     shacl:name "full address"@en;
     shacl:path <http://www.w3.org/ns/locn#fullAddress>
   ], [
-    shacl:datatype xsd:string;
+    shacl:datatype rdfs:Literal;
     shacl:description "A number or sequence of characters that uniquely identifies the locator within the relevant scope."@en;
     shacl:name "locator designator"@en;
     shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
@@ -60,19 +60,19 @@
     shacl:name "locator name"@en;
     shacl:path <http://www.w3.org/ns/locn#locatorName>
   ], [
-    shacl:datatype xsd:string;
+    shacl:datatype rdfs:Literal;
     shacl:description "A location designator for a postal delivery point at a post office, usually a number."@en;
     shacl:name "post office box"@en;
     shacl:path <http://www.w3.org/ns/locn#poBox>
   ], [
-    shacl:datatype xsd:string;
+    shacl:datatype rdfs:Literal;
     shacl:description "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
     shacl:name "post code"@en;
     shacl:path <http://www.w3.org/ns/locn#postCode>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
-    shacl:name "post name (city)"@en;
+    shacl:name "post name"@en;
     shacl:path <http://www.w3.org/ns/locn#postName>
   ], [
     shacl:datatype rdf:langString;
@@ -124,10 +124,15 @@
 <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ContactPointShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://data.europa.eu/m8g/OpeningHoursSpecification>;
-    shacl:description "The time interval during which the Contact Point is not available."@en;
+    shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
+    shacl:description "The time during which the Contact Point is not available."@en;
     shacl:name "availability restriction"@en;
-    shacl:path <http://data.europa.eu/m8g/hoursAvailable>
+    shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
+  ], [
+    shacl:class foaf:Document;
+    shacl:description "A web page that could be used to reach out the Contact Point."@en;
+    shacl:name "contact page"@en;
+    shacl:path <http://data.europa.eu/m8g/contactPage>
   ], [
     shacl:datatype rdfs:Literal;
     shacl:description "An electronic address through which the Contact Point can be contacted."@en;
@@ -139,8 +144,8 @@
     shacl:name "has telephone"@en;
     shacl:path <http://data.europa.eu/m8g/telephone>
   ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "The (structured) hours at which the contact point is normally available."@en;
+    shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
+    shacl:description "The time at which the Contact Point is normally available."@en;
     shacl:name "opening hours"@en;
     shacl:path <http://data.europa.eu/m8g/openingHours>
   ];
@@ -184,26 +189,6 @@
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/ImageObject> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OpeningHoursSpecificationShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:datatype xsd:anyURI;
-    shacl:description "The day of the week for which these opening hours are valid."@en;
-    shacl:name "day of week"@en;
-    shacl:path <http://data.europa.eu/m8g/dayOfWeek>
-  ], [
-    shacl:datatype xsd:dateTime;
-    shacl:description "The date when the Opening Hours Specification becomes valid."@en;
-    shacl:name "valid from"@en;
-    shacl:path <http://data.europa.eu/m8g/validFrom>
-  ], [
-    shacl:datatype xsd:dateTime;
-    shacl:description "The date after when the Opening Hours Specification is not valid."@en;
-    shacl:name "valid through"@en;
-    shacl:path <http://data.europa.eu/m8g/validThrough>
-  ];
-  shacl:targetClass <http://data.europa.eu/m8g/OpeningHoursSpecification> .
-
 <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass org:Organization .
@@ -242,7 +227,7 @@
     shacl:path org:classification
   ], [
     shacl:class <http://data.europa.eu/m8g/ContactPoint>;
-    shacl:description "The Contact Point that provides contact information of the Public Organization."@en;
+    shacl:description "The main contact information of the resource."@en;
     shacl:name "contact point"@en;
     shacl:path <http://data.europa.eu/m8g/contactPoint>
   ], [
@@ -337,3 +322,18 @@
     shacl:path <http://purl.org/vocab/cpsv#implements>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/ReferenceFramework> .
+
+<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#TemporalEntityShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "A  textual representation of the Temporal Entity."@en;
+    shacl:name "description"@en;
+    shacl:path dc:description
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "The recurrence of an instant or period."@en;
+    shacl:name "frequency"@en;
+    shacl:path <http://data.europa.eu/m8g/frequency>
+  ];
+  shacl:targetClass <http://www.w3.org/2006/time#TemporalEntity> .

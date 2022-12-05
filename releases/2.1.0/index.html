@@ -54,8 +54,12 @@
               <div class="head" role="status" id="status">
               <dl>
               <dt>Status</dt><dd>Semic Recommendation</dd>
-              <dt>Published at</dt><dd>2022-04-01</dd>
-              <dt>This version</dt><dd><a href="https://semiceu.github.io/CPOV/releases/2.00">https://semiceu.github.io/CPOV/releases/2.00</a></dd>
+              <dt>Published at</dt><dd>2022-12-05</dd>
+              <dt>This version</dt><dd>
+               
+<a href="https://semiceu.github.io/CPOV/releases/2.1.0">https://semiceu.github.io/CPOV/releases/2.1.0</a>
+
+               </dd>
               
               
               </dl>
@@ -190,8 +194,12 @@
 
               <div class="head" role="metainfo" id="metainfo">
               <dl>
-              <dt>Source</dt><dd><a href="https://github.com/SEMICeu/CPOV/tree/master/releases/2.00">https://github.com/SEMICeu/CPOV/tree/master/releases/2.00</a></dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/5438abe40bd3d90e3f64bd8877aef4fb4613fb99/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/5438abe40bd3d90e3f64bd8877aef4fb4613fb99/CHANGELOG</a></dd>-->
+              <dt>Source</dt><dd>
+               
+<a href="https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.0">https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.0</a>
+
+              </dd>
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/c32f6b55883b86d91eeee8a73559c33c3fc91d7d/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/c32f6b55883b86d91eeee8a73559c33c3fc91d7d/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/CPOV/issues">https://github.com/SEMICeu/CPOV/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="CPOV">CPOV</a></dd>-->
 
@@ -268,7 +276,7 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 
                 <p>
-                  This Core Vocabulary has the status of Semic Recommendation published on 2022-04-01.
+                  This Core Vocabulary has the status of Semic Recommendation published on 2022-12-05.
 	        </p>
                 
               </section>
@@ -304,11 +312,11 @@
                       <a href="#Document">Document</a> |
                       <a href="#Identifier">Identifier</a> |
                       <a href="#Image Object">Image Object</a> |
-                      <a href="#Opening Hours Specification">Opening Hours Specification</a> |
                       <a href="#Organization">Organization</a> |
                       <a href="#Organizational Unit">Organizational Unit</a> |
                       <a href="#Public Organisation">Public Organisation</a> |
                       <a href="#Reference Framework">Reference Framework</a> |
+                      <a href="#Temporal Entity">Temporal Entity</a> |
                     </p>
                   </div>
                   
@@ -352,13 +360,13 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                     <dd>For this entity the following properties are defined:
                       <a href="#Address%3Aaddress%20area">address area</a>, 
                       <a href="#Address%3Aaddress%20ID">address ID</a>, 
-                      <a href="#Address%3Aadministrative%20unit%20level%201%20(country)">administrative unit level 1 (country)</a>, 
-                      <a href="#Address%3Aadministrative%20unit%20level%202%20(country%2Fregion%2Fstate)">administrative unit level 2 (country/region/state)</a>, 
+                      <a href="#Address%3Aadministrative%20unit%20level%201">administrative unit level 1</a>, 
+                      <a href="#Address%3Aadministrative%20unit%20level%202">administrative unit level 2</a>, 
                       <a href="#Address%3Afull%20address">full address</a>, 
                       <a href="#Address%3Alocator%20designator">locator designator</a>, 
                       <a href="#Address%3Alocator%20name">locator name</a>, 
                       <a href="#Address%3Apost%20code">post code</a>, 
-                      <a href="#Address%3Apost%20name%20(city)">post name (city)</a>, 
+                      <a href="#Address%3Apost%20name">post name</a>, 
                       <a href="#Address%3Apost%20office%20box">post office box</a>, 
                       <a href="#Address%3Athoroughfare">thoroughfare</a>.</dd>
                     
@@ -408,7 +416,7 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                         <td>
                           
 			     
-			    <a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a>
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
                             
                           
                         </td>
@@ -419,15 +427,18 @@ The INSPIRE method of representing addresses is very detailed, designed primaril
 <br/><br/>
 Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
 <br/><br/>
-To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the  Core Location Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.</td>
+To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the  Core Location Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.
+<br/><br/>
+The datatype of addressID is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.
+</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aadministrative%20unit%20level%201%20(country)" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL1">
+                      <tr id="Address%3Aadministrative%20unit%20level%201" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL1">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#adminUnitL1" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#adminUnitL1" data-placement="right">
-                            administrative unit level 1 (country)</a>
+                            administrative unit level 1</a>
                           </code>
                         </td>
                         <td>
@@ -442,11 +453,11 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aadministrative%20unit%20level%202%20(country%2Fregion%2Fstate)" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL2">
+                      <tr id="Address%3Aadministrative%20unit%20level%202" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL2">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#adminUnitL2" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#adminUnitL2" data-placement="right">
-                            administrative unit level 2 (country/region/state)</a>
+                            administrative unit level 2</a>
                           </code>
                         </td>
                         <td>
@@ -490,12 +501,14 @@ To provide maximum flexibility in the Core Vocabulary, whilst remaining interope
                         <td>
                           
 			     
-			    <a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a>
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
                             
                           
                         </td>
                         <td property="rdfs:comment">A number or sequence of characters that uniquely identifies the locator within the relevant scope.</td>
-                        <td property="skos:scopeNote">In simpler terms, this is the building number, apartment number, etc. For an address such as "Flat 3, 17 Bridge Street", the locator is "flat 3, 17".</td>
+                        <td property="skos:scopeNote">In simpler terms, this is the building number, apartment number, etc. For an address such as "Flat 3, 17 Bridge Street", the locator is "flat 3, 17".
+<br/><br/>
+The datatype of locatorDesignator is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
                         <td></td>
                       </tr>
                     
@@ -530,20 +543,22 @@ The key difference between a locator and a locator name is that the latter is a 
                         <td>
                           
 			     
-			    <a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a>
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
                             
                           
                         </td>
                         <td property="rdfs:comment">The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</td>
-                        <td property="skos:scopeNote">Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example "75000".</td>
+                        <td property="skos:scopeNote">Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example "75000".
+
+The datatype of addressID is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Apost%20name%20(city)" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postName">
+                      <tr id="Address%3Apost%20name" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postName">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#postName" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#postName" data-placement="right">
-                            post name (city)</a>
+                            post name</a>
                           </code>
                         </td>
                         <td>
@@ -568,12 +583,14 @@ The key difference between a locator and a locator name is that the latter is a 
                         <td>
                           
 			     
-			    <a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a>
+			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
                             
                           
                         </td>
                         <td property="rdfs:comment">A location designator for a postal delivery point at a post office, usually a number.</td>
-                        <td property="skos:scopeNote">INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is "9383".</td>
+                        <td property="skos:scopeNote">INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is "9383".
+<br/><br/>
+The datatype of poBox is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
                         <td></td>
                       </tr>
                     
@@ -778,7 +795,7 @@ The key difference between a locator and a locator name is that the latter is a 
               <h3 class="h3" id="Contact Point"><a href="http://data.europa.eu/m8g/ContactPoint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ContactPoint" data-placement="right">Contact Point</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Definition</dt><dd>information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with.</dd>
+                    <dt>Definition</dt><dd>Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with.</dd>
                     
                     <dt>Usage</dt><dd>The Core Public Organization Vocabulary defines properties for telephone number, e-mail address and opening hours although it is noteworthy that the class is based on schema.org's ContactPoint class (http://schema.org/ContactPoint) that has additional properties that some implementations may find useful.</dd>
                     
@@ -787,6 +804,7 @@ The key difference between a locator and a locator name is that the latter is a 
 		     
                     <dd>For this entity the following properties are defined:
                       <a href="#Contact%20Point%3Aavailability%20restriction">availability restriction</a>, 
+                      <a href="#Contact%20Point%3Acontact%20page">contact page</a>, 
                       <a href="#Contact%20Point%3Ahas%20email">has email</a>, 
                       <a href="#Contact%20Point%3Ahas%20telephone">has telephone</a>, 
                       <a href="#Contact%20Point%3Aopening%20hours">opening hours</a>.</dd>
@@ -808,21 +826,40 @@ The key difference between a locator and a locator name is that the latter is a 
 
                     <tbody class="supertype">
                     
-                      <tr id="Contact%20Point%3Aavailability%20restriction" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hoursAvailable">
+                      <tr id="Contact%20Point%3Aavailability%20restriction" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/hoursAvailable" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hoursAvailable" data-placement="right">
+                            <a href="http://data.europa.eu/m8g/specialOpeningHoursSpecification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/specialOpeningHoursSpecification" data-placement="right">
                             availability restriction</a>
                           </code>
                         </td>
                         <td>
                           
 			    
-			    <a href="#Opening Hours Specification" data-placement="right">Opening Hours Specification</a>
+			    <a href="#Temporal Entity" data-placement="right">Temporal Entity</a>
 			    
                           
                         </td>
-                        <td property="rdfs:comment">The time interval during which the Contact Point is not available.</td>
+                        <td property="rdfs:comment">The time during which the Contact Point is not available.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Contact%20Point%3Acontact%20page" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/contactPage">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/contactPage" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/contactPage" data-placement="right">
+                            contact page</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Document" data-placement="right">Document</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">A web page that could be used to reach out the Contact Point.</td>
                         <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
@@ -874,13 +911,13 @@ The key difference between a locator and a locator name is that the latter is a 
                         </td>
                         <td>
                           
-			     
-			    <a href="http://www.w3.org/2000/01/rdf-schema#Literal" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Literal" data-placement="right">Literal</a>
-                            
+			    
+			    <a href="#Temporal Entity" data-placement="right">Temporal Entity</a>
+			    
                           
                         </td>
-                        <td property="rdfs:comment">The (structured) hours at which the contact point is normally available.</td>
-                        <td property="skos:scopeNote">Days are specified using two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. For example, if the contact point is open Monday-Friday, 9 -5, the value of the openingHours property would be Mo-Fr 09:00-17:00. If the Contact Point is only available on Tuesday and Thursday between 6 and 8pm, the value would be Tu,Th 16:00-20:00.</td>
+                        <td property="rdfs:comment">The time at which the Contact Point is normally available.</td>
+                        <td property="skos:scopeNote"></td>
                         <td></td>
                       </tr>
                     
@@ -1058,102 +1095,6 @@ The key difference between a locator and a locator name is that the latter is a 
                   </dl>
                 </div>
 		
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id="Opening Hours Specification"><a href="http://data.europa.eu/m8g/OpeningHoursSpecification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/OpeningHoursSpecification" data-placement="right">Opening Hours Specification</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Definition</dt><dd>An exceptional circumstance that overrides the normal Opening Hours, such as being closed on public holidays.</dd>
-                    
-                    <dt>Usage</dt><dd>This class is aligned to Schema.org OpeningHoursSpecification class.</dd>
-                    
-		    
-                    <dt>Properties</dt>
-		     
-                    <dd>For this entity the following properties are defined:
-                      <a href="#Opening%20Hours%20Specification%3Aday%20of%20week">day of week</a>, 
-                      <a href="#Opening%20Hours%20Specification%3Avalid%20from">valid from</a>, 
-                      <a href="#Opening%20Hours%20Specification%3Avalid%20through">valid through</a>.</dd>
-                    
-                  </dl>
-                </div>
-		 
-                <div class="u-table-overflow">
-                  <table class="data-table">
-                    <thead>
-                      <tr class="data-table__header">
-                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
-                        <th class="data-table__header-title--sortable">Expected Range</th>
-                        <th class="data-table__header-title--sortable">Definition</th>
-                        <th class="data-table__header-title--sortable">Usage</th>
-                        <th class="data-table__header-title--sortable">Codelist</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="supertype">
-                    
-                      <tr id="Opening%20Hours%20Specification%3Aday%20of%20week" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/dayOfWeek">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/dayOfWeek" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/dayOfWeek" data-placement="right">
-                            day of week</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#anyURI" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#anyURI" data-placement="right">URI</a>
-                            
-                          
-                        </td>
-                        <td property="rdfs:comment">The day of the week for which these opening hours are valid.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Opening%20Hours%20Specification%3Avalid%20from" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/validFrom">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/validFrom" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/validFrom" data-placement="right">
-                            valid from</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a>
-                            
-                          
-                        </td>
-                        <td property="rdfs:comment">The date when the Opening Hours Specification becomes valid.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Opening%20Hours%20Specification%3Avalid%20through" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/validThrough">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.europa.eu/m8g/validThrough" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/validThrough" data-placement="right">
-                            valid through</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			     
-			    <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">DateTime</a>
-                            
-                          
-                        </td>
-                        <td property="rdfs:comment">The date after when the Opening Hours Specification is not valid.</td>
-                        <td property="skos:scopeNote">For example the end of an offer, salary period, or a period of opening hours.</td>
-                        <td></td>
-                      </tr>
-                    
-                    </tbody>
-                  </table>
-                </div>
-      			  
             </div>
             
               <div class="region region--no-space-top">
@@ -1382,7 +1323,7 @@ This definition is consistent with the more detailed definition of a "public sec
 			    
                           
                         </td>
-                        <td property="rdfs:comment">The Contact Point that provides contact information of the Public Organization.</td>
+                        <td property="rdfs:comment">The main contact information of the resource.</td>
                         <td property="skos:scopeNote">Usually a phone number and e-mail address. Other contact methods may be included, including online contact information, but this is conceptually distinct from the organization's homepage that may or may not provide contact information.</td>
                         <td></td>
                       </tr>
@@ -1766,6 +1707,80 @@ property.</td>
       			  
             </div>
             
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="Temporal Entity"><a href="http://www.w3.org/2006/time#TemporalEntity" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#TemporalEntity" data-placement="right">Temporal Entity</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Definition</dt><dd>A temporal interval or instant.</dd>
+                    
+		    
+                    <dt>Properties</dt>
+		     
+                    <dd>For this entity the following properties are defined:
+                      <a href="#Temporal%20Entity%3Adescription">description</a>, 
+                      <a href="#Temporal%20Entity%3Afrequency">frequency</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Temporal%20Entity%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
+                            description</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-toggle="tooltip" data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">Text</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">A  textual representation of the Temporal Entity.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Temporal%20Entity%3Afrequency" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/frequency">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/frequency" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/frequency" data-placement="right">
+                            frequency</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			     
+			    <a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Code</a>
+                            
+                          
+                        </td>
+                        <td property="rdfs:comment">The recurrence of an instant or period.</td>
+                        <td property="skos:scopeNote">It is recommended to use the frequency from an existing vocabulary like the <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency">Frequency</a> from the Publications Office.</td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
 
             
 	    
@@ -1787,7 +1802,7 @@ property.</td>
                 (non-normative)
                 
 <p>
-A changelog describing the (major) changes to the previous version (1.0.0) of the Core Public Organization Vocabulary and the new version that is being proposed in this specification (2.0.0), can be found <a href="https://github.com/SEMICeu/CPOV/blob/master/releases/2.00/Changelog.md">here</a>.
+A changelog describing the (major) changes to the previous version (2.00) of the Core Public Organization Vocabulary and the new version that is being proposed in this specification (2.1.0), can be found <a href="https://github.com/SEMICeu/CPOV/blob/master/releases/2.1.0/Changelog.md">here</a>.
 </p>
 
             </div>
