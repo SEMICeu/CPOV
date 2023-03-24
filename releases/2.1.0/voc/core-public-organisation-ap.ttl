@@ -27,25 +27,17 @@ This definition is consistent with the more detailed definition of a \"public se
   rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 <http://data.europa.eu/m8g/contactPage> a owl:ObjectProperty;
-  rdfs:domain <http://data.europa.eu/m8g/ContactPoint>;
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range foaf:Document .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 <http://data.europa.eu/m8g/email> a owl:DatatypeProperty;
-  rdfs:domain <http://data.europa.eu/m8g/ContactPoint>;
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range rdfs:Literal .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 <http://data.europa.eu/m8g/frequency> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "It is recommended to use the frequency from an existing vocabulary like the <a href=\"https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency\">Frequency</a> from the Publications Office."@en;
-  rdfs:domain <http://www.w3.org/2006/time#TemporalEntity>;
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range skos:Concept .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 <http://data.europa.eu/m8g/telephone> a owl:DatatypeProperty;
-  rdfs:domain <http://data.europa.eu/m8g/ContactPoint>;
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
-  rdfs:range rdfs:Literal .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>; .
 
 dc:description a rdf:Property;
   rdfs:label "description"@en .
