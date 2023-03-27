@@ -37,7 +37,7 @@ This definition is consistent with the more detailed definition of a \"public se
   rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 <http://data.europa.eu/m8g/telephone> a owl:DatatypeProperty;
-  rdfs:isDefinedBy <http://data.europa.eu/m8g>; .
+  rdfs:isDefinedBy <http://data.europa.eu/m8g> .
 
 dc:description a rdf:Property;
   rdfs:label "description"@en .
@@ -63,17 +63,11 @@ org:classification a rdf:Property;
 org:hasMember a rdf:Property;
   rdfs:label "has member"@en .
 
-org:hasSubOrganization a rdf:Property;
-  rdfs:label "has sub organization"@en .
-
 org:memberOf a rdf:Property;
   rdfs:label "member of"@en .
 
 org:purpose a rdf:Property;
   rdfs:label "purpose"@en .
-
-org:subOrganizationOf a rdf:Property;
-  rdfs:label "sub organization of"@en .
 
 <http://data.europa.eu/m8g/ContactPoint> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "The Core Public Organization Vocabulary defines properties for telephone number, e-mail address and opening hours although it is noteworthy that the class is based on schema.org's ContactPoint class (http://schema.org/ContactPoint) that has additional properties that some implementations may find useful."@en;
@@ -96,10 +90,8 @@ org:subOrganizationOf a rdf:Property;
     foaf:name "Semantic Interoperability Community (SEMIC)"
   ];
   rdfs:seeAlso <http://data.europa.eu/88u/dataset/atu-type>,
-    org:subOrganizationOf,
     org:purpose,
     org:memberOf,
-    org:hasSubOrganization,
     org:hasMember,
     org:classification,
     skos:prefLabel,

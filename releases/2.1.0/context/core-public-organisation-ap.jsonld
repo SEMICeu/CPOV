@@ -143,6 +143,16 @@
     },
     "ImageObject": "http://data.europa.eu/m8g/ImageObject",
     "Organization": "http://www.w3.org/ns/org#Organization",
+    "Organization.hasSubOrganization": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
+      "@type": "@id"
+    },
+    "Organization.subOrganizationOf": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "@id"
+    },
     "OrganizationalUnit": "http://www.w3.org/ns/org#OrganizationalUnit",
     "OrganizationalUnit.unitOf": {
       "@container": "@set",
@@ -183,11 +193,6 @@
     "PublicOrganisation.hasMember": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/org#hasMember",
-      "@type": "@id"
-    },
-    "PublicOrganisation.hasSubOrganization": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
       "@type": "@id"
     },
     "PublicOrganisation.hasUnit": {
@@ -243,11 +248,6 @@
     "PublicOrganisation.spatial": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "@id"
-    },
-    "PublicOrganisation.subOrganizationOf": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
       "@type": "@id"
     },
     "ReferenceFramework": "http://data.europa.eu/m8g/ReferenceFramework",

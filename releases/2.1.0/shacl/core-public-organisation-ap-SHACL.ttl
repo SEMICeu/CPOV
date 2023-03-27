@@ -9,331 +9,951 @@
 @prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en> <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_enshapes> <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ContactPointShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ImageObjectShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#PublicOrganisationShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ReferenceFrameworkShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AdministrativeTerritorialUnitShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#TemporalEntityShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#IdentifierShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AddressShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ChangeEventShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationalUnitShape>,
-    <https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#DocumentShape> .
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation> rdfs:member <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ImageObjectShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFrameworkShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AdministrativeTerritorialUnitShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationalUnitShape>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#DocumentShape> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AddressShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:datatype rdf:langString;
-    shacl:description "The name of a geographic area that groups Addresses."@en;
-    shacl:name "address area"@en;
-    shacl:path <http://www.w3.org/ns/locn#addressArea>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "A globally unique identifier for each instance of an Address."@en;
-    shacl:name "address ID"@en;
-    shacl:path <http://www.w3.org/ns/locn#addressId>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The name of the uppermost level of the address, almost always a country."@en;
-    shacl:name "administrative unit level 1"@en;
-    shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
-    shacl:name "administrative unit level 2"@en;
-    shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The complete address written as a string."@en;
-    shacl:name "full address"@en;
-    shacl:path <http://www.w3.org/ns/locn#fullAddress>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "A number or sequence of characters that uniquely identifies the locator within the relevant scope."@en;
-    shacl:name "locator designator"@en;
-    shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "Proper noun(s) applied to the real world entity identified by the locator."@en;
-    shacl:name "locator name"@en;
-    shacl:path <http://www.w3.org/ns/locn#locatorName>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "A location designator for a postal delivery point at a post office, usually a number."@en;
-    shacl:name "post office box"@en;
-    shacl:path <http://www.w3.org/ns/locn#poBox>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
-    shacl:name "post code"@en;
-    shacl:path <http://www.w3.org/ns/locn#postCode>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
-    shacl:name "post name"@en;
-    shacl:path <http://www.w3.org/ns/locn#postName>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The name of a passage or way through from one location to another."@en;
-    shacl:name "thoroughfare"@en;
-    shacl:path <http://www.w3.org/ns/locn#thoroughfare>
-  ];
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/006de06965023999963c4307153479c8629991d9>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/03690748629ed1c685fc6a365780375be09bce76>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/256ffe464f9c7682e950f7853ef0b6060580435b>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/3a0fcecd9e5f4e8deb4d102b9d072a4b067b773e>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/8b4c4bdd61e921f78483a3141338773693d4b2ef>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/9097b947404def8604330ec2fc5a0bd405128b35>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/9aaaf1750887d905949d78ac718f18c02809a28e>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/9c278b09ca17b0ef710224829c0354dc4c2f9a40>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/9c2d6af39a55e5e6a76f6b852bbcbada029c21af>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/a9a46434014b93624ab68c9a56a5bc66a38da9a4>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/aa9622c05f497ef1b06496716742dd5cbfc6f0c9>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/ac2d62a08fd924f88a79f0e70cda9fca4d484fd2>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/ae24e9fc95115753cabe5ad6bd3c05b9751cd13c>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/b35e8c8ed2d85ea47f163d53cafca733ecb29389>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/f1144df3e852614939e86f2e427788162aa7cb72>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa>;
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#AdministrativeTerritorialUnitShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/006de06965023999963c4307153479c8629991d9> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Alocator%20name";
+  shacl:description "Proper noun(s) applied to the real world entity identified by the locator."@en;
+  shacl:name "locator name"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#locatorName>;
+  <https://purl.eu/ns/shacl#message> "The expected value for locator name is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/03690748629ed1c685fc6a365780375be09bce76> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aadministrative%20unit%20level%201";
+  shacl:description "The name of the uppermost level of the address, almost always a country."@en;
+  shacl:name "administrative unit level 1"@en;
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL1>;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for administrative unit level 1"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Athoroughfare";
+  shacl:datatype rdf:langString;
+  shacl:description "The name of a passage or way through from one location to another."@en;
+  shacl:name "thoroughfare"@en;
+  shacl:path <http://www.w3.org/ns/locn#thoroughfare>;
+  <https://purl.eu/ns/shacl#message> "The range of thoroughfare must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/256ffe464f9c7682e950f7853ef0b6060580435b> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aadministrative%20unit%20level%202";
+  shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
+  shacl:name "administrative unit level 2"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL2>;
+  <https://purl.eu/ns/shacl#message> "The expected value for administrative unit level 2 is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aadministrative%20unit%20level%201";
+  shacl:datatype rdf:langString;
+  shacl:description "The name of the uppermost level of the address, almost always a country."@en;
+  shacl:name "administrative unit level 1"@en;
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL1>;
+  <https://purl.eu/ns/shacl#message> "The range of administrative unit level 1 must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/3a0fcecd9e5f4e8deb4d102b9d072a4b067b773e> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Afull%20address";
+  shacl:description "The complete address written as a string."@en;
+  shacl:name "full address"@en;
+  shacl:path <http://www.w3.org/ns/locn#fullAddress>;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for full address"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aaddress%20area";
+  shacl:datatype rdf:langString;
+  shacl:description "The name of a geographic area that groups Addresses."@en;
+  shacl:name "address area"@en;
+  shacl:path <http://www.w3.org/ns/locn#addressArea>;
+  <https://purl.eu/ns/shacl#message> "The range of address area must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Alocator%20name";
+  shacl:description "Proper noun(s) applied to the real world entity identified by the locator."@en;
+  shacl:name "locator name"@en;
+  shacl:path <http://www.w3.org/ns/locn#locatorName>;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for locator name"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aadministrative%20unit%20level%202";
+  shacl:datatype rdf:langString;
+  shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
+  shacl:name "administrative unit level 2"@en;
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL2>;
+  <https://purl.eu/ns/shacl#message> "The range of administrative unit level 2 must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/8b4c4bdd61e921f78483a3141338773693d4b2ef> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aaddress%20ID";
+  shacl:description "A globally unique identifier for each instance of an Address."@en;
+  shacl:name "address ID"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#addressId>;
+  <https://purl.eu/ns/shacl#message> "The expected value for address ID is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/9097b947404def8604330ec2fc5a0bd405128b35> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Alocator%20designator";
+  shacl:description "A number or sequence of characters that uniquely identifies the locator within the relevant scope."@en;
+  shacl:name "locator designator"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#locatorDesignator>;
+  <https://purl.eu/ns/shacl#message> "The expected value for locator designator is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Apost%20name";
+  shacl:datatype rdf:langString;
+  shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
+  shacl:name "post name"@en;
+  shacl:path <http://www.w3.org/ns/locn#postName>;
+  <https://purl.eu/ns/shacl#message> "The range of post name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/9aaaf1750887d905949d78ac718f18c02809a28e> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aadministrative%20unit%20level%201";
+  shacl:description "The name of the uppermost level of the address, almost always a country."@en;
+  shacl:name "administrative unit level 1"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL1>;
+  <https://purl.eu/ns/shacl#message> "The expected value for administrative unit level 1 is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/9c278b09ca17b0ef710224829c0354dc4c2f9a40> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Apost%20office%20box";
+  shacl:description "A location designator for a postal delivery point at a post office, usually a number."@en;
+  shacl:name "post office box"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#poBox>;
+  <https://purl.eu/ns/shacl#message> "The expected value for post office box is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/9c2d6af39a55e5e6a76f6b852bbcbada029c21af> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Afull%20address";
+  shacl:description "The complete address written as a string."@en;
+  shacl:name "full address"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#fullAddress>;
+  <https://purl.eu/ns/shacl#message> "The expected value for full address is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/a9a46434014b93624ab68c9a56a5bc66a38da9a4> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Apost%20name";
+  shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
+  shacl:name "post name"@en;
+  shacl:path <http://www.w3.org/ns/locn#postName>;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for post name"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/aa9622c05f497ef1b06496716742dd5cbfc6f0c9> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Athoroughfare";
+  shacl:description "The name of a passage or way through from one location to another."@en;
+  shacl:name "thoroughfare"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#thoroughfare>;
+  <https://purl.eu/ns/shacl#message> "The expected value for thoroughfare is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/ac2d62a08fd924f88a79f0e70cda9fca4d484fd2> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Athoroughfare";
+  shacl:description "The name of a passage or way through from one location to another."@en;
+  shacl:name "thoroughfare"@en;
+  shacl:path <http://www.w3.org/ns/locn#thoroughfare>;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for thoroughfare"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/ae24e9fc95115753cabe5ad6bd3c05b9751cd13c> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aadministrative%20unit%20level%202";
+  shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
+  shacl:name "administrative unit level 2"@en;
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL2>;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for administrative unit level 2"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/b35e8c8ed2d85ea47f163d53cafca733ecb29389> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aaddress%20area";
+  shacl:description "The name of a geographic area that groups Addresses."@en;
+  shacl:name "address area"@en;
+  shacl:path <http://www.w3.org/ns/locn#addressArea>;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for address area"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Apost%20code";
+  shacl:description "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
+  shacl:name "post code"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#postCode>;
+  <https://purl.eu/ns/shacl#message> "The expected value for post code is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Alocator%20name";
+  shacl:datatype rdf:langString;
+  shacl:description "Proper noun(s) applied to the real world entity identified by the locator."@en;
+  shacl:name "locator name"@en;
+  shacl:path <http://www.w3.org/ns/locn#locatorName>;
+  <https://purl.eu/ns/shacl#message> "The range of locator name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Afull%20address";
+  shacl:datatype rdf:langString;
+  shacl:description "The complete address written as a string."@en;
+  shacl:name "full address"@en;
+  shacl:path <http://www.w3.org/ns/locn#fullAddress>;
+  <https://purl.eu/ns/shacl#message> "The range of full address must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/f1144df3e852614939e86f2e427788162aa7cb72> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Aaddress%20area";
+  shacl:description "The name of a geographic area that groups Addresses."@en;
+  shacl:name "address area"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#addressArea>;
+  <https://purl.eu/ns/shacl#message> "The expected value for address area is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Address%3Apost%20name";
+  shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
+  shacl:name "post name"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#postName>;
+  <https://purl.eu/ns/shacl#message> "The expected value for post name is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#AdministrativeTerritorialUnitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/88u/dataset/atu-type> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ChangeEventShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:datatype rdf:langString;
-    shacl:description "A textual explanation of the event."@en;
-    shacl:name "description"@en;
-    shacl:path dc:description
-  ], [
-    shacl:datatype xsd:dateTime;
-    shacl:description "The time instant when the state of the organisation update was terminated."@en;
-    shacl:name "ended at time"@en;
-    shacl:path prov:endedAtTime
-  ], [
-    shacl:class <http://data.europa.eu/m8g/ReferenceFramework>;
-    shacl:description "A piece of legislation or a policy document that prompted the change."@en;
-    shacl:name "has formal framework"@en;
-    shacl:path <http://data.europa.eu/m8g/hasFormalFramework>
-  ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "The Organization that existed before the change."@en;
-    shacl:name "original organization"@en;
-    shacl:path org:originalOrganization
-  ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "This property links a Change Event or a Foundation Event to the Organization that resulted from it."@en;
-    shacl:name "resulting organization"@en;
-    shacl:path org:resultingOrganization
-  ], [
-    shacl:datatype xsd:dateTime;
-    shacl:description "The time instant when the state of the organisation update was initiated."@en;
-    shacl:name "started at time"@en;
-    shacl:path prov:startedAtTime
-  ];
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/4001f8641cfcfcd686fd8271f7baf370d91e6253>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/486118f166e37e64f3bbebdca97588fb5074ba52>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/4ab53582adf88e7640a0c4d5d27ecb74be319041>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/8627cc58af87cec3202bbca080fc234f2f3c8c8a>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/8725f4613ad6961359ab221c2266e7e9567bc4a7>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
   shacl:targetClass org:ChangeEvent .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ContactPointShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/4001f8641cfcfcd686fd8271f7baf370d91e6253> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Astarted%20at%20time";
+  shacl:description "The time instant when the state of the organisation update was initiated."@en;
+  shacl:name "started at time"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path prov:startedAtTime;
+  <https://purl.eu/ns/shacl#message> "The expected value for started at time is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/486118f166e37e64f3bbebdca97588fb5074ba52> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Aresulting%20organization";
+  shacl:description "This property links a Change Event or a Foundation Event to the Organization that resulted from it."@en;
+  shacl:name "resulting organization"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:resultingOrganization;
+  <https://purl.eu/ns/shacl#message> "The expected value for resulting organization is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/4ab53582adf88e7640a0c4d5d27ecb74be319041> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Ahas%20formal%20framework";
+  shacl:description "A piece of legislation or a policy document that prompted the change."@en;
+  shacl:name "has formal framework"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/hasFormalFramework>;
+  <https://purl.eu/ns/shacl#message> "The expected value for has formal framework is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Aoriginal%20organization";
+  shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+  shacl:description "The Organization that existed before the change."@en;
+  shacl:name "original organization"@en;
+  shacl:path org:originalOrganization;
+  <https://purl.eu/ns/shacl#message> "The range of original organization must be of type <http://data.europa.eu/m8g/PublicOrganisation>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Adescription";
+  shacl:description "A textual explanation of the event."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description;
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Adescription";
+  shacl:description "A textual explanation of the event."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for description"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Aended%20at%20time";
+  shacl:datatype xsd:dateTime;
+  shacl:description "The time instant when the state of the organisation update was terminated."@en;
+  shacl:name "ended at time"@en;
+  shacl:path prov:endedAtTime;
+  <https://purl.eu/ns/shacl#message> "The range of ended at time must be of type <http://www.w3.org/2001/XMLSchema#dateTime>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Astarted%20at%20time";
+  shacl:datatype xsd:dateTime;
+  shacl:description "The time instant when the state of the organisation update was initiated."@en;
+  shacl:name "started at time"@en;
+  shacl:path prov:startedAtTime;
+  <https://purl.eu/ns/shacl#message> "The range of started at time must be of type <http://www.w3.org/2001/XMLSchema#dateTime>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Ahas%20formal%20framework";
+  shacl:class <http://data.europa.eu/m8g/ReferenceFramework>;
+  shacl:description "A piece of legislation or a policy document that prompted the change."@en;
+  shacl:name "has formal framework"@en;
+  shacl:path <http://data.europa.eu/m8g/hasFormalFramework>;
+  <https://purl.eu/ns/shacl#message> "The range of has formal framework must be of type <http://data.europa.eu/m8g/ReferenceFramework>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/8627cc58af87cec3202bbca080fc234f2f3c8c8a> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Aended%20at%20time";
+  shacl:description "The time instant when the state of the organisation update was terminated."@en;
+  shacl:name "ended at time"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path prov:endedAtTime;
+  <https://purl.eu/ns/shacl#message> "The expected value for ended at time is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/8725f4613ad6961359ab221c2266e7e9567bc4a7> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Aoriginal%20organization";
+  shacl:description "The Organization that existed before the change."@en;
+  shacl:name "original organization"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:originalOrganization;
+  <https://purl.eu/ns/shacl#message> "The expected value for original organization is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Aresulting%20organization";
+  shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+  shacl:description "This property links a Change Event or a Foundation Event to the Organization that resulted from it."@en;
+  shacl:name "resulting organization"@en;
+  shacl:path org:resultingOrganization;
+  <https://purl.eu/ns/shacl#message> "The range of resulting organization must be of type <http://data.europa.eu/m8g/PublicOrganisation>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ChangeEvent%3Adescription";
+  shacl:datatype rdf:langString;
+  shacl:description "A textual explanation of the event."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
-    shacl:description "The time during which the Contact Point is not available."@en;
-    shacl:name "availability restriction"@en;
-    shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>
-  ], [
-    shacl:class foaf:Document;
-    shacl:description "A web page that could be used to reach out the Contact Point."@en;
-    shacl:name "contact page"@en;
-    shacl:path <http://data.europa.eu/m8g/contactPage>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "An electronic address through which the Contact Point can be contacted."@en;
-    shacl:name "has email"@en;
-    shacl:path <http://data.europa.eu/m8g/email>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "A telephone number through which the Contact Point can be contacted."@en;
-    shacl:name "has telephone"@en;
-    shacl:path <http://data.europa.eu/m8g/telephone>
-  ], [
-    shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
-    shacl:description "The time at which the Contact Point is normally available."@en;
-    shacl:name "opening hours"@en;
-    shacl:path <http://data.europa.eu/m8g/openingHours>
-  ];
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/0c404fa56c64463c15f65878d02efa16eec065b0>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/2c2e861c64607bcf2ba7176ce18df71cc690e57e>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/8547f9fea103d51b54d608cf10f98b003fde7378>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/939028c42179e18627eac7954154b35dbc9c5a42>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/a736c4b01ea7557518c0c146f3e311947ce00ccc>;
   shacl:targetClass <http://data.europa.eu/m8g/ContactPoint> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#DocumentShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/0c404fa56c64463c15f65878d02efa16eec065b0> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPoint%3Ahas%20email";
+  shacl:description "An electronic address through which the Contact Point can be contacted."@en;
+  shacl:name "has email"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://data.europa.eu/m8g/email>;
+  <https://purl.eu/ns/shacl#message> "The expected value for has email is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/2c2e861c64607bcf2ba7176ce18df71cc690e57e> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPoint%3Aavailability%20restriction";
+  shacl:description "The time during which the Contact Point is not available."@en;
+  shacl:name "availability restriction"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>;
+  <https://purl.eu/ns/shacl#message> "The expected value for availability restriction is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPoint%3Aopening%20hours";
+  shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
+  shacl:description "The time at which the Contact Point is normally available."@en;
+  shacl:name "opening hours"@en;
+  shacl:path <http://data.europa.eu/m8g/openingHours>;
+  <https://purl.eu/ns/shacl#message> "The range of opening hours must be of type <http://www.w3.org/2006/time#TemporalEntity>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/8547f9fea103d51b54d608cf10f98b003fde7378> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPoint%3Ahas%20telephone";
+  shacl:description "A telephone number through which the Contact Point can be contacted."@en;
+  shacl:name "has telephone"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://data.europa.eu/m8g/telephone>;
+  <https://purl.eu/ns/shacl#message> "The expected value for has telephone is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/939028c42179e18627eac7954154b35dbc9c5a42> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPoint%3Aopening%20hours";
+  shacl:description "The time at which the Contact Point is normally available."@en;
+  shacl:name "opening hours"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/openingHours>;
+  <https://purl.eu/ns/shacl#message> "The expected value for opening hours is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPoint%3Acontact%20page";
+  shacl:class foaf:Document;
+  shacl:description "A web page that could be used to reach out the Contact Point."@en;
+  shacl:name "contact page"@en;
+  shacl:path <http://data.europa.eu/m8g/contactPage>;
+  <https://purl.eu/ns/shacl#message> "The range of contact page must be of type <http://xmlns.com/foaf/0.1/Document>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPoint%3Aavailability%20restriction";
+  shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
+  shacl:description "The time during which the Contact Point is not available."@en;
+  shacl:name "availability restriction"@en;
+  shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification>;
+  <https://purl.eu/ns/shacl#message> "The range of availability restriction must be of type <http://www.w3.org/2006/time#TemporalEntity>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPointShape/a736c4b01ea7557518c0c146f3e311947ce00ccc> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ContactPoint%3Acontact%20page";
+  shacl:description "A web page that could be used to reach out the Contact Point."@en;
+  shacl:name "contact page"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/contactPage>;
+  <https://purl.eu/ns/shacl#message> "The expected value for contact page is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#DocumentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass foaf:Document .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#IdentifierShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:datatype xsd:date;
-    shacl:description "The date on which the Identifier was assigned."@en;
-    shacl:name "date of issue"@en;
-    shacl:path dc:issued
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The name of the agency responsible for issuing the Identifier."@en;
-    shacl:name "issuing authority name"@en;
-    shacl:path <http://www.w3.org/ns/adms#schemeAgency>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "A string of characters to uniquely identify a concept."@en;
-    shacl:name "notation"@en;
-    shacl:path skos:notation
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "Name of the scheme used to construct the identifier."@en;
-    shacl:name "scheme name"@en;
-    shacl:path rdfs:label
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "URI of the scheme used to construct the identifier."@en;
-    shacl:name "scheme URI"@en;
-    shacl:path dc:conformsTo
-  ];
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/053d0ae3c4b213ae2f708e5e492b97e2cce08686>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/19a8c28b6b8faa24df544d81a43730e4fa7878d0>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/51bb668356193afa459fd0a35bef46bd1f351ccf>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/561379c5a289dfe97488bc20c49d7e80b1271b47>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/886a37c0a64d5093fa1e6f0352c72d6c9999de5f>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/96725f4e9a21bc55e077ed6f796b20e9c550b021>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/b66ff3c38dc89b4412b1715099a98c00ae8118c9>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/cc40d454ac926043491df929ab05a361896b0021>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/ce99d905817e35ff5ebdf871e45b1e25e2e85188>;
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ImageObjectShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/053d0ae3c4b213ae2f708e5e492b97e2cce08686> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Anotation";
+  shacl:description "A string of characters to uniquely identify a concept."@en;
+  shacl:name "notation"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path skos:notation;
+  <https://purl.eu/ns/shacl#message> "The expected value for notation is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Ascheme%20URI";
+  shacl:datatype rdf:langString;
+  shacl:description "URI of the scheme used to construct the identifier."@en;
+  shacl:name "scheme URI"@en;
+  shacl:path dc:conformsTo;
+  <https://purl.eu/ns/shacl#message> "The range of scheme URI must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/19a8c28b6b8faa24df544d81a43730e4fa7878d0> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Aissuing%20authority%20name";
+  shacl:description "The name of the agency responsible for issuing the Identifier."@en;
+  shacl:name "issuing authority name"@en;
+  shacl:path <http://www.w3.org/ns/adms#schemeAgency>;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for issuing authority name"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Ascheme%20name";
+  shacl:datatype rdf:langString;
+  shacl:description "Name of the scheme used to construct the identifier."@en;
+  shacl:name "scheme name"@en;
+  shacl:path rdfs:label;
+  <https://purl.eu/ns/shacl#message> "The range of scheme name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/51bb668356193afa459fd0a35bef46bd1f351ccf> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Ascheme%20URI";
+  shacl:description "URI of the scheme used to construct the identifier."@en;
+  shacl:name "scheme URI"@en;
+  shacl:path dc:conformsTo;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for scheme URI"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/561379c5a289dfe97488bc20c49d7e80b1271b47> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Aissuing%20authority%20name";
+  shacl:description "The name of the agency responsible for issuing the Identifier."@en;
+  shacl:name "issuing authority name"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/adms#schemeAgency>;
+  <https://purl.eu/ns/shacl#message> "The expected value for issuing authority name is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/886a37c0a64d5093fa1e6f0352c72d6c9999de5f> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Adate%20of%20issue";
+  shacl:description "The date on which the Identifier was assigned."@en;
+  shacl:name "date of issue"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:issued;
+  <https://purl.eu/ns/shacl#message> "The expected value for date of issue is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/96725f4e9a21bc55e077ed6f796b20e9c550b021> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Aissuing%20authority%20name";
+  shacl:datatype rdf:langString;
+  shacl:description "The name of the agency responsible for issuing the Identifier."@en;
+  shacl:name "issuing authority name"@en;
+  shacl:path <http://www.w3.org/ns/adms#schemeAgency>;
+  <https://purl.eu/ns/shacl#message> "The range of issuing authority name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Adate%20of%20issue";
+  shacl:datatype xsd:date;
+  shacl:description "The date on which the Identifier was assigned."@en;
+  shacl:name "date of issue"@en;
+  shacl:path dc:issued;
+  <https://purl.eu/ns/shacl#message> "The range of date of issue must be of type <http://www.w3.org/2001/XMLSchema#date>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/b66ff3c38dc89b4412b1715099a98c00ae8118c9> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Ascheme%20name";
+  shacl:description "Name of the scheme used to construct the identifier."@en;
+  shacl:name "scheme name"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path rdfs:label;
+  <https://purl.eu/ns/shacl#message> "The expected value for scheme name is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/cc40d454ac926043491df929ab05a361896b0021> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Ascheme%20URI";
+  shacl:description "URI of the scheme used to construct the identifier."@en;
+  shacl:name "scheme URI"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:conformsTo;
+  <https://purl.eu/ns/shacl#message> "The expected value for scheme URI is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#IdentifierShape/ce99d905817e35ff5ebdf871e45b1e25e2e85188> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Identifier%3Ascheme%20name";
+  shacl:description "Name of the scheme used to construct the identifier."@en;
+  shacl:name "scheme name"@en;
+  shacl:path rdfs:label;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for scheme name"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ImageObjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/ImageObject> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape/92c74470235a279a2d61934b4fefb7b590a20196>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape/9a3fb2f7985ffdaf5c668c29a107a7e8ac02f1ce>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a>;
   shacl:targetClass org:Organization .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#OrganizationalUnitShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Organization%3Asub%20organization%20of";
+  shacl:class org:Organization;
+  shacl:description "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization."@en;
+  shacl:name "sub organization of"@en;
+  shacl:path org:subOrganizationOf;
+  <https://purl.eu/ns/shacl#message> "The range of sub organization of must be of type <http://www.w3.org/ns/org#Organization>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape/92c74470235a279a2d61934b4fefb7b590a20196> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Organization%3Ahas%20sub%20organization";
+  shacl:description "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an organization which is a sub-part or child of this organization."@en;
+  shacl:name "has sub organization"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:hasSubOrganization;
+  <https://purl.eu/ns/shacl#message> "The expected value for has sub organization is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape/9a3fb2f7985ffdaf5c668c29a107a7e8ac02f1ce> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Organization%3Asub%20organization%20of";
+  shacl:description "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization."@en;
+  shacl:name "sub organization of"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:subOrganizationOf;
+  <https://purl.eu/ns/shacl#message> "The expected value for sub organization of is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#Organization%3Ahas%20sub%20organization";
+  shacl:class org:Organization;
+  shacl:description "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an organization which is a sub-part or child of this organization."@en;
+  shacl:name "has sub organization"@en;
+  shacl:path org:hasSubOrganization;
+  <https://purl.eu/ns/shacl#message> "The range of has sub organization must be of type <http://www.w3.org/ns/org#Organization>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationalUnitShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "The Public Organisation of which the Organizational Unit is an operational department."@en;
-    shacl:name "unit of"@en;
-    shacl:path org:unitOf
-  ];
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationalUnitShape/593ec4d85aab525ca301cd8c16a7804012862a94>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898>;
   shacl:targetClass org:OrganizationalUnit .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#PublicOrganisationShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationalUnitShape/593ec4d85aab525ca301cd8c16a7804012862a94> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationalUnit%3Aunit%20of";
+  shacl:description "The Public Organisation of which the Organizational Unit is an operational department."@en;
+  shacl:name "unit of"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:unitOf;
+  <https://purl.eu/ns/shacl#message> "The expected value for unit of is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#OrganizationalUnit%3Aunit%20of";
+  shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+  shacl:description "The Public Organisation of which the Organizational Unit is an operational department."@en;
+  shacl:name "unit of"@en;
+  shacl:path org:unitOf;
+  <https://purl.eu/ns/shacl#message> "The range of unit of must be of type <http://data.europa.eu/m8g/PublicOrganisation>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:class <http://www.w3.org/ns/locn#Address>;
-    shacl:description "The Address of a Public Organization."@en;
-    shacl:name "address"@en;
-    shacl:path <http://www.w3.org/ns/locn#address>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "An alternative or informal name(s) of a Public Organization, irrespective of language."@en;
-    shacl:name "alternative label"@en;
-    shacl:path skos:altLabel
-  ], [
-    shacl:class org:ChangeEvent;
-    shacl:description "The Change Event that changed the Organization."@en;
-    shacl:name "changed by"@en;
-    shacl:path org:changedBy
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "The categorisation of the Public Organization."@en;
-    shacl:name "classification"@en;
-    shacl:path org:classification
-  ], [
-    shacl:class <http://data.europa.eu/m8g/ContactPoint>;
-    shacl:description "The main contact information of the resource."@en;
-    shacl:name "contact point"@en;
-    shacl:path <http://data.europa.eu/m8g/contactPoint>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "The textual description of the Public Organization."@en;
-    shacl:name "description"@en;
-    shacl:path dc:description
-  ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "An Organization which is a member of another without being a sub organization, they are independent entities."@en;
-    shacl:name "has member"@en;
-    shacl:path org:hasMember
-  ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "An Organization which is a sub-part or child of the Pulic Organization."@en;
-    shacl:name "has sub organization"@en;
-    shacl:path org:hasSubOrganization
-  ], [
-    shacl:class org:OrganizationalUnit;
-    shacl:description "An operational department within the Public Organization."@en;
-    shacl:name "has unit"@en;
-    shacl:path org:hasUnit
-  ], [
-    shacl:class foaf:Document;
-    shacl:description "The official home page of the Public Organization."@en;
-    shacl:name "homepage"@en;
-    shacl:path foaf:homepage
-  ], [
-    shacl:class <http://www.w3.org/ns/adms#Identifier>;
-    shacl:description "The unambiguous structured reference for the Public Organization."@en;
-    shacl:name "identifier"@en;
-    shacl:path <http://www.w3.org/ns/adms#identifier>
-  ], [
-    shacl:class <http://data.europa.eu/m8g/ImageObject>;
-    shacl:description "A graphic symbol to represent the Public Oorganization."@en;
-    shacl:name "logo"@en;
-    shacl:path <http://data.europa.eu/m8g/logo>
-  ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities."@en;
-    shacl:name "member of"@en;
-    shacl:path org:memberOf
-  ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."@en;
-    shacl:name "next"@en;
-    shacl:path xhv:next
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
-    shacl:name "preferred label"@en;
-    shacl:path skos:prefLabel
-  ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed"@en;
-    shacl:name "prev"@en;
-    shacl:path xhv:prev
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "This property describes the reasons of existence of an Organization."@en;
-    shacl:name "purpose"@en;
-    shacl:path org:purpose
-  ], [
-    shacl:class org:ChangeEvent;
-    shacl:description "A Change Event from which the Public Organisation resulted."@en;
-    shacl:name "resulted from"@en;
-    shacl:path org:resultedFrom
-  ], [
-    shacl:class <http://data.europa.eu/88u/dataset/atu-type>;
-    shacl:description "This property links an Organization to the Administrative Region(s) that it covers."@en;
-    shacl:name "spatial"@en;
-    shacl:path dc:spatial
-  ], [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "An Organization of which the Public Organization is a sub organization."@en;
-    shacl:name "sub organization of"@en;
-    shacl:path org:subOrganizationOf
-  ];
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/0505000dc192edd685f1d7977ad74385de6ba52f>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/0a79940f6fb16193ff7a69f50e5ff7e807f2685d>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/2c7d994dd540f92c116cac913e2aa5d588945f1f>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/3b9cc6558bbf88b7fbaf0c2f3ab6ae7fb8c1b4b9>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/3fd45972245296a986ad73d13d316ec9d1e5533f>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/57a7a4d6d9d2b1b84ef808e54e9ecec28f144fa0>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/85f0eb3f010328d7d5f3a329cc69fc5a734348b6>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/88b702e12401b15cdfbfb284e359477f384bce54>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8932cdc11dcea78a104fe961daef62e126485fc3>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8b53fded3b6187eee98607304ab29bc1977b4fe2>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8d36a62f83db7f94097e27edb51306e17e0d40f3>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/9adf9f5890592909cf3e67021ae7ab4f895a7745>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/aadbd67a77a624f073be2076627fb9dc883cbe48>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/b93b49bf7122a561ecc9674449665256e441faf5>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/c43a74a9b5e93cc6d40339ffc6e25f1f4c999233>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/c552423cc5f3398e44ee3d03cdf62e560fedd532>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/d6979a925fe55dfff828a2b49a43d8dc817fac76>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/fa88865dff8487890f122fd7257ebca0d81ff275>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e>;
   shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#ReferenceFrameworkShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/0505000dc192edd685f1d7977ad74385de6ba52f> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aalternative%20label";
+  shacl:description "An alternative or informal name(s) of a Public Organization, irrespective of language."@en;
+  shacl:name "alternative label"@en;
+  shacl:path skos:altLabel;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for alternative label"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Ahas%20member";
+  shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+  shacl:description "An Organization which is a member of another without being a sub organization, they are independent entities."@en;
+  shacl:name "has member"@en;
+  shacl:path org:hasMember;
+  <https://purl.eu/ns/shacl#message> "The range of has member must be of type <http://data.europa.eu/m8g/PublicOrganisation>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/0a79940f6fb16193ff7a69f50e5ff7e807f2685d> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Alogo";
+  shacl:description "A graphic symbol to represent the Public Oorganization."@en;
+  shacl:name "logo"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/logo>;
+  <https://purl.eu/ns/shacl#message> "The expected value for logo is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/2c7d994dd540f92c116cac913e2aa5d588945f1f> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aaddress";
+  shacl:description "The Address of a Public Organization."@en;
+  shacl:name "address"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://www.w3.org/ns/locn#address>;
+  <https://purl.eu/ns/shacl#message> "The expected value for address is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Apreferred%20label";
+  shacl:datatype rdf:langString;
+  shacl:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
+  shacl:name "preferred label"@en;
+  shacl:path skos:prefLabel;
+  <https://purl.eu/ns/shacl#message> "The range of preferred label must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/3b9cc6558bbf88b7fbaf0c2f3ab6ae7fb8c1b4b9> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Apreferred%20label";
+  shacl:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
+  shacl:name "preferred label"@en;
+  shacl:path skos:prefLabel;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for preferred label"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Achanged%20by";
+  shacl:class org:ChangeEvent;
+  shacl:description "The Change Event that changed the Organization."@en;
+  shacl:name "changed by"@en;
+  shacl:path org:changedBy;
+  <https://purl.eu/ns/shacl#message> "The range of changed by must be of type <http://www.w3.org/ns/org#ChangeEvent>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/3fd45972245296a986ad73d13d316ec9d1e5533f> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Amember%20of";
+  shacl:description "An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities."@en;
+  shacl:name "member of"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:memberOf;
+  <https://purl.eu/ns/shacl#message> "The expected value for member of is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/57a7a4d6d9d2b1b84ef808e54e9ecec28f144fa0> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aprev";
+  shacl:description "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed"@en;
+  shacl:name "prev"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path xhv:prev;
+  <https://purl.eu/ns/shacl#message> "The expected value for prev is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Anext";
+  shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+  shacl:description "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."@en;
+  shacl:name "next"@en;
+  shacl:path xhv:next;
+  <https://purl.eu/ns/shacl#message> "The range of next must be of type <http://data.europa.eu/m8g/PublicOrganisation>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aaddress";
+  shacl:class <http://www.w3.org/ns/locn#Address>;
+  shacl:description "The Address of a Public Organization."@en;
+  shacl:name "address"@en;
+  shacl:path <http://www.w3.org/ns/locn#address>;
+  <https://purl.eu/ns/shacl#message> "The range of address must be of type <http://www.w3.org/ns/locn#Address>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Ahas%20unit";
+  shacl:class org:OrganizationalUnit;
+  shacl:description "An operational department within the Public Organization."@en;
+  shacl:name "has unit"@en;
+  shacl:path org:hasUnit;
+  <https://purl.eu/ns/shacl#message> "The range of has unit must be of type <http://www.w3.org/ns/org#OrganizationalUnit>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Adescription";
+  shacl:description "The textual description of the Public Organization."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description;
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Apreferred%20label";
+  shacl:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
+  shacl:name "preferred label"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path skos:prefLabel;
+  <https://purl.eu/ns/shacl#message> "The expected value for preferred label is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Adescription";
+  shacl:description "The textual description of the Public Organization."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for description"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Acontact%20point";
+  shacl:class <http://data.europa.eu/m8g/ContactPoint>;
+  shacl:description "The main contact information of the resource."@en;
+  shacl:name "contact point"@en;
+  shacl:path <http://data.europa.eu/m8g/contactPoint>;
+  <https://purl.eu/ns/shacl#message> "The range of contact point must be of type <http://data.europa.eu/m8g/ContactPoint>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/85f0eb3f010328d7d5f3a329cc69fc5a734348b6> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Achanged%20by";
+  shacl:description "The Change Event that changed the Organization."@en;
+  shacl:name "changed by"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:changedBy;
+  <https://purl.eu/ns/shacl#message> "The expected value for changed by is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Apurpose";
+  shacl:class skos:Concept;
+  shacl:description "This property describes the reasons of existence of an Organization."@en;
+  shacl:name "purpose"@en;
+  shacl:path org:purpose;
+  <https://purl.eu/ns/shacl#message> "The range of purpose must be of type <http://www.w3.org/2004/02/skos/core#Concept>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/88b702e12401b15cdfbfb284e359477f384bce54> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aalternative%20label";
+  shacl:description "An alternative or informal name(s) of a Public Organization, irrespective of language."@en;
+  shacl:name "alternative label"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path skos:altLabel;
+  <https://purl.eu/ns/shacl#message> "The expected value for alternative label is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8932cdc11dcea78a104fe961daef62e126485fc3> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Apurpose";
+  shacl:description "This property describes the reasons of existence of an Organization."@en;
+  shacl:name "purpose"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:purpose;
+  <https://purl.eu/ns/shacl#message> "The expected value for purpose is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8b53fded3b6187eee98607304ab29bc1977b4fe2> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aresulted%20from";
+  shacl:description "A Change Event from which the Public Organisation resulted."@en;
+  shacl:name "resulted from"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:resultedFrom;
+  <https://purl.eu/ns/shacl#message> "The expected value for resulted from is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8d36a62f83db7f94097e27edb51306e17e0d40f3> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Ahomepage";
+  shacl:description "The official home page of the Public Organization."@en;
+  shacl:name "homepage"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path foaf:homepage;
+  <https://purl.eu/ns/shacl#message> "The expected value for homepage is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aspatial";
+  shacl:class <http://data.europa.eu/88u/dataset/atu-type>;
+  shacl:description "This property links an Organization to the Administrative Region(s) that it covers."@en;
+  shacl:name "spatial"@en;
+  shacl:path dc:spatial;
+  <https://purl.eu/ns/shacl#message> "The range of spatial must be of type <http://data.europa.eu/88u/dataset/atu-type>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/9adf9f5890592909cf3e67021ae7ab4f895a7745> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Acontact%20point";
+  shacl:description "The main contact information of the resource."@en;
+  shacl:name "contact point"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/contactPoint>;
+  <https://purl.eu/ns/shacl#message> "The expected value for contact point is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aidentifier";
+  shacl:description "The unambiguous structured reference for the Public Organization."@en;
+  shacl:name "identifier"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://www.w3.org/ns/adms#identifier>;
+  <https://purl.eu/ns/shacl#message> "The expected value for identifier is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/b93b49bf7122a561ecc9674449665256e441faf5> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aspatial";
+  shacl:description "This property links an Organization to the Administrative Region(s) that it covers."@en;
+  shacl:name "spatial"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path dc:spatial;
+  <https://purl.eu/ns/shacl#message> "The expected value for spatial is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aclassification";
+  shacl:class skos:Concept;
+  shacl:description "The categorisation of the Public Organization."@en;
+  shacl:name "classification"@en;
+  shacl:path org:classification;
+  <https://purl.eu/ns/shacl#message> "The range of classification must be of type <http://www.w3.org/2004/02/skos/core#Concept>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aresulted%20from";
+  shacl:class org:ChangeEvent;
+  shacl:description "A Change Event from which the Public Organisation resulted."@en;
+  shacl:name "resulted from"@en;
+  shacl:path org:resultedFrom;
+  <https://purl.eu/ns/shacl#message> "The range of resulted from must be of type <http://www.w3.org/ns/org#ChangeEvent>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aprev";
+  shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+  shacl:description "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed"@en;
+  shacl:name "prev"@en;
+  shacl:path xhv:prev;
+  <https://purl.eu/ns/shacl#message> "The range of prev must be of type <http://data.europa.eu/m8g/PublicOrganisation>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/c43a74a9b5e93cc6d40339ffc6e25f1f4c999233> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Anext";
+  shacl:description "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."@en;
+  shacl:name "next"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path xhv:next;
+  <https://purl.eu/ns/shacl#message> "The expected value for next is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/c552423cc5f3398e44ee3d03cdf62e560fedd532> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aclassification";
+  shacl:description "The categorisation of the Public Organization."@en;
+  shacl:name "classification"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:classification;
+  <https://purl.eu/ns/shacl#message> "The expected value for classification is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Adescription";
+  shacl:datatype rdf:langString;
+  shacl:description "The textual description of the Public Organization."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/d6979a925fe55dfff828a2b49a43d8dc817fac76> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Ahas%20unit";
+  shacl:description "An operational department within the Public Organization."@en;
+  shacl:name "has unit"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:hasUnit;
+  <https://purl.eu/ns/shacl#message> "The expected value for has unit is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aalternative%20label";
+  shacl:datatype rdf:langString;
+  shacl:description "An alternative or informal name(s) of a Public Organization, irrespective of language."@en;
+  shacl:name "alternative label"@en;
+  shacl:path skos:altLabel;
+  <https://purl.eu/ns/shacl#message> "The range of alternative label must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Alogo";
+  shacl:class <http://data.europa.eu/m8g/ImageObject>;
+  shacl:description "A graphic symbol to represent the Public Oorganization."@en;
+  shacl:name "logo"@en;
+  shacl:path <http://data.europa.eu/m8g/logo>;
+  <https://purl.eu/ns/shacl#message> "The range of logo must be of type <http://data.europa.eu/m8g/ImageObject>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Aidentifier";
+  shacl:class <http://www.w3.org/ns/adms#Identifier>;
+  shacl:description "The unambiguous structured reference for the Public Organization."@en;
+  shacl:name "identifier"@en;
+  shacl:path <http://www.w3.org/ns/adms#identifier>;
+  <https://purl.eu/ns/shacl#message> "The range of identifier must be of type <http://www.w3.org/ns/adms#Identifier>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Amember%20of";
+  shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+  shacl:description "An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities."@en;
+  shacl:name "member of"@en;
+  shacl:path org:memberOf;
+  <https://purl.eu/ns/shacl#message> "The range of member of must be of type <http://data.europa.eu/m8g/PublicOrganisation>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/fa88865dff8487890f122fd7257ebca0d81ff275> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Ahas%20member";
+  shacl:description "An Organization which is a member of another without being a sub organization, they are independent entities."@en;
+  shacl:name "has member"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path org:hasMember;
+  <https://purl.eu/ns/shacl#message> "The expected value for has member is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#PublicOrganisation%3Ahomepage";
+  shacl:class foaf:Document;
+  shacl:description "The official home page of the Public Organization."@en;
+  shacl:name "homepage"@en;
+  shacl:path foaf:homepage;
+  <https://purl.eu/ns/shacl#message> "The range of homepage must be of type <http://xmlns.com/foaf/0.1/Document>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFrameworkShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:datatype rdfs:Literal;
-    shacl:description "An unambiguous reference to a Reference Framework."@en;
-    shacl:name "identifier"@en;
-    shacl:path dc:identifier
-  ], [
-    shacl:class org:ChangeEvent;
-    shacl:description "A Change Event linked to relevant legislation or policy documents."@en;
-    shacl:name "implements"@en;
-    shacl:path <http://purl.org/vocab/cpsv#implements>
-  ];
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFrameworkShape/45c29ae77863bf76765c44a8c34f3cab08469fbf>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFrameworkShape/aadbd67a77a624f073be2076627fb9dc883cbe48>;
   shacl:targetClass <http://data.europa.eu/m8g/ReferenceFramework> .
 
-<https://semiceu.github.io//shacl/core-public-organisation-ap-SHACL_en#TemporalEntityShape> a shacl:NodeShape;
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFrameworkShape/45c29ae77863bf76765c44a8c34f3cab08469fbf> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFramework%3Aimplements";
+  shacl:description "A Change Event linked to relevant legislation or policy documents."@en;
+  shacl:name "implements"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://purl.org/vocab/cpsv#implements>;
+  <https://purl.eu/ns/shacl#message> "The expected value for implements is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFramework%3Aimplements";
+  shacl:class org:ChangeEvent;
+  shacl:description "A Change Event linked to relevant legislation or policy documents."@en;
+  shacl:name "implements"@en;
+  shacl:path <http://purl.org/vocab/cpsv#implements>;
+  <https://purl.eu/ns/shacl#message> "The range of implements must be of type <http://www.w3.org/ns/org#ChangeEvent>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFrameworkShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#ReferenceFramework%3Aidentifier";
+  shacl:description "An unambiguous reference to a Reference Framework."@en;
+  shacl:name "identifier"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:identifier;
+  <https://purl.eu/ns/shacl#message> "The expected value for identifier is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:datatype rdf:langString;
-    shacl:description "A  textual representation of the Temporal Entity."@en;
-    shacl:name "description"@en;
-    shacl:path dc:description
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "The recurrence of an instant or period."@en;
-    shacl:name "frequency"@en;
-    shacl:path <http://data.europa.eu/m8g/frequency>
-  ];
+  shacl:property <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/63a8cf23801ef605734507c621693524f22476dd>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/6cae9880e515253132af1452a38a8a5827165149>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/768bb4171e00505886fe9a1e949b4cd71f0eb548>,
+    <https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
   shacl:targetClass <http://www.w3.org/2006/time#TemporalEntity> .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntity%3Afrequency";
+  shacl:class skos:Concept;
+  shacl:description "The recurrence of an instant or period."@en;
+  shacl:name "frequency"@en;
+  shacl:path <http://data.europa.eu/m8g/frequency>;
+  <https://purl.eu/ns/shacl#message> "The range of frequency must be of type <http://www.w3.org/2004/02/skos/core#Concept>."@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/63a8cf23801ef605734507c621693524f22476dd> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntity%3Afrequency";
+  shacl:description "The recurrence of an instant or period."@en;
+  shacl:name "frequency"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/frequency>;
+  <https://purl.eu/ns/shacl#message> "The expected value for frequency is a rdfs:Resource (URI or blank node)"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntity%3Adescription";
+  shacl:description "A  textual representation of the Temporal Entity."@en;
+  shacl:name "description"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:description;
+  <https://purl.eu/ns/shacl#message> "The expected value for description is a Literal"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntity%3Adescription";
+  shacl:description "A  textual representation of the Temporal Entity."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  shacl:uniqueLang true;
+  <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for description"@en .
+
+<https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io//doc/core-vocabulary/core-public-organisation#TemporalEntity%3Adescription";
+  shacl:datatype rdf:langString;
+  shacl:description "A  textual representation of the Temporal Entity."@en;
+  shacl:name "description"@en;
+  shacl:path dc:description;
+  <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
