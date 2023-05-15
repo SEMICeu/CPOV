@@ -71,17 +71,11 @@ org:classification a rdf:Property;
 org:hasMember a rdf:Property;
   rdfs:label "has member"@en .
 
-org:hasSubOrganization a rdf:Property;
-  rdfs:label "has sub organization"@en .
-
 org:memberOf a rdf:Property;
   rdfs:label "member of"@en .
 
 org:purpose a rdf:Property;
   rdfs:label "purpose"@en .
-
-org:subOrganizationOf a rdf:Property;
-  rdfs:label "sub organization of"@en .
 
 <http://data.europa.eu/m8g/ContactPoint> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "The Core Public Organization Vocabulary defines properties for telephone number, e-mail address and opening hours although it is noteworthy that the class is based on schema.org's ContactPoint class (http://schema.org/ContactPoint) that has additional properties that some implementations may find useful."@en;
@@ -104,42 +98,20 @@ org:subOrganizationOf a rdf:Property;
     foaf:name "Semantic Interoperability Community (SEMIC)"
   ];
   rdfs:seeAlso <http://data.europa.eu/88u/dataset/atu-type>,
-    org:subOrganizationOf,
-    org:purpose,
-    org:memberOf,
-    org:hasSubOrganization,
-    org:hasMember,
-    org:classification,
-    skos:prefLabel,
-    skos:altLabel,
-    xhv:prev,
-    xhv:next,
+    dc:description,
     dc:spatial,
-    dc:description;
+    xhv:next,
+    xhv:prev,
+    skos:altLabel,
+    skos:prefLabel,
+    org:classification,
+    org:hasMember,
+    org:memberOf,
+    org:purpose;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
-    foaf:firstName "Bert";
-    foaf:lastName "Van Nuffelen";
-    schemas:affiliation [foaf:name "TenForce"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Emidio";
-    foaf:lastName "Stani";
-    schemas:affiliation [foaf:name "PwC EU Services"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Dimitri";
-    foaf:lastName "Schepers";
-    schemas:affiliation [foaf:name "PwC EU Services"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Pavlina";
-    foaf:lastName "Fragkou";
-    schemas:affiliation [foaf:name "European Commission"]
-  ], [
-    a foaf:Person;
-    foaf:firstName "Michiel";
-    foaf:lastName "De Keyzer";
+    foaf:firstName "Florian";
+    foaf:lastName "Barthelemy";
     schemas:affiliation [foaf:name "PwC EU Services"]
   ], [
     a foaf:Person;
@@ -148,9 +120,29 @@ org:subOrganizationOf a rdf:Property;
     schemas:affiliation [foaf:name "PwC EU Services"]
   ], [
     a foaf:Person;
-    foaf:firstName "Florian";
-    foaf:lastName "Barthelemy";
+    foaf:firstName "Michiel";
+    foaf:lastName "De Keyzer";
     schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Pavlina";
+    foaf:lastName "Fragkou";
+    schemas:affiliation [foaf:name "European Commission"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Dimitri";
+    foaf:lastName "Schepers";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Emidio";
+    foaf:lastName "Stani";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen";
+    schemas:affiliation [foaf:name "TenForce"]
   ];
   foaf:maker [
     a foaf:Person;

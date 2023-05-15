@@ -54,7 +54,7 @@
               <div class="head" role="status" id="status">
               <dl>
               <dt>Status</dt><dd>Semic Recommendation</dd>
-              <dt>Published at</dt><dd>2022-12-05</dd>
+              <dt>Published at</dt><dd>2023-05-15</dd>
               <dt>This version</dt><dd>
                
 <a href="https://semiceu.github.io/CPOV/releases/2.1.0">https://semiceu.github.io/CPOV/releases/2.1.0</a>
@@ -199,7 +199,7 @@
 <a href="https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.0">https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.0</a>
 
               </dd>
-              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/c32f6b55883b86d91eeee8a73559c33c3fc91d7d/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/c32f6b55883b86d91eeee8a73559c33c3fc91d7d/CHANGELOG</a></dd>-->
+              <!--<dt>Changelog</dt><dd><a href="git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/1a3c0d334ad3563e6ee963b76c033f41d60474a2/CHANGELOG">git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git/blob/1a3c0d334ad3563e6ee963b76c033f41d60474a2/CHANGELOG</a></dd>-->
               <dt>Feedback</dt><dd><a href="https://github.com/SEMICeu/CPOV/issues">https://github.com/SEMICeu/CPOV/issues</a></dd>
               <!--<dt>Registry of standards</dt><dd><a href="CPOV">CPOV</a></dd>-->
 
@@ -276,7 +276,7 @@
                 <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
                 
                 <p>
-                  This Core Vocabulary has the status of Semic Recommendation published on 2022-12-05.
+                  This Core Vocabulary has the status of Semic Recommendation published on 2023-05-15.
 	        </p>
                 
               </section>
@@ -306,17 +306,17 @@
                       <br />
                       |
                       <a href="#Address">Address</a> |
-                      <a href="#Administrative Territorial Unit">Administrative Territorial Unit</a> |
-                      <a href="#Change Event">Change Event</a> |
-                      <a href="#Contact Point">Contact Point</a> |
+                      <a href="#AdministrativeTerritorialUnit">Administrative Territorial Unit</a> |
+                      <a href="#ChangeEvent">Change Event</a> |
+                      <a href="#Contactpoint">ContactPoint</a> |
                       <a href="#Document">Document</a> |
                       <a href="#Identifier">Identifier</a> |
-                      <a href="#Image Object">Image Object</a> |
+                      <a href="#ImageObject">Image Object</a> |
                       <a href="#Organization">Organization</a> |
-                      <a href="#Organizational Unit">Organizational Unit</a> |
-                      <a href="#Public Organisation">Public Organisation</a> |
-                      <a href="#Reference Framework">Reference Framework</a> |
-                      <a href="#Temporal Entity">Temporal Entity</a> |
+                      <a href="#OrganizationalUnit">Organizational Unit</a> |
+                      <a href="#PublicOrganisation">Public Organisation</a> |
+                      <a href="#ReferenceFramework">Reference Framework</a> |
+                      <a href="#TemporalEntity">Temporal Entity</a> |
                     </p>
                   </div>
                   
@@ -348,6 +348,7 @@ This specification was heavily based on the INSPIRE Address Representation data 
 <br/><br/>
 - full address (the complete address as a formatted string)<br/>
 - addressID (a unique identifier for the address).
+<br/><br/>
 The first of these allows publishers to simply provide the complete Address as one string, with or without formatting. This is analogous to <a href="https://www.w3.org/TR/vcard-rdf/#d4e953">vCard's label property</a>.
 <br/><br/>
 The addressID is part of the INSPIRE guidelines and provides a hook that can be used to link the Address to an alternative representation, such as vCard or OASIS xAL.
@@ -358,16 +359,16 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Address%3Aaddress%20area">address area</a>, 
-                      <a href="#Address%3Aaddress%20ID">address ID</a>, 
-                      <a href="#Address%3Aadministrative%20unit%20level%201">administrative unit level 1</a>, 
-                      <a href="#Address%3Aadministrative%20unit%20level%202">administrative unit level 2</a>, 
-                      <a href="#Address%3Afull%20address">full address</a>, 
-                      <a href="#Address%3Alocator%20designator">locator designator</a>, 
-                      <a href="#Address%3Alocator%20name">locator name</a>, 
-                      <a href="#Address%3Apost%20code">post code</a>, 
-                      <a href="#Address%3Apost%20name">post name</a>, 
-                      <a href="#Address%3Apost%20office%20box">post office box</a>, 
+                      <a href="#Address%3AaddressArea">address area</a>, 
+                      <a href="#Address%3AaddressId">address ID</a>, 
+                      <a href="#Address%3AadministrativeUnitLevel1">administrative unit level 1</a>, 
+                      <a href="#Address%3AadministrativeUnitLevel2">administrative unit level 2</a>, 
+                      <a href="#Address%3AfullAddress">full address</a>, 
+                      <a href="#Address%3AlocatorDesignator">locator designator</a>, 
+                      <a href="#Address%3AlocatorName">locator name</a>, 
+                      <a href="#Address%3ApostCode">post code</a>, 
+                      <a href="#Address%3ApostName">post name</a>, 
+                      <a href="#Address%3ApostOfficeBox">post office box</a>, 
                       <a href="#Address%3Athoroughfare">thoroughfare</a>.</dd>
                     
                   </dl>
@@ -387,7 +388,7 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
 
                     <tbody class="supertype">
                     
-                      <tr id="Address%3Aaddress%20area" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressArea">
+                      <tr id="Address%3AaddressArea" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressArea">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#addressArea" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#addressArea" data-placement="right">
@@ -406,7 +407,7 @@ This class belongs to <a href="https://semiceu.github.io/Core-Location-Vocabular
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aaddress%20ID" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressId">
+                      <tr id="Address%3AaddressId" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#addressId">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#addressId" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#addressId" data-placement="right">
@@ -428,13 +429,12 @@ The INSPIRE method of representing addresses is very detailed, designed primaril
 Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard.
 <br/><br/>
 To provide maximum flexibility in the Core Vocabulary, whilst remaining interoperable with INSPIRE Address Guidelines (which EU Member States are obliged to use), the  Core Location Vocabulary provides the extra property of full address and makes use of INSPIRE's addressID.
-<br/><br/>
-The datatype of addressID is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.
+
 </td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aadministrative%20unit%20level%201" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL1">
+                      <tr id="Address%3AadministrativeUnitLevel1" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL1">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#adminUnitL1" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#adminUnitL1" data-placement="right">
@@ -453,7 +453,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Aadministrative%20unit%20level%202" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL2">
+                      <tr id="Address%3AadministrativeUnitLevel2" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#adminUnitL2">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#adminUnitL2" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#adminUnitL2" data-placement="right">
@@ -472,7 +472,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Afull%20address" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#fullAddress">
+                      <tr id="Address%3AfullAddress" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#fullAddress">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#fullAddress" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#fullAddress" data-placement="right">
@@ -491,7 +491,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Alocator%20designator" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#locatorDesignator">
+                      <tr id="Address%3AlocatorDesignator" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#locatorDesignator">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#locatorDesignator" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#locatorDesignator" data-placement="right">
@@ -507,12 +507,12 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         </td>
                         <td property="rdfs:comment">A number or sequence of characters that uniquely identifies the locator within the relevant scope.</td>
                         <td property="skos:scopeNote">In simpler terms, this is the building number, apartment number, etc. For an address such as "Flat 3, 17 Bridge Street", the locator is "flat 3, 17".
-<br/><br/>
-The datatype of locatorDesignator is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
+
+</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Alocator%20name" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#locatorName">
+                      <tr id="Address%3AlocatorName" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#locatorName">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#locatorName" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#locatorName" data-placement="right">
@@ -529,11 +529,11 @@ The datatype of locatorDesignator is indicated as Literal (keeping backward comp
                         <td property="rdfs:comment">Proper noun(s) applied to the real world entity identified by the locator.</td>
                         <td property="skos:scopeNote">The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building.
 <br/><br/>
-The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.</td>
+The key difference between a locator designator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Apost%20code" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postCode">
+                      <tr id="Address%3ApostCode" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postCode">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#postCode" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#postCode" data-placement="right">
@@ -548,13 +548,11 @@ The key difference between a locator and a locator name is that the latter is a 
                           
                         </td>
                         <td property="rdfs:comment">The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</td>
-                        <td property="skos:scopeNote">Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example "75000".
-
-The datatype of addressID is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
+                        <td property="skos:scopeNote">Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example "75000".</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Apost%20name" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postName">
+                      <tr id="Address%3ApostName" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#postName">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#postName" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#postName" data-placement="right">
@@ -573,7 +571,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                         <td></td>
                       </tr>
                     
-                      <tr id="Address%3Apost%20office%20box" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#poBox">
+                      <tr id="Address%3ApostOfficeBox" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#poBox">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#poBox" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#poBox" data-placement="right">
@@ -588,9 +586,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                           
                         </td>
                         <td property="rdfs:comment">A location designator for a postal delivery point at a post office, usually a number.</td>
-                        <td property="skos:scopeNote">INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is "9383".
-<br/><br/>
-The datatype of poBox is indicated as Literal (keeping backward compatibility with the old W3C specification) that can be typed differently, see <a href="https://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal">more</a>.</td>
+                        <td property="skos:scopeNote">INSPIRE's name for this is "postalDeliveryIdentifier" for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is "9383".</td>
                         <td></td>
                       </tr>
                     
@@ -620,7 +616,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Administrative Territorial Unit"><a href="http://data.europa.eu/88u/dataset/atu-type" data-toggle="tooltip" data-content="http://data.europa.eu/88u/dataset/atu-type" data-placement="right">Administrative Territorial Unit</a></h3>
+              <h3 class="h3" id="AdministrativeTerritorialUnit"><a href="http://data.europa.eu/88u/dataset/atu-type" data-toggle="tooltip" data-content="http://data.europa.eu/88u/dataset/atu-type" data-placement="right">Administrative Territorial Unit</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Definition</dt><dd>A code from a list that represents the administrative territorial unit of the EU Member States, based on national official / legal information and the ISO 3166-2 standard.</dd>
@@ -636,7 +632,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Change Event"><a href="http://www.w3.org/ns/org#ChangeEvent" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#ChangeEvent" data-placement="right">Change Event</a></h3>
+              <h3 class="h3" id="ChangeEvent"><a href="http://www.w3.org/ns/org#ChangeEvent" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#ChangeEvent" data-placement="right">Change Event</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Definition</dt><dd>An event which resulted in a major change to an Organization such as a merger or complete restructuring.</dd>
@@ -647,12 +643,12 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Change%20Event%3Adescription">description</a>, 
-                      <a href="#Change%20Event%3Aended%20at%20time">ended at time</a>, 
-                      <a href="#Change%20Event%3Ahas%20formal%20framework">has formal framework</a>, 
-                      <a href="#Change%20Event%3Aoriginal%20organization">original organization</a>, 
-                      <a href="#Change%20Event%3Aresulting%20organization">resulting organization</a>, 
-                      <a href="#Change%20Event%3Astarted%20at%20time">started at time</a>.</dd>
+                      <a href="#ChangeEvent%3Adescription">description</a>, 
+                      <a href="#ChangeEvent%3AendedAtTime">ended at time</a>, 
+                      <a href="#ChangeEvent%3AhasFormalFramework">has formal framework</a>, 
+                      <a href="#ChangeEvent%3AoriginalOrganization">original organization</a>, 
+                      <a href="#ChangeEvent%3AresultingOrganization">resulting organization</a>, 
+                      <a href="#ChangeEvent%3AstartedAtTime">started at time</a>.</dd>
                     
                   </dl>
                 </div>
@@ -671,7 +667,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
 
                     <tbody class="supertype">
                     
-                      <tr id="Change%20Event%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
+                      <tr id="ChangeEvent%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
@@ -690,7 +686,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Change%20Event%3Aended%20at%20time" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#endedAtTime">
+                      <tr id="ChangeEvent%3AendedAtTime" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#endedAtTime">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/prov#endedAtTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#endedAtTime" data-placement="right">
@@ -709,7 +705,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Change%20Event%3Ahas%20formal%20framework" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasFormalFramework">
+                      <tr id="ChangeEvent%3AhasFormalFramework" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasFormalFramework">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/hasFormalFramework" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasFormalFramework" data-placement="right">
@@ -728,7 +724,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Change%20Event%3Aoriginal%20organization" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#originalOrganization">
+                      <tr id="ChangeEvent%3AoriginalOrganization" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#originalOrganization">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#originalOrganization" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#originalOrganization" data-placement="right">
@@ -747,7 +743,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Change%20Event%3Aresulting%20organization" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#resultingOrganization">
+                      <tr id="ChangeEvent%3AresultingOrganization" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#resultingOrganization">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#resultingOrganization" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#resultingOrganization" data-placement="right">
@@ -766,7 +762,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Change%20Event%3Astarted%20at%20time" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#startedAtTime">
+                      <tr id="ChangeEvent%3AstartedAtTime" typeof="rdfs:Property" resource="http://www.w3.org/ns/prov#startedAtTime">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/prov#startedAtTime" data-toggle="tooltip" data-content="http://www.w3.org/ns/prov#startedAtTime" data-placement="right">
@@ -792,7 +788,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Contact Point"><a href="http://data.europa.eu/m8g/ContactPoint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ContactPoint" data-placement="right">Contact Point</a></h3>
+              <h3 class="h3" id="Contactpoint"><a href="http://data.europa.eu/m8g/ContactPoint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ContactPoint" data-placement="right">ContactPoint</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Definition</dt><dd>Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with.</dd>
@@ -803,11 +799,11 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Contact%20Point%3Aavailability%20restriction">availability restriction</a>, 
-                      <a href="#Contact%20Point%3Acontact%20page">contact page</a>, 
-                      <a href="#Contact%20Point%3Ahas%20email">has email</a>, 
-                      <a href="#Contact%20Point%3Ahas%20telephone">has telephone</a>, 
-                      <a href="#Contact%20Point%3Aopening%20hours">opening hours</a>.</dd>
+                      <a href="#Contactpoint%3AavailabilityRestriction">availability restriction</a>, 
+                      <a href="#Contactpoint%3AcontactPage">contact page</a>, 
+                      <a href="#Contactpoint%3AhasEmail">has email</a>, 
+                      <a href="#Contactpoint%3AhasTelephone">has telephone</a>, 
+                      <a href="#Contactpoint%3AopeningHours">opening hours</a>.</dd>
                     
                   </dl>
                 </div>
@@ -826,7 +822,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
 
                     <tbody class="supertype">
                     
-                      <tr id="Contact%20Point%3Aavailability%20restriction" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
+                      <tr id="Contactpoint%3AavailabilityRestriction" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/specialOpeningHoursSpecification" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/specialOpeningHoursSpecification" data-placement="right">
@@ -845,7 +841,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Contact%20Point%3Acontact%20page" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/contactPage">
+                      <tr id="Contactpoint%3AcontactPage" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/contactPage">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/contactPage" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/contactPage" data-placement="right">
@@ -864,7 +860,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Contact%20Point%3Ahas%20email" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/email">
+                      <tr id="Contactpoint%3AhasEmail" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/email">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/email" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/email" data-placement="right">
@@ -883,7 +879,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Contact%20Point%3Ahas%20telephone" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/telephone">
+                      <tr id="Contactpoint%3AhasTelephone" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/telephone">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/telephone" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/telephone" data-placement="right">
@@ -902,7 +898,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Contact%20Point%3Aopening%20hours" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/openingHours">
+                      <tr id="Contactpoint%3AopeningHours" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/openingHours">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/openingHours" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/openingHours" data-placement="right">
@@ -957,11 +953,11 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Identifier%3Adate%20of%20issue">date of issue</a>, 
-                      <a href="#Identifier%3Aissuing%20authority%20name">issuing authority name</a>, 
+                      <a href="#Identifier%3AdateOfIssue">date of issue</a>, 
+                      <a href="#Identifier%3AissuingAuthorityName">issuing authority name</a>, 
                       <a href="#Identifier%3Anotation">notation</a>, 
-                      <a href="#Identifier%3Ascheme%20name">scheme name</a>, 
-                      <a href="#Identifier%3Ascheme%20URI">scheme URI</a>.</dd>
+                      <a href="#Identifier%3AschemeName">scheme name</a>, 
+                      <a href="#Identifier%3AschemeUri">scheme URI</a>.</dd>
                     
                   </dl>
                 </div>
@@ -980,7 +976,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
 
                     <tbody class="supertype">
                     
-                      <tr id="Identifier%3Adate%20of%20issue" typeof="rdfs:Property" resource="http://purl.org/dc/terms/issued">
+                      <tr id="Identifier%3AdateOfIssue" typeof="rdfs:Property" resource="http://purl.org/dc/terms/issued">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/issued" data-toggle="tooltip" data-content="http://purl.org/dc/terms/issued" data-placement="right">
@@ -999,7 +995,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Identifier%3Aissuing%20authority%20name" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#schemeAgency">
+                      <tr id="Identifier%3AissuingAuthorityName" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#schemeAgency">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/adms#schemeAgency" data-toggle="tooltip" data-content="http://www.w3.org/ns/adms#schemeAgency" data-placement="right">
@@ -1037,7 +1033,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Identifier%3Ascheme%20name" typeof="rdfs:Property" resource="http://www.w3.org/2000/01/rdf-schema#label">
+                      <tr id="Identifier%3AschemeName" typeof="rdfs:Property" resource="http://www.w3.org/2000/01/rdf-schema#label">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/2000/01/rdf-schema#label" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#label" data-placement="right">
@@ -1056,7 +1052,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         <td></td>
                       </tr>
                     
-                      <tr id="Identifier%3Ascheme%20URI" typeof="rdfs:Property" resource="http://purl.org/dc/terms/conformsTo">
+                      <tr id="Identifier%3AschemeUri" typeof="rdfs:Property" resource="http://purl.org/dc/terms/conformsTo">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/conformsTo" data-toggle="tooltip" data-content="http://purl.org/dc/terms/conformsTo" data-placement="right">
@@ -1082,7 +1078,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Image Object"><a href="http://data.europa.eu/m8g/ImageObject" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ImageObject" data-placement="right">Image Object</a></h3>
+              <h3 class="h3" id="ImageObject"><a href="http://data.europa.eu/m8g/ImageObject" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ImageObject" data-placement="right">Image Object</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Definition</dt><dd>A logo to describe / represent the PublicOrganization.</dd>
@@ -1109,31 +1105,10 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
 		   </dd>
                     
                     <dt>Properties</dt>
-		    
-                    <dd>No properties have been defined for this entity.</dd>
-                    
-                  </dl>
-                </div>
-		
-            </div>
-            
-              <div class="region region--no-space-top">
-              <h3 class="h3" id="Organizational Unit"><a href="http://www.w3.org/ns/org#OrganizationalUnit" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#OrganizationalUnit" data-placement="right">Organizational Unit</a></h3>
-                <div class="region region--no-space-top">
-                  <dl>
-                    <dt>Definition</dt><dd>A subdivision of Organization which is part of this Organization.</dd>
-                    
-                    <dt>Usage</dt><dd>The existance of an Organizational Unit depends on the Parent Organization, which means that it can only exist in the scope of the Parent Organization and not on its own.</dd>
-                    
-		     
-		    <dt>Subclass of<dt><dd>
-                        <a href="#Organization">Organization</a>
-		   </dd>
-                    
-                    <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Organizational%20Unit%3Aunit%20of">unit of</a>.</dd>
+                      <a href="#Organization%3AhasSubOrganization">has sub organization</a>, 
+                      <a href="#Organization%3AsubOrganizationOf">sub organization of</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1152,7 +1127,86 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
 
                     <tbody class="supertype">
                     
-                      <tr id="Organizational%20Unit%3Aunit%20of" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#unitOf">
+                      <tr id="Organization%3AhasSubOrganization" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasSubOrganization">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/org#hasSubOrganization" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#hasSubOrganization" data-placement="right">
+                            has sub organization</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Organization" data-placement="right">Organization</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an organization which is a sub-part or child of this organization.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Organization%3AsubOrganizationOf" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#subOrganizationOf">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://www.w3.org/ns/org#subOrganizationOf" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#subOrganizationOf" data-placement="right">
+                            sub organization of</a>
+                          </code>
+                        </td>
+                        <td>
+                          
+			    
+			    <a href="#Organization" data-placement="right">Organization</a>
+			    
+                          
+                        </td>
+                        <td property="rdfs:comment">Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization.</td>
+                        <td property="skos:scopeNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+              <div class="region region--no-space-top">
+              <h3 class="h3" id="OrganizationalUnit"><a href="http://www.w3.org/ns/org#OrganizationalUnit" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#OrganizationalUnit" data-placement="right">Organizational Unit</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Definition</dt><dd>A subdivision of Organization which is part of this Organization.</dd>
+                    
+                    <dt>Usage</dt><dd>The existance of an Organizational Unit depends on the Parent Organization, which means that it can only exist in the scope of the Parent Organization and not on its own.</dd>
+                    
+		     
+		    <dt>Subclass of<dt><dd>
+                        <a href="#Organization">Organization</a>
+		   </dd>
+                    
+                    <dt>Properties</dt>
+		     
+                    <dd>For this entity the following properties are defined:
+                      <a href="#OrganizationalUnit%3AunitOf">unit of</a>.</dd>
+                    
+                  </dl>
+                </div>
+		 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
+                        <th class="data-table__header-title--sortable">Expected Range</th>
+                        <th class="data-table__header-title--sortable">Definition</th>
+                        <th class="data-table__header-title--sortable">Usage</th>
+                        <th class="data-table__header-title--sortable">Codelist</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="OrganizationalUnit%3AunitOf" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#unitOf">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#unitOf" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#unitOf" data-placement="right">
@@ -1178,7 +1232,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Public Organisation"><a href="http://data.europa.eu/m8g/PublicOrganisation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PublicOrganisation" data-placement="right">Public Organisation</a></h3>
+              <h3 class="h3" id="PublicOrganisation"><a href="http://data.europa.eu/m8g/PublicOrganisation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PublicOrganisation" data-placement="right">Public Organisation</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Definition</dt><dd>An Organization that is defined as being part of the public sector by a legal framework at any level.</dd>
@@ -1195,26 +1249,24 @@ This definition is consistent with the more detailed definition of a "public sec
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Public%20Organisation%3Aaddress">address</a>, 
-                      <a href="#Public%20Organisation%3Aalternative%20label">alternative label</a>, 
-                      <a href="#Public%20Organisation%3Achanged%20by">changed by</a>, 
-                      <a href="#Public%20Organisation%3Aclassification">classification</a>, 
-                      <a href="#Public%20Organisation%3Acontact%20point">contact point</a>, 
-                      <a href="#Public%20Organisation%3Adescription">description</a>, 
-                      <a href="#Public%20Organisation%3Ahas%20member">has member</a>, 
-                      <a href="#Public%20Organisation%3Ahas%20sub%20organization">has sub organization</a>, 
-                      <a href="#Public%20Organisation%3Ahas%20unit">has unit</a>, 
-                      <a href="#Public%20Organisation%3Ahomepage">homepage</a>, 
-                      <a href="#Public%20Organisation%3Aidentifier">identifier</a>, 
-                      <a href="#Public%20Organisation%3Alogo">logo</a>, 
-                      <a href="#Public%20Organisation%3Amember%20of">member of</a>, 
-                      <a href="#Public%20Organisation%3Anext">next</a>, 
-                      <a href="#Public%20Organisation%3Apreferred%20label">preferred label</a>, 
-                      <a href="#Public%20Organisation%3Aprev">prev</a>, 
-                      <a href="#Public%20Organisation%3Apurpose">purpose</a>, 
-                      <a href="#Public%20Organisation%3Aresulted%20from">resulted from</a>, 
-                      <a href="#Public%20Organisation%3Aspatial">spatial</a>, 
-                      <a href="#Public%20Organisation%3Asub%20organization%20of">sub organization of</a>.</dd>
+                      <a href="#PublicOrganisation%3Aaddress">address</a>, 
+                      <a href="#PublicOrganisation%3AalternativeLabel">alternative label</a>, 
+                      <a href="#PublicOrganisation%3AchangedBy">changed by</a>, 
+                      <a href="#PublicOrganisation%3Aclassification">classification</a>, 
+                      <a href="#PublicOrganisation%3AcontactPoint">contact point</a>, 
+                      <a href="#PublicOrganisation%3Adescription">description</a>, 
+                      <a href="#PublicOrganisation%3AhasMember">has member</a>, 
+                      <a href="#PublicOrganisation%3AhasUnit">has unit</a>, 
+                      <a href="#PublicOrganisation%3Ahomepage">homepage</a>, 
+                      <a href="#PublicOrganisation%3Aidentifier">identifier</a>, 
+                      <a href="#PublicOrganisation%3Alogo">logo</a>, 
+                      <a href="#PublicOrganisation%3AmemberOf">member of</a>, 
+                      <a href="#PublicOrganisation%3Anext">next</a>, 
+                      <a href="#PublicOrganisation%3ApreferredLabel">preferred label</a>, 
+                      <a href="#PublicOrganisation%3Aprev">prev</a>, 
+                      <a href="#PublicOrganisation%3Apurpose">purpose</a>, 
+                      <a href="#PublicOrganisation%3AresultedFrom">resulted from</a>, 
+                      <a href="#PublicOrganisation%3Aspatial">spatial</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1233,7 +1285,7 @@ This definition is consistent with the more detailed definition of a "public sec
 
                     <tbody class="supertype">
                     
-                      <tr id="Public%20Organisation%3Aaddress" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#address">
+                      <tr id="PublicOrganisation%3Aaddress" typeof="rdfs:Property" resource="http://www.w3.org/ns/locn#address">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/locn#address" data-toggle="tooltip" data-content="http://www.w3.org/ns/locn#address" data-placement="right">
@@ -1252,7 +1304,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Aalternative%20label" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#altLabel">
+                      <tr id="PublicOrganisation%3AalternativeLabel" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#altLabel">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/2004/02/skos/core#altLabel" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#altLabel" data-placement="right">
@@ -1271,7 +1323,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Achanged%20by" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#changedBy">
+                      <tr id="PublicOrganisation%3AchangedBy" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#changedBy">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#changedBy" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#changedBy" data-placement="right">
@@ -1290,7 +1342,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Aclassification" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#classification">
+                      <tr id="PublicOrganisation%3Aclassification" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#classification">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#classification" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#classification" data-placement="right">
@@ -1309,7 +1361,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Acontact%20point" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/contactPoint">
+                      <tr id="PublicOrganisation%3AcontactPoint" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/contactPoint">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/contactPoint" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/contactPoint" data-placement="right">
@@ -1319,7 +1371,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         <td>
                           
 			    
-			    <a href="#Contact Point" data-placement="right">Contact Point</a>
+			    <a href="#ContactPoint" data-placement="right">ContactPoint</a>
 			    
                           
                         </td>
@@ -1328,7 +1380,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
+                      <tr id="PublicOrganisation%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
@@ -1347,7 +1399,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Ahas%20member" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasMember">
+                      <tr id="PublicOrganisation%3AhasMember" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasMember">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#hasMember" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#hasMember" data-placement="right">
@@ -1368,26 +1420,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Ahas%20sub%20organization" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasSubOrganization">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#hasSubOrganization" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#hasSubOrganization" data-placement="right">
-                            has sub organization</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Public Organisation" data-placement="right">Public Organisation</a>
-			    
-                          
-                        </td>
-                        <td property="rdfs:comment">An Organization which is a sub-part or child of the Pulic Organization.</td>
-                        <td property="skos:scopeNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Public%20Organisation%3Ahas%20unit" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasUnit">
+                      <tr id="PublicOrganisation%3AhasUnit" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#hasUnit">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#hasUnit" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#hasUnit" data-placement="right">
@@ -1406,7 +1439,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Ahomepage" typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/homepage">
+                      <tr id="PublicOrganisation%3Ahomepage" typeof="rdfs:Property" resource="http://xmlns.com/foaf/0.1/homepage">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://xmlns.com/foaf/0.1/homepage" data-toggle="tooltip" data-content="http://xmlns.com/foaf/0.1/homepage" data-placement="right">
@@ -1425,7 +1458,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Aidentifier" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
+                      <tr id="PublicOrganisation%3Aidentifier" typeof="rdfs:Property" resource="http://www.w3.org/ns/adms#identifier">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/adms#identifier" data-toggle="tooltip" data-content="http://www.w3.org/ns/adms#identifier" data-placement="right">
@@ -1444,7 +1477,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Alogo" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/logo">
+                      <tr id="PublicOrganisation%3Alogo" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/logo">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/logo" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/logo" data-placement="right">
@@ -1463,7 +1496,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Amember%20of" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#memberOf">
+                      <tr id="PublicOrganisation%3AmemberOf" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#memberOf">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#memberOf" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#memberOf" data-placement="right">
@@ -1484,7 +1517,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Anext" typeof="rdfs:Property" resource="http://www.w3.org/1999/xhtml/vocab#next">
+                      <tr id="PublicOrganisation%3Anext" typeof="rdfs:Property" resource="http://www.w3.org/1999/xhtml/vocab#next">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/1999/xhtml/vocab#next" data-toggle="tooltip" data-content="http://www.w3.org/1999/xhtml/vocab#next" data-placement="right">
@@ -1503,7 +1536,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Apreferred%20label" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#prefLabel">
+                      <tr id="PublicOrganisation%3ApreferredLabel" typeof="rdfs:Property" resource="http://www.w3.org/2004/02/skos/core#prefLabel">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/2004/02/skos/core#prefLabel" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#prefLabel" data-placement="right">
@@ -1522,7 +1555,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Aprev" typeof="rdfs:Property" resource="http://www.w3.org/1999/xhtml/vocab#prev">
+                      <tr id="PublicOrganisation%3Aprev" typeof="rdfs:Property" resource="http://www.w3.org/1999/xhtml/vocab#prev">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/1999/xhtml/vocab#prev" data-toggle="tooltip" data-content="http://www.w3.org/1999/xhtml/vocab#prev" data-placement="right">
@@ -1541,7 +1574,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Apurpose" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#purpose">
+                      <tr id="PublicOrganisation%3Apurpose" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#purpose">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#purpose" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#purpose" data-placement="right">
@@ -1560,7 +1593,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Aresulted%20from" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#resultedFrom">
+                      <tr id="PublicOrganisation%3AresultedFrom" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#resultedFrom">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://www.w3.org/ns/org#resultedFrom" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#resultedFrom" data-placement="right">
@@ -1579,7 +1612,7 @@ An example of memberships are the EU member states and other partners which coul
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Aspatial" typeof="rdfs:Property" resource="http://purl.org/dc/terms/spatial">
+                      <tr id="PublicOrganisation%3Aspatial" typeof="rdfs:Property" resource="http://purl.org/dc/terms/spatial">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/spatial" data-toggle="tooltip" data-content="http://purl.org/dc/terms/spatial" data-placement="right">
@@ -1606,25 +1639,6 @@ property.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Public%20Organisation%3Asub%20organization%20of" typeof="rdfs:Property" resource="http://www.w3.org/ns/org#subOrganizationOf">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://www.w3.org/ns/org#subOrganizationOf" data-toggle="tooltip" data-content="http://www.w3.org/ns/org#subOrganizationOf" data-placement="right">
-                            sub organization of</a>
-                          </code>
-                        </td>
-                        <td>
-                          
-			    
-			    <a href="#Public Organisation" data-placement="right">Public Organisation</a>
-			    
-                          
-                        </td>
-                        <td property="rdfs:comment">An Organization of which the Public Organization is a sub organization.</td>
-                        <td property="skos:scopeNote">Public Organizations are often large and complex and may be a collection of smaller Organizations, each of which has a specific identity that may be legally defined. The hasSubOrganization and subOrganizationOf properties express the relationships between Organizations in a hierarchical structure.</td>
-                        <td></td>
-                      </tr>
-                    
                     </tbody>
                   </table>
                 </div>
@@ -1632,7 +1646,7 @@ property.</td>
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Reference Framework"><a href="http://data.europa.eu/m8g/ReferenceFramework" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ReferenceFramework" data-placement="right">Reference Framework</a></h3>
+              <h3 class="h3" id="ReferenceFramework"><a href="http://data.europa.eu/m8g/ReferenceFramework" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/ReferenceFramework" data-placement="right">Reference Framework</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Definition</dt><dd>Legislation or official policy from which Requirements are derived.</dd>
@@ -1643,8 +1657,8 @@ property.</td>
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Reference%20Framework%3Aidentifier">identifier</a>, 
-                      <a href="#Reference%20Framework%3Aimplements">implements</a>.</dd>
+                      <a href="#ReferenceFramework%3Aidentifier">identifier</a>, 
+                      <a href="#ReferenceFramework%3Aimplements">implements</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1663,7 +1677,7 @@ property.</td>
 
                     <tbody class="supertype">
                     
-                      <tr id="Reference%20Framework%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
+                      <tr id="ReferenceFramework%3Aidentifier" typeof="rdfs:Property" resource="http://purl.org/dc/terms/identifier">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/identifier" data-toggle="tooltip" data-content="http://purl.org/dc/terms/identifier" data-placement="right">
@@ -1682,7 +1696,7 @@ property.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Reference%20Framework%3Aimplements" typeof="rdfs:Property" resource="http://purl.org/vocab/cpsv#implements">
+                      <tr id="ReferenceFramework%3Aimplements" typeof="rdfs:Property" resource="http://purl.org/vocab/cpsv#implements">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/vocab/cpsv#implements" data-toggle="tooltip" data-content="http://purl.org/vocab/cpsv#implements" data-placement="right">
@@ -1708,7 +1722,7 @@ property.</td>
             </div>
             
               <div class="region region--no-space-top">
-              <h3 class="h3" id="Temporal Entity"><a href="http://www.w3.org/2006/time#TemporalEntity" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#TemporalEntity" data-placement="right">Temporal Entity</a></h3>
+              <h3 class="h3" id="TemporalEntity"><a href="http://www.w3.org/2006/time#TemporalEntity" data-toggle="tooltip" data-content="http://www.w3.org/2006/time#TemporalEntity" data-placement="right">Temporal Entity</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
                     <dt>Definition</dt><dd>A temporal interval or instant.</dd>
@@ -1717,8 +1731,8 @@ property.</td>
                     <dt>Properties</dt>
 		     
                     <dd>For this entity the following properties are defined:
-                      <a href="#Temporal%20Entity%3Adescription">description</a>, 
-                      <a href="#Temporal%20Entity%3Afrequency">frequency</a>.</dd>
+                      <a href="#TemporalEntity%3Adescription">description</a>, 
+                      <a href="#TemporalEntity%3Afrequency">frequency</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1737,7 +1751,7 @@ property.</td>
 
                     <tbody class="supertype">
                     
-                      <tr id="Temporal%20Entity%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
+                      <tr id="TemporalEntity%3Adescription" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
@@ -1756,7 +1770,7 @@ property.</td>
                         <td></td>
                       </tr>
                     
-                      <tr id="Temporal%20Entity%3Afrequency" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/frequency">
+                      <tr id="TemporalEntity%3Afrequency" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/frequency">
                         <td>
                           <code property="rdfs:label">
                             <a href="http://data.europa.eu/m8g/frequency" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/frequency" data-placement="right">
@@ -1843,6 +1857,16 @@ A changelog describing the (major) changes to the previous version (2.00) of the
 		<p>A reusable SHACL template for this Core Vocabulary is retrievable <a href="./shacl/core-public-organisation-ap-SHACL.ttl" target="_blank">here</a>.</p>
                 
             </div>
+			
+			<div class="region region--no-space-top" id="mappings">
+                <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Mappings</h2>
+                (non-normative)
+                
+<p>
+A mapping towards Schema.org can be found <a href="https://github.com/SEMICeu/Semantic-Mappings/tree/main/Core%20Public%20Organisation">here</a>
+<p>
+
+            </div>
 	    
           </div>
           <div class="col--3-12 col--12-12--s col--4-12--m push--1-12 push--reset--m" id="sideNav">
@@ -1892,6 +1916,10 @@ A changelog describing the (major) changes to the previous version (2.00) of the
 			      
                               <li class="side-navigation__item">
                                   <a href="#shacl">SHACL template</a>
+                              </li>
+							  
+							  <li class="side-navigation__item">
+                                  <a href="#mappings">Mappings</a>
                               </li>
 			      
                           </ul>
@@ -1956,7 +1984,7 @@ A changelog describing the (major) changes to the previous version (2.00) of the
       min-height: 10px;
       position:absolute;
       top: 20px;
-      left: 20px;
+      right: 20px;
     }
     .header {
       margin: 0;
