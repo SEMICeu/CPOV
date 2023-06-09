@@ -15,5 +15,5 @@ This specification was produced by the Core Vocabularies Working Group (Person T
 
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the Core Public Organisation Vocabulary repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/CPOV/wiki.
 
-Copyright © 2021 European Union. All material in this repository is published under the license [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless explicitly otherwise mentioned.
+Copyright © 2023 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the ADMS repository on GitHub.
 
