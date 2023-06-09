@@ -1,3 +1,4 @@
+![SEMIC Core Vocabulary](/semic-icon-small.png)
 # Core Public Organisation Vocabulary (CPOV)
 
 This is the issue tracker for the maintenance of the Core Public Organisation Vocabulary.
