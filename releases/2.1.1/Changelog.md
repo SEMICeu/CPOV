@@ -19,4 +19,4 @@ The table below gives an overview of the classes (and their definitions) within 
 
 | Nr | Core Public Organisation Vocabulary v1.0.0 | Core Public Organisation Vocabulary v2.0.0 | Rationale | GitHub / Change |
 | --- | --- | --- | --- | --- |
-| /- | **To be completed** | /- | /- | /- |
+| - | *To be completed* | - | - | - |
