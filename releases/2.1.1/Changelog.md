@@ -3,7 +3,7 @@
 ## Introduction
 
 
-This document describes the (major) changes to [the current version 2.1.0](https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.0) of the Core Public Organisation Vocabulary for which a new version is being proposed ([version 2.1.1](https://semiceu.github.io/CPOV/releases/2.1.1/)). The list of changes results in the new version to be considered as a minor release.
+This document describes the (major) changes to [the current version 2.1.0](https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.0) of the Core Public Organisation Vocabulary for which a new version is being proposed ([version 2.1.1](https://semiceu.github.io/CPOV/releases/2.1.1/)). The list of changes results in the new version to be considered as a bug fix.
 
 All of the changes were discussed and approved during the [webinar](https://joinup.ec.europa.eu/collection/semic-support-centre/event/webinar-review-core-vocabularies) of 27/10/2023.
 
