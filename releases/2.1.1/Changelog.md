@@ -17,6 +17,6 @@ The table below gives an overview of the classes (and their definitions) within 
 
 **D** stands for changes in data types
 
-| Nr | Core Public Organisation Vocabulary v1.0.0 | Core Public Organisation Vocabulary v2.0.0 | Rationale | GitHub / Change |
+| Nr | Core Public Organisation Vocabulary v2.1.0 | Core Public Organisation Vocabulary v2.1.1 | Rationale | GitHub / Change |
 | --- | --- | --- | --- | --- |
 | - | *To be completed* | - | - | - |
