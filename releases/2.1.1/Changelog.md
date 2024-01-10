@@ -22,4 +22,3 @@ The table below gives an overview of the classes (and their definitions) within 
 | Nr | Core Public Organisation Vocabulary v2.1.0 | Core Public Organisation Vocabulary v2.1.1 | Rationale | GitHub / Change |
 | --- | --- | --- | --- | --- |
 | - | - | ReSpec Styling has been applied to the specification.| - | - |
-| - | - | ReSpec Styling has been applied to the specification.| - | - |
