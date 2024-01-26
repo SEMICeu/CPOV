@@ -1,0 +1,1861 @@
+{
+  "@context": {
+    "@vocab": "https://semiceu.github.io/CPOV/releases/2.1.1",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qb:codeList": {
+      "@id": "qb:codeList",
+      "@type": "@id"
+    },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf:first": {
+      "@type": "@id"
+    },
+    "rdf:rest": {
+      "@type": "@id"
+    },
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdfs:comment": {
+      "@id": "rdfs:comment"
+    },
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sh:and": {
+      "@container": "@set",
+      "@id": "sh:and",
+      "@type": "@id"
+    },
+    "sh:class": {
+      "@id": "sh:class",
+      "@type": "@id"
+    },
+    "sh:datatype": {
+      "@id": "sh:datatype",
+      "@type": "@id"
+    },
+    "sh:description": {
+      "@container": "@language",
+      "@id": "sh:description"
+    },
+    "sh:hasValue": {
+      "@id": "sh:hasValue",
+      "@type": "@id"
+    },
+    "sh:in": {
+      "@container": "@set",
+      "@id": "sh:in",
+      "@type": "@id"
+    },
+    "sh:maxCount": {
+      "@id": "sh:maxCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:minCount": {
+      "@id": "sh:minCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:name": {
+      "@container": "@language",
+      "@id": "sh:name"
+    },
+    "sh:node": {
+      "@id": "sh:node",
+      "@type": "@id"
+    },
+    "sh:nodeKind": {
+      "@id": "sh:nodeKind",
+      "@type": "@id"
+    },
+    "sh:or": {
+      "@container": "@set",
+      "@id": "sh:or",
+      "@type": "@id"
+    },
+    "sh:path": {
+      "@id": "sh:path",
+      "@type": "@id"
+    },
+    "sh:property": {
+      "@id": "sh:property",
+      "@type": "@id"
+    },
+    "sh:severity": {
+      "@id": "sh:severity",
+      "@type": "@id"
+    },
+    "sh:targetClass": {
+      "@id": "sh:targetClass",
+      "@type": "@id"
+    },
+    "sh:uniqueLang": {
+      "@id": "sh:uniqueLang",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "shapes": {
+      "@id": "rdfs:member",
+      "@type": "@id"
+    },
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vl": "https://purl.eu/ns/shacl#",
+    "vl:message": {
+      "@container": "@language",
+      "@id": "vl:message"
+    }
+  },
+  "@id": "https://semiceu.github.io/CPOV/releases/2.1.1",
+  "shapes": [
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/0c404fa56c64463c15f65878d02efa16eec065b0",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.hasemail",
+          "sh:description": {
+            "en": "An electronic address through which the Contact Point can be contacted."
+          },
+          "sh:name": {
+            "en": "has email"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/m8g/email",
+          "vl:message": {
+            "en": "The expected value for has email is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/2c2e861c64607bcf2ba7176ce18df71cc690e57e",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.availabilityrestriction",
+          "sh:description": {
+            "en": "The time during which the Contact Point is not available."
+          },
+          "sh:name": {
+            "en": "availability restriction"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
+          "vl:message": {
+            "en": "The expected value for availability restriction is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.openinghours",
+          "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
+          "sh:description": {
+            "en": "The time at which the Contact Point is normally available."
+          },
+          "sh:name": {
+            "en": "opening hours"
+          },
+          "sh:path": "http://data.europa.eu/m8g/openingHours",
+          "vl:message": {
+            "en": "The range of opening hours must be of type <http://www.w3.org/2006/time#TemporalEntity>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/8547f9fea103d51b54d608cf10f98b003fde7378",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.hastelephone",
+          "sh:description": {
+            "en": "A telephone number through which the Contact Point can be contacted."
+          },
+          "sh:name": {
+            "en": "has telephone"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/m8g/telephone",
+          "vl:message": {
+            "en": "The expected value for has telephone is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/939028c42179e18627eac7954154b35dbc9c5a42",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.openinghours",
+          "sh:description": {
+            "en": "The time at which the Contact Point is normally available."
+          },
+          "sh:name": {
+            "en": "opening hours"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/openingHours",
+          "vl:message": {
+            "en": "The expected value for opening hours is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.contactpage",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "A web page that could be used to reach out the Contact Point."
+          },
+          "sh:name": {
+            "en": "contact page"
+          },
+          "sh:path": "http://data.europa.eu/m8g/contactPage",
+          "vl:message": {
+            "en": "The range of contact page must be of type <http://xmlns.com/foaf/0.1/Document>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.availabilityrestriction",
+          "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
+          "sh:description": {
+            "en": "The time during which the Contact Point is not available."
+          },
+          "sh:name": {
+            "en": "availability restriction"
+          },
+          "sh:path": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
+          "vl:message": {
+            "en": "The range of availability restriction must be of type <http://www.w3.org/2006/time#TemporalEntity>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/a736c4b01ea7557518c0c146f3e311947ce00ccc",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.contactpage",
+          "sh:description": {
+            "en": "A web page that could be used to reach out the Contact Point."
+          },
+          "sh:name": {
+            "en": "contact page"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/contactPage",
+          "vl:message": {
+            "en": "The expected value for contact page is a rdfs:Resource (URI or blank node)"
+          }
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/ContactPoint"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ImageObjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/m8g/ImageObject"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/0505000dc192edd685f1d7977ad74385de6ba52f",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.alternativelabel",
+          "sh:description": {
+            "en": "An alternative or informal name(s) of a Public Organization, irrespective of language."
+          },
+          "sh:name": {
+            "en": "alternative label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#altLabel",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for alternative label"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasmember",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "An Organization which is a member of another without being a sub organization, they are independent entities."
+          },
+          "sh:name": {
+            "en": "has member"
+          },
+          "sh:path": "http://www.w3.org/ns/org#hasMember",
+          "vl:message": {
+            "en": "The range of has member must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/0a79940f6fb16193ff7a69f50e5ff7e807f2685d",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.logo",
+          "sh:description": {
+            "en": "A graphic symbol to represent the Public Organization."
+          },
+          "sh:name": {
+            "en": "logo"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/logo",
+          "vl:message": {
+            "en": "The expected value for logo is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/2c7d994dd540f92c116cac913e2aa5d588945f1f",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.address",
+          "sh:description": {
+            "en": "The Address of a Public Organization."
+          },
+          "sh:name": {
+            "en": "address"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/locn#address",
+          "vl:message": {
+            "en": "The expected value for address is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.preferredlabel",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "vl:message": {
+            "en": "The range of preferred label must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/3b9cc6558bbf88b7fbaf0c2f3ab6ae7fb8c1b4b9",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.preferredlabel",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for preferred label"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.changedby",
+          "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
+          "sh:description": {
+            "en": "The Change Event that changed the Organization."
+          },
+          "sh:name": {
+            "en": "changed by"
+          },
+          "sh:path": "http://www.w3.org/ns/org#changedBy",
+          "vl:message": {
+            "en": "The range of changed by must be of type <http://www.w3.org/ns/org#ChangeEvent>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/3fd45972245296a986ad73d13d316ec9d1e5533f",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.memberof",
+          "sh:description": {
+            "en": "An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities."
+          },
+          "sh:name": {
+            "en": "member of"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#memberOf",
+          "vl:message": {
+            "en": "The expected value for member of is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/57a7a4d6d9d2b1b84ef808e54e9ecec28f144fa0",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.prev",
+          "sh:description": {
+            "en": "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."
+          },
+          "sh:name": {
+            "en": "prev"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/1999/xhtml/vocab#prev",
+          "vl:message": {
+            "en": "The expected value for prev is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.next",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."
+          },
+          "sh:name": {
+            "en": "next"
+          },
+          "sh:path": "http://www.w3.org/1999/xhtml/vocab#next",
+          "vl:message": {
+            "en": "The range of next must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.address",
+          "sh:class": "http://www.w3.org/ns/locn#Address",
+          "sh:description": {
+            "en": "The Address of a Public Organization."
+          },
+          "sh:name": {
+            "en": "address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#address",
+          "vl:message": {
+            "en": "The range of address must be of type <http://www.w3.org/ns/locn#Address>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasunit",
+          "sh:class": "http://www.w3.org/ns/org#OrganizationalUnit",
+          "sh:description": {
+            "en": "An operational department within the Public Organization."
+          },
+          "sh:name": {
+            "en": "has unit"
+          },
+          "sh:path": "http://www.w3.org/ns/org#hasUnit",
+          "vl:message": {
+            "en": "The range of has unit must be of type <http://www.w3.org/ns/org#OrganizationalUnit>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.description",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description",
+          "vl:message": {
+            "en": "The expected value for description is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.preferredlabel",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "vl:message": {
+            "en": "The expected value for preferred label is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.description",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for description"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.contactpoint",
+          "sh:class": "http://data.europa.eu/m8g/ContactPoint",
+          "sh:description": {
+            "en": "The main contact information of the resource."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://data.europa.eu/m8g/contactPoint",
+          "vl:message": {
+            "en": "The range of contact point must be of type <http://data.europa.eu/m8g/ContactPoint>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/85f0eb3f010328d7d5f3a329cc69fc5a734348b6",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.changedby",
+          "sh:description": {
+            "en": "The Change Event that changed the Organization."
+          },
+          "sh:name": {
+            "en": "changed by"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#changedBy",
+          "vl:message": {
+            "en": "The expected value for changed by is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.purpose",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "This property describes the reasons of existence of an Organization."
+          },
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "http://www.w3.org/ns/org#purpose",
+          "vl:message": {
+            "en": "The range of purpose must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/88b702e12401b15cdfbfb284e359477f384bce54",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.alternativelabel",
+          "sh:description": {
+            "en": "An alternative or informal name(s) of a Public Organization, irrespective of language."
+          },
+          "sh:name": {
+            "en": "alternative label"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2004/02/skos/core#altLabel",
+          "vl:message": {
+            "en": "The expected value for alternative label is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8932cdc11dcea78a104fe961daef62e126485fc3",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.purpose",
+          "sh:description": {
+            "en": "This property describes the reasons of existence of an Organization."
+          },
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#purpose",
+          "vl:message": {
+            "en": "The expected value for purpose is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8b53fded3b6187eee98607304ab29bc1977b4fe2",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.resultedfrom",
+          "sh:description": {
+            "en": "A Change Event from which the Public Organisation resulted."
+          },
+          "sh:name": {
+            "en": "resulted from"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#resultedFrom",
+          "vl:message": {
+            "en": "The expected value for resulted from is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8d36a62f83db7f94097e27edb51306e17e0d40f3",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.homepage",
+          "sh:description": {
+            "en": "The official home page of the Public Organization."
+          },
+          "sh:name": {
+            "en": "homepage"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://xmlns.com/foaf/0.1/homepage",
+          "vl:message": {
+            "en": "The expected value for homepage is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.spatial",
+          "sh:class": "http://data.europa.eu/88u/dataset/atu-type",
+          "sh:description": {
+            "en": "This property links an Organization to the Administrative Region(s) that it covers."
+          },
+          "sh:name": {
+            "en": "spatial"
+          },
+          "sh:path": "http://purl.org/dc/terms/spatial",
+          "vl:message": {
+            "en": "The range of spatial must be of type <http://data.europa.eu/88u/dataset/atu-type>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/9adf9f5890592909cf3e67021ae7ab4f895a7745",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.contactpoint",
+          "sh:description": {
+            "en": "The main contact information of the resource."
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/contactPoint",
+          "vl:message": {
+            "en": "The expected value for contact point is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference for the Public Organization."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/adms#identifier",
+          "vl:message": {
+            "en": "The expected value for identifier is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/b93b49bf7122a561ecc9674449665256e441faf5",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.spatial",
+          "sh:description": {
+            "en": "This property links an Organization to the Administrative Region(s) that it covers."
+          },
+          "sh:name": {
+            "en": "spatial"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/dc/terms/spatial",
+          "vl:message": {
+            "en": "The expected value for spatial is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.classification",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The categorisation of the Public Organization."
+          },
+          "sh:name": {
+            "en": "classification"
+          },
+          "sh:path": "http://www.w3.org/ns/org#classification",
+          "vl:message": {
+            "en": "The range of classification must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.resultedfrom",
+          "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
+          "sh:description": {
+            "en": "A Change Event from which the Public Organisation resulted."
+          },
+          "sh:name": {
+            "en": "resulted from"
+          },
+          "sh:path": "http://www.w3.org/ns/org#resultedFrom",
+          "vl:message": {
+            "en": "The range of resulted from must be of type <http://www.w3.org/ns/org#ChangeEvent>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.prev",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."
+          },
+          "sh:name": {
+            "en": "prev"
+          },
+          "sh:path": "http://www.w3.org/1999/xhtml/vocab#prev",
+          "vl:message": {
+            "en": "The range of prev must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/c43a74a9b5e93cc6d40339ffc6e25f1f4c999233",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.next",
+          "sh:description": {
+            "en": "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."
+          },
+          "sh:name": {
+            "en": "next"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/1999/xhtml/vocab#next",
+          "vl:message": {
+            "en": "The expected value for next is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/c552423cc5f3398e44ee3d03cdf62e560fedd532",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.classification",
+          "sh:description": {
+            "en": "The categorisation of the Public Organization."
+          },
+          "sh:name": {
+            "en": "classification"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#classification",
+          "vl:message": {
+            "en": "The expected value for classification is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "vl:message": {
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d6979a925fe55dfff828a2b49a43d8dc817fac76",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasunit",
+          "sh:description": {
+            "en": "An operational department within the Public Organization."
+          },
+          "sh:name": {
+            "en": "has unit"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#hasUnit",
+          "vl:message": {
+            "en": "The expected value for has unit is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.alternativelabel",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "An alternative or informal name(s) of a Public Organization, irrespective of language."
+          },
+          "sh:name": {
+            "en": "alternative label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#altLabel",
+          "vl:message": {
+            "en": "The range of alternative label must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.logo",
+          "sh:class": "http://data.europa.eu/m8g/ImageObject",
+          "sh:description": {
+            "en": "A graphic symbol to represent the Public Organization."
+          },
+          "sh:name": {
+            "en": "logo"
+          },
+          "sh:path": "http://data.europa.eu/m8g/logo",
+          "vl:message": {
+            "en": "The range of logo must be of type <http://data.europa.eu/m8g/ImageObject>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.identifier",
+          "sh:class": "http://www.w3.org/ns/adms#Identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference for the Public Organization."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#identifier",
+          "vl:message": {
+            "en": "The range of identifier must be of type <http://www.w3.org/ns/adms#Identifier>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.memberof",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities."
+          },
+          "sh:name": {
+            "en": "member of"
+          },
+          "sh:path": "http://www.w3.org/ns/org#memberOf",
+          "vl:message": {
+            "en": "The range of member of must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/fa88865dff8487890f122fd7257ebca0d81ff275",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasmember",
+          "sh:description": {
+            "en": "An Organization which is a member of another without being a sub organization, they are independent entities."
+          },
+          "sh:name": {
+            "en": "has member"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#hasMember",
+          "vl:message": {
+            "en": "The expected value for has member is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.homepage",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "The official home page of the Public Organization."
+          },
+          "sh:name": {
+            "en": "homepage"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/homepage",
+          "vl:message": {
+            "en": "The range of homepage must be of type <http://xmlns.com/foaf/0.1/Document>."
+          }
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape/45c29ae77863bf76765c44a8c34f3cab08469fbf",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFramework.implements",
+          "sh:description": {
+            "en": "A Change Event linked to relevant legislation or policy documents."
+          },
+          "sh:name": {
+            "en": "implements"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://purl.org/vocab/cpsv#implements",
+          "vl:message": {
+            "en": "The expected value for implements is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFramework.implements",
+          "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
+          "sh:description": {
+            "en": "A Change Event linked to relevant legislation or policy documents."
+          },
+          "sh:name": {
+            "en": "implements"
+          },
+          "sh:path": "http://purl.org/vocab/cpsv#implements",
+          "vl:message": {
+            "en": "The range of implements must be of type <http://www.w3.org/ns/org#ChangeEvent>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFramework.identifier",
+          "sh:description": {
+            "en": "An unambiguous reference to a Reference Framework."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/identifier",
+          "vl:message": {
+            "en": "The expected value for identifier is a Literal"
+          }
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/ReferenceFramework"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AdministrativeTerritorialUnitShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://data.europa.eu/88u/dataset/atu-type"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TextShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#LiteralShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#URIShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#DateShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#CodeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.frequency",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The recurrence of an instant or period."
+          },
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:path": "http://data.europa.eu/m8g/frequency",
+          "vl:message": {
+            "en": "The range of frequency must be of type <http://www.w3.org/2004/02/skos/core#Concept>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/63a8cf23801ef605734507c621693524f22476dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.frequency",
+          "sh:description": {
+            "en": "The recurrence of an instant or period."
+          },
+          "sh:name": {
+            "en": "frequency"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/frequency",
+          "vl:message": {
+            "en": "The expected value for frequency is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.description",
+          "sh:description": {
+            "en": "A  textual representation of the Temporal Entity."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description",
+          "vl:message": {
+            "en": "The expected value for description is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.description",
+          "sh:description": {
+            "en": "A  textual representation of the Temporal Entity."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for description"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A  textual representation of the Temporal Entity."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "vl:message": {
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/2006/time#TemporalEntity"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/053d0ae3c4b213ae2f708e5e492b97e2cce08686",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.notation",
+          "sh:description": {
+            "en": "A string of characters to uniquely identify a concept."
+          },
+          "sh:name": {
+            "en": "notation"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation",
+          "vl:message": {
+            "en": "The expected value for notation is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemeURI",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": {
+            "en": "URI of the scheme used to construct the identifier."
+          },
+          "sh:name": {
+            "en": "scheme URI"
+          },
+          "sh:path": "http://purl.org/dc/terms/conformsTo",
+          "vl:message": {
+            "en": "The range of scheme URI must be of type <http://www.w3.org/2001/XMLSchema#anyURI>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemename",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "Name of the scheme used to construct the identifier."
+          },
+          "sh:name": {
+            "en": "scheme name"
+          },
+          "sh:path": "http://www.w3.org/2000/01/rdf-schema#label",
+          "vl:message": {
+            "en": "The range of scheme name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/886a37c0a64d5093fa1e6f0352c72d6c9999de5f",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.dateofissue",
+          "sh:description": {
+            "en": "The date on which the Identifier was assigned."
+          },
+          "sh:name": {
+            "en": "date of issue"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/issued",
+          "vl:message": {
+            "en": "The expected value for date of issue is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.dateofissue",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#date",
+          "sh:description": {
+            "en": "The date on which the Identifier was assigned."
+          },
+          "sh:name": {
+            "en": "date of issue"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued",
+          "vl:message": {
+            "en": "The range of date of issue must be of type <http://www.w3.org/2001/XMLSchema#date>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/b66ff3c38dc89b4412b1715099a98c00ae8118c9",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemename",
+          "sh:description": {
+            "en": "Name of the scheme used to construct the identifier."
+          },
+          "sh:name": {
+            "en": "scheme name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/2000/01/rdf-schema#label",
+          "vl:message": {
+            "en": "The expected value for scheme name is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/cc40d454ac926043491df929ab05a361896b0021",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemeURI",
+          "sh:description": {
+            "en": "URI of the scheme used to construct the identifier."
+          },
+          "sh:name": {
+            "en": "scheme URI"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/conformsTo",
+          "vl:message": {
+            "en": "The expected value for scheme URI is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/ce99d905817e35ff5ebdf871e45b1e25e2e85188",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemename",
+          "sh:description": {
+            "en": "Name of the scheme used to construct the identifier."
+          },
+          "sh:name": {
+            "en": "scheme name"
+          },
+          "sh:path": "http://www.w3.org/2000/01/rdf-schema#label",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for scheme name"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/e17cae15cd3a2db8b6c9aeef586141ff8b261cab",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemaagency",
+          "sh:description": {
+            "en": "The name of the agency that issued the identifier."
+          },
+          "sh:name": {
+            "en": "schema agency"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/adms#schemeAgency",
+          "vl:message": {
+            "en": "The expected value for schema agency is a Literal"
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/adms#Identifier"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/006de06965023999963c4307153479c8629991d9",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.locatorname",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building."
+          },
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#locatorName",
+          "vl:message": {
+            "en": "The expected value for locator name is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/03690748629ed1c685fc6a365780375be09bce76",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel1",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for administrative unit level 1"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.thoroughfare",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
+          "vl:message": {
+            "en": "The range of thoroughfare must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/256ffe464f9c7682e950f7853ef0b6060580435b",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel2",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
+          "vl:message": {
+            "en": "The expected value for administrative unit level 2 is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel1",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
+          "vl:message": {
+            "en": "The range of administrative unit level 1 must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/3a0fcecd9e5f4e8deb4d102b9d072a4b067b773e",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.fulladdress",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for full address"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.addressarea",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressArea",
+          "vl:message": {
+            "en": "The range of address area must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.locatorname",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building."
+          },
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorName",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for locator name"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel2",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
+          "vl:message": {
+            "en": "The range of administrative unit level 2 must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/8b4c4bdd61e921f78483a3141338773693d4b2ef",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.addressID",
+          "sh:description": {
+            "en": "A globally unique identifier for each instance of an Address."
+          },
+          "sh:name": {
+            "en": "address ID"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#addressId",
+          "vl:message": {
+            "en": "The expected value for address ID is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/9097b947404def8604330ec2fc5a0bd405128b35",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.locatordesignator",
+          "sh:description": {
+            "en": "A number or sequence of characters that uniquely identifies the locator within the relevant scope."
+          },
+          "sh:name": {
+            "en": "locator designator"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#locatorDesignator",
+          "vl:message": {
+            "en": "The expected value for locator designator is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.postname",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postName",
+          "vl:message": {
+            "en": "The range of post name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/9aaaf1750887d905949d78ac718f18c02809a28e",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel1",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1",
+          "vl:message": {
+            "en": "The expected value for administrative unit level 1 is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/9c278b09ca17b0ef710224829c0354dc4c2f9a40",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.postofficebox",
+          "sh:description": {
+            "en": "A location designator for a postal delivery point at a post office, usually a number."
+          },
+          "sh:name": {
+            "en": "post office box"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#poBox",
+          "vl:message": {
+            "en": "The expected value for post office box is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/9c2d6af39a55e5e6a76f6b852bbcbada029c21af",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.fulladdress",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress",
+          "vl:message": {
+            "en": "The expected value for full address is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/a9a46434014b93624ab68c9a56a5bc66a38da9a4",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.postname",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postName",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for post name"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/aa9622c05f497ef1b06496716742dd5cbfc6f0c9",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.thoroughfare",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
+          "vl:message": {
+            "en": "The expected value for thoroughfare is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/ac2d62a08fd924f88a79f0e70cda9fca4d484fd2",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.thoroughfare",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for thoroughfare"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/ae24e9fc95115753cabe5ad6bd3c05b9751cd13c",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel2",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for administrative unit level 2"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/b35e8c8ed2d85ea47f163d53cafca733ecb29389",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.addressarea",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressArea",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for address area"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.postcode",
+          "sh:description": {
+            "en": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post code"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#postCode",
+          "vl:message": {
+            "en": "The expected value for post code is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.locatorname",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building."
+          },
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorName",
+          "vl:message": {
+            "en": "The range of locator name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.fulladdress",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress",
+          "vl:message": {
+            "en": "The range of full address must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/f1144df3e852614939e86f2e427788162aa7cb72",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.addressarea",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#addressArea",
+          "vl:message": {
+            "en": "The expected value for address area is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.postname",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/locn#postName",
+          "vl:message": {
+            "en": "The expected value for post name is a Literal"
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/locn#Address"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/4001f8641cfcfcd686fd8271f7baf370d91e6253",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.startedattime",
+          "sh:description": {
+            "en": "The time instant when the state of the organisation update was initiated."
+          },
+          "sh:name": {
+            "en": "started at time"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/prov#startedAtTime",
+          "vl:message": {
+            "en": "The expected value for started at time is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/486118f166e37e64f3bbebdca97588fb5074ba52",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.resultingorganization",
+          "sh:description": {
+            "en": "This property links a Change Event or a Foundation Event to the Organization that resulted from it."
+          },
+          "sh:name": {
+            "en": "resulting organization"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#resultingOrganization",
+          "vl:message": {
+            "en": "The expected value for resulting organization is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/4ab53582adf88e7640a0c4d5d27ecb74be319041",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.hasformalframework",
+          "sh:description": {
+            "en": "A piece of legislation or a policy document that prompted the change."
+          },
+          "sh:name": {
+            "en": "has formal framework"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/m8g/hasFormalFramework",
+          "vl:message": {
+            "en": "The expected value for has formal framework is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.originalorganization",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "The Organization that existed before the change."
+          },
+          "sh:name": {
+            "en": "original organization"
+          },
+          "sh:path": "http://www.w3.org/ns/org#originalOrganization",
+          "vl:message": {
+            "en": "The range of original organization must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/6cae9880e515253132af1452a38a8a5827165149",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.description",
+          "sh:description": {
+            "en": "A textual explanation of the event."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/description",
+          "vl:message": {
+            "en": "The expected value for description is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/768bb4171e00505886fe9a1e949b4cd71f0eb548",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.description",
+          "sh:description": {
+            "en": "A textual explanation of the event."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "sh:uniqueLang": "true",
+          "vl:message": {
+            "en": "Only 1 value for each language is allowed for description"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.endedattime",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "The time instant when the state of the organisation update was terminated."
+          },
+          "sh:name": {
+            "en": "ended at time"
+          },
+          "sh:path": "http://www.w3.org/ns/prov#endedAtTime",
+          "vl:message": {
+            "en": "The range of ended at time must be of type <http://www.w3.org/2001/XMLSchema#dateTime>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.startedattime",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "The time instant when the state of the organisation update was initiated."
+          },
+          "sh:name": {
+            "en": "started at time"
+          },
+          "sh:path": "http://www.w3.org/ns/prov#startedAtTime",
+          "vl:message": {
+            "en": "The range of started at time must be of type <http://www.w3.org/2001/XMLSchema#dateTime>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.hasformalframework",
+          "sh:class": "http://data.europa.eu/m8g/ReferenceFramework",
+          "sh:description": {
+            "en": "A piece of legislation or a policy document that prompted the change."
+          },
+          "sh:name": {
+            "en": "has formal framework"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasFormalFramework",
+          "vl:message": {
+            "en": "The range of has formal framework must be of type <http://data.europa.eu/m8g/ReferenceFramework>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/8627cc58af87cec3202bbca080fc234f2f3c8c8a",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.endedattime",
+          "sh:description": {
+            "en": "The time instant when the state of the organisation update was terminated."
+          },
+          "sh:name": {
+            "en": "ended at time"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://www.w3.org/ns/prov#endedAtTime",
+          "vl:message": {
+            "en": "The expected value for ended at time is a Literal"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/8725f4613ad6961359ab221c2266e7e9567bc4a7",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.originalorganization",
+          "sh:description": {
+            "en": "The Organization that existed before the change."
+          },
+          "sh:name": {
+            "en": "original organization"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#originalOrganization",
+          "vl:message": {
+            "en": "The expected value for original organization is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.resultingorganization",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "This property links a Change Event or a Foundation Event to the Organization that resulted from it."
+          },
+          "sh:name": {
+            "en": "resulting organization"
+          },
+          "sh:path": "http://www.w3.org/ns/org#resultingOrganization",
+          "vl:message": {
+            "en": "The range of resulting organization must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A textual explanation of the event."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description",
+          "vl:message": {
+            "en": "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/org#ChangeEvent"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.suborganizationof",
+          "sh:class": "http://www.w3.org/ns/org#Organization",
+          "sh:description": {
+            "en": "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization."
+          },
+          "sh:name": {
+            "en": "sub organization of"
+          },
+          "sh:path": "http://www.w3.org/ns/org#subOrganizationOf",
+          "vl:message": {
+            "en": "The range of sub organization of must be of type <http://www.w3.org/ns/org#Organization>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/92c74470235a279a2d61934b4fefb7b590a20196",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.hassuborganization",
+          "sh:description": {
+            "en": "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an organization which is a sub-part or child of this organization."
+          },
+          "sh:name": {
+            "en": "has sub organization"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#hasSubOrganization",
+          "vl:message": {
+            "en": "The expected value for has sub organization is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/9a3fb2f7985ffdaf5c668c29a107a7e8ac02f1ce",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.suborganizationof",
+          "sh:description": {
+            "en": "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization."
+          },
+          "sh:name": {
+            "en": "sub organization of"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#subOrganizationOf",
+          "vl:message": {
+            "en": "The expected value for sub organization of is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.hassuborganization",
+          "sh:class": "http://www.w3.org/ns/org#Organization",
+          "sh:description": {
+            "en": "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an organization which is a sub-part or child of this organization."
+          },
+          "sh:name": {
+            "en": "has sub organization"
+          },
+          "sh:path": "http://www.w3.org/ns/org#hasSubOrganization",
+          "vl:message": {
+            "en": "The range of has sub organization must be of type <http://www.w3.org/ns/org#Organization>."
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/org#Organization"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape/593ec4d85aab525ca301cd8c16a7804012862a94",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnit.unitof",
+          "sh:description": {
+            "en": "The Public Organisation of which the Organizational Unit is an operational department."
+          },
+          "sh:name": {
+            "en": "unit of"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://www.w3.org/ns/org#unitOf",
+          "vl:message": {
+            "en": "The expected value for unit of is a rdfs:Resource (URI or blank node)"
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898",
+          "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnit.unitof",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "The Public Organisation of which the Organizational Unit is an operational department."
+          },
+          "sh:name": {
+            "en": "unit of"
+          },
+          "sh:path": "http://www.w3.org/ns/org#unitOf",
+          "vl:message": {
+            "en": "The range of unit of must be of type <http://data.europa.eu/m8g/PublicOrganisation>."
+          }
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/org#OrganizationalUnit"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#DocumentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
+    },
+    {
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#DateTimeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/m8g/ImageObject> a owl:Class;
+  rdfs:label "Image Object"@en;
+  rdfs:comment "A logo to describe / represent an entity."@en;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/PublicOrganisation> a owl:Class;
+  rdfs:label "Public Organisation"@en;
+  <http://purl.org/vocab/vann/usageNote> """Organizations which exist to provide services for its citizens and companies are called Public Organizations. The Public Organization class represents the organization. One organization may comprise several sub-organizations and any organization may have one or more organizational units. Each of these is described using the same properties and relationships.
+<br/><br/>
+This definition is consistent with the more detailed definition of a \"public sector body\" as given in the <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L1024&qid=1706001352901\">PSI Directive</a>: \"the State, regional or local authorities, bodies governed by public law and associations formed by one or several such authorities or one or several such bodies governed by public law\". It further defines a body governed by public law as any body \"(a) established for the specific purpose of meeting needs in the general interest, not having an industrial or commercial character; and (b) having legal personality; and (c) financed, for the most part by the State, or regional or local authorities, or other bodies governed by public law; or subject to management supervision by those bodies; or having an administrative, managerial or supervisory board, more than half of whose members are appointed by the State, regional or local authorities or by other bodies governed by public law\"."""@en;
+  rdfs:comment "An Organization that is defined as being part of the public sector by a legal framework at any level."@en;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
+  rdfs:subClassOf org:Organization .
+
+<http://data.europa.eu/m8g/ReferenceFramework> a owl:Class;
+  rdfs:label "Reference Framework"@en;
+  <http://purl.org/vocab/vann/usageNote> "Usual Reference Frameworks are legal and non-legal specifications. Examples include procedures, tendering legislation, etc."@en;
+  rdfs:comment "Legislation or official policy from which Requirements are derived."@en;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g/contactPage> a owl:ObjectProperty;
+  rdfs:label "contact page"@en;
+  rdfs:comment "A web page that could be used to reach out the Contact Point."@en;
+  rdfs:domain <http://data.europa.eu/m8g/ContactPoint>;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
+  rdfs:range foaf:Document .
+
+<http://data.europa.eu/m8g/email> a owl:DatatypeProperty;
+  rdfs:label "has email"@en;
+  rdfs:comment "An electronic address through which the Contact Point can be contacted."@en;
+  rdfs:domain <http://data.europa.eu/m8g/ContactPoint>;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
+  rdfs:range rdfs:Literal .
+
+<http://data.europa.eu/m8g/frequency> a owl:ObjectProperty;
+  rdfs:label "frequency"@en;
+  <http://purl.org/vocab/vann/usageNote> "It is recommended to use the frequency from an existing vocabulary like the <a href=\"https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency\">Frequency</a> from the Publications Office."@en;
+  rdfs:comment "The recurrence of an instant or period."@en;
+  rdfs:domain <http://www.w3.org/2006/time#TemporalEntity>;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
+  rdfs:range skos:Concept .
+
+<http://data.europa.eu/m8g/telephone> a owl:DatatypeProperty;
+  rdfs:label "has telephone"@en;
+  rdfs:comment "A telephone number through which the Contact Point can be contacted."@en;
+  rdfs:domain <http://data.europa.eu/m8g/ContactPoint>;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g>;
+  rdfs:range rdfs:Literal .
+
+<http://data.europa.eu/m8g/ContactPoint> a owl:Class;
+  rdfs:label "Contact Point"@en;
+  <http://purl.org/vocab/vann/usageNote> "The Core Public Organization Vocabulary defines properties for telephone number, e-mail address and opening hours although it is noteworthy that the class is based on schema.org's <a href=\"http://schema.org/ContactPoint\"> ContactPoint </a> class  that has additional properties that some implementations may find useful."@en;
+  rdfs:comment "Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with."@en;
+  rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+
+<http://data.europa.eu/m8g> a owl:Ontology;
+  rdfs:label "core-public-organisation"@en,
+    "core-public-organisation"@nl;
+  dc:issued "2024-01-31";
+  dc:license <https://creativecommons.org/licenses/by/4.0/>;
+  dc:mediator [
+    foaf:homepage <https://semic.eu>;
+    foaf:name "Semantic Interoperability Community (SEMIC)"
+  ];
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    foaf:firstName "Florian";
+    foaf:lastName "Barthelemy";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Emiel";
+    foaf:lastName "Dhondt";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Pavlina";
+    foaf:lastName "Fragkou";
+    schemas:affiliation [foaf:name "European Commission"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Arthur";
+    foaf:lastName "Schiltz";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anastasia";
+    foaf:lastName "Sofou";
+    schemas:affiliation [foaf:name "Trasys International"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Emidio";
+    foaf:lastName "Stani";
+    schemas:affiliation [foaf:name "PwC EU Services"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen"
+  ];
+  foaf:maker [
+    a foaf:Person;
+    foaf:firstName "Core Vocabularies Working Group"
+  ] .

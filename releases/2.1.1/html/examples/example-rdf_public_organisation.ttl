@@ -1,0 +1,69 @@
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix org-type: <http://publications.europa.eu/resource/authority/organization-type/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+ex:po a cv:PublicOrganisation ;
+  locn:address ex:ad ;
+  org:classification org-type:GOV, org-type:AGENCY ;
+  cv:contactPoint ex:cp ;
+  foaf:homepage <https://finances.belgium.be/> ;
+  foaf:homepage <https://financien.belgium.be> ;
+  foaf:homepage <https://finance.belgium.be/> ;
+  foaf:homepage <https://finanzen.belgium.be/> ;
+  skos:prefLabel "Service Public Fédéral FINANCES"@fr ;
+  skos:prefLabel "Federale Overheidsdiesnt FINANCIEN"@nl ;
+  skos:prefLabel "Federal Public Service FINANCE"@en ;
+  skos:prefLabel "Foderaler Offentlicher Dienst FINANZEN"@de ;
+  dct:spatial <http://publications.europa.eu/resource/authority/atu/BEL> .
+
+ex:ad a locn:Address ;
+  locn:addressArea "Quartier Nord"@fr ;
+  locn:adminUnitL1 "Belgique"@fr ;
+  locn:adminUnitL2 "Région de Bruxelles-Capitale"@fr ;
+  locn:fullAddress "Boulevard du Roi Albert II 33 1030 Bruxelles, Belgique"@fr ;
+  locn:locatorDesignator "33" ;
+  locn:postCode "1030" ;
+  locn:postName "Bruxelles"@fr ;
+  locn:thoroughfare "Boulevard du Roi Albert II"@fr .
+
+ex:cp a cv:ContactPoint ;
+  cv:telephone "+32 257 25757" ;
+  cv:openingHours ex:oh ;
+  cv:specialOpeningHoursSpecification ex:sohs .
+
+ex:oh a time:TemporalEntity ;
+  dct:description "Every working day from 9 a.m. to 5 p.m."@en ;
+  cv:frequency <http://publications.europa.eu/resource/authority/frequency/DAILY>;
+  time:hasBeginning [  a time:Instant ;
+    time:inDateTime [ a time:DateTimeDescription ;
+      time:unitType time:unitMinute ;
+      time:hour 9 ;
+      time:minute 0 ;
+    ] ;
+  ] ;
+  time:hasEnd [ a time:Instant;
+    time:inDateTime [ a time:DateTimeDescription ;
+      time:unitType time:unitMinute;
+      time:hour 17;
+      time:minute 0;
+    ];
+  ] .
+
+ex:sohs a time:TemporalEntity ;
+  dct:description "closed on weekend"@en;
+  time:hasBeginning [ a time:Instant;
+    time:inDateTime [ a time:DateTimeDescription;
+      time:dayOfWeek time:Saturday;
+    ];
+  ];
+  time:hasEnd [ a time:Instant;
+    time:inDateTime [ a time:DateTimeDescription;
+      time:dayOfWeek time:Sunday;
+    ];
+  ] .

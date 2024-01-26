@@ -1,0 +1,216 @@
+{
+  "@context": [
+  "https://semiceu.github.io/uri.semic.eu-generated/CPOV/releases/2.1.1/context/core-public-organisation-ap.jsonld",
+   {
+    "cv": "http://data.europa.eu/m8g/",
+    "dct": "http://purl.org/dc/terms/",
+    "ex": "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "org": "http://www.w3.org/ns/org#",
+    "org-type": "http://publications.europa.eu/resource/authority/organization-type/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+   }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:po",
+      "@type": "PublicOrganisation",
+      "locn:address": {
+        "@id": "ex:ad"
+      },
+      "org:classification": [
+        {
+          "@id": "org-type:GOV"
+        },
+        {
+          "@id": "org-type:AGENCY"
+        }
+      ],
+      "cv:contactPoint": {
+        "@id": "ex:cp"
+      },
+      "foaf:homepage": [
+        {
+          "@id": "https://finances.belgium.be/"
+        },
+        {
+          "@id": "https://financien.belgium.be"
+        },
+        {
+          "@id": "https://finance.belgium.be/"
+        },
+        {
+          "@id": "https://finanzen.belgium.be/"
+        }
+      ],
+      "skos:prefLabel": [
+        {
+          "@language": "fr",
+          "@value": "Service Public Fédéral FINANCES"
+        },
+        {
+          "@language": "nl",
+          "@value": "Federale Overheidsdiesnt FINANCIEN"
+        },
+        {
+          "@language": "en",
+          "@value": "Federal Public Service FINANCE"
+        },
+        {
+          "@language": "de",
+          "@value": "Foderaler Offentlicher Dienst FINANZEN"
+        }
+      ],
+      "dct:spatial": {
+        "@id": "http://publications.europa.eu/resource/authority/atu/BEL"
+      }
+    },
+    {
+      "@id": "ex:ad",
+      "@type": "Address",
+      "locn:addressArea": {
+        "@language": "fr",
+        "@value": "Quartier Nord"
+      },
+      "locn:adminUnitL1": {
+        "@language": "fr",
+        "@value": "Belgique"
+      },
+      "locn:adminUnitL2": {
+        "@language": "fr",
+        "@value": "Région de Bruxelles-Capitale"
+      },
+      "locn:fullAddress": {
+        "@language": "fr",
+        "@value": "Boulevard du Roi Albert II 33 1030 Bruxelles, Belgique"
+      },
+      "locn:locatorDesignator": "33",
+      "locn:postCode": "1030",
+      "locn:postName": {
+        "@language": "fr",
+        "@value": "Bruxelles"
+      },
+      "locn:thoroughfare": {
+        "@language": "fr",
+        "@value": "Boulevard du Roi Albert II"
+      }
+    },
+    {
+      "@id": "ex:cp",
+      "@type": "ContactPoint",
+      "cv:openingHours": {
+        "@id": "ex:oh"
+      },
+      "cv:specialOpeningHoursSpecification": {
+        "@id": "ex:sohs"
+      },
+      "cv:telephone": "+32 257 25757"
+    },
+    {
+      "@id": "ex:oh",
+      "@type": "TemporalEntity",
+      "cv:frequency": {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/DAILY"
+      },
+      "dct:description": {
+        "@language": "en",
+        "@value": "Every working day from 9 a.m. to 5 p.m."
+      },
+      "time:hasBeginning": {
+        "@id": "_:g0"
+      },
+      "time:hasEnd": {
+        "@id": "_:g2"
+      }
+    },
+    {
+      "@id": "_:g0",
+      "@type": "time:Instant",
+      "time:inDateTime": {
+        "@id": "_:g1"
+      }
+    },
+    {
+      "@id": "_:g1",
+      "@type": "time:DateTimeDescription",
+      "time:hour": {
+        "@type": "xsd:integer",
+        "@value": "9"
+      },
+      "time:minute": {
+        "@type": "xsd:integer",
+        "@value": "0"
+      },
+      "time:unitType": {
+        "@id": "time:unitMinute"
+      }
+    },
+    {
+      "@id": "_:g2",
+      "@type": "time:Instant",
+      "time:inDateTime": {
+        "@id": "_:g3"
+      }
+    },
+    {
+      "@id": "_:g3",
+      "@type": "time:DateTimeDescription",
+      "time:hour": {
+        "@type": "xsd:integer",
+        "@value": "17"
+      },
+      "time:minute": {
+        "@type": "xsd:integer",
+        "@value": "0"
+      },
+      "time:unitType": {
+        "@id": "time:unitMinute"
+      }
+    },
+    {
+      "@id": "ex:sohs",
+      "@type": "TemporalEntity",
+      "dct:description": {
+        "@language": "en",
+        "@value": "closed on weekend"
+      },
+      "time:hasBeginning": {
+        "@id": "_:g4"
+      },
+      "time:hasEnd": {
+        "@id": "_:g6"
+      }
+    },
+    {
+      "@id": "_:g4",
+      "@type": "time:Instant",
+      "time:inDateTime": {
+        "@id": "_:g5"
+      }
+    },
+    {
+      "@id": "_:g5",
+      "@type": "time:DateTimeDescription",
+      "time:dayOfWeek": {
+        "@id": "time:Saturday"
+      }
+    },
+    {
+      "@id": "_:g6",
+      "@type": "time:Instant",
+      "time:inDateTime": {
+        "@id": "_:g7"
+      }
+    },
+    {
+      "@id": "_:g7",
+      "@type": "time:DateTimeDescription",
+      "time:dayOfWeek": {
+        "@id": "time:Sunday"
+      }
+    }
+  ]
+}
