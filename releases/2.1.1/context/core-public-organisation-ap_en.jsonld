@@ -52,7 +52,6 @@
       "@id": "http://www.w3.org/ns/locn#thoroughfare",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "AdministrativeTerritorialUnit": "http://data.europa.eu/88u/dataset/atu-type",
     "ChangeEvent": "http://www.w3.org/ns/org#ChangeEvent",
     "ChangeEvent.description": {
       "@container": "@set",
@@ -138,6 +137,7 @@
     },
     "ImageObject": "http://data.europa.eu/m8g/ImageObject",
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Location": "http://purl.org/dc/terms/Location",
     "Organization": "http://www.w3.org/ns/org#Organization",
     "Organization.hasSubOrganization": {
       "@container": "@set",

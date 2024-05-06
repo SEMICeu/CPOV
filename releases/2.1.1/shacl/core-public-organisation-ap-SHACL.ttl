@@ -9,394 +9,394 @@
 @prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1> rdfs:member <https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ImageObjectShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#AdministrativeTerritorialUnitShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#TextShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#LiteralShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#URIShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#DateShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#CodeShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#DocumentShape>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#DateTimeShape> .
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl> rdfs:member <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ImageObjectShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ReferenceFrameworkShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#LocationShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TextShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#LiteralShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#URIShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DateShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#CodeShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationalUnitShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DocumentShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DateTimeShape> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7>;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7>;
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.thoroughfare";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.thoroughfare";
   shacl:datatype rdf:langString;
   shacl:description "The name of a passage or way through from one location to another."@en;
   shacl:name "thoroughfare"@en;
   shacl:path <http://www.w3.org/ns/locn#thoroughfare> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel1";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel1";
   shacl:datatype rdf:langString;
   shacl:description "The name of the uppermost level of the address, almost always a country."@en;
   shacl:name "administrative unit level 1"@en;
   shacl:path <http://www.w3.org/ns/locn#adminUnitL1> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.addressarea";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.addressarea";
   shacl:datatype rdf:langString;
   shacl:description "The name of a geographic area that groups Addresses."@en;
   shacl:name "address area"@en;
   shacl:path <http://www.w3.org/ns/locn#addressArea> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel2";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel2";
   shacl:datatype rdf:langString;
   shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
   shacl:name "administrative unit level 2"@en;
   shacl:path <http://www.w3.org/ns/locn#adminUnitL2> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.postname";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.postname";
   shacl:datatype rdf:langString;
   shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
   shacl:name "post name"@en;
   shacl:path <http://www.w3.org/ns/locn#postName> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.locatorname";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.locatorname";
   shacl:datatype rdf:langString;
   shacl:description "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building."@en;
   shacl:name "locator name"@en;
   shacl:path <http://www.w3.org/ns/locn#locatorName> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.fulladdress";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Address.fulladdress";
   shacl:datatype rdf:langString;
   shacl:description "The complete address written as a string."@en;
   shacl:name "full address"@en;
   shacl:path <http://www.w3.org/ns/locn#fullAddress> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#AdministrativeTerritorialUnitShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://data.europa.eu/88u/dataset/atu-type> .
-
-<https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
   shacl:targetClass org:ChangeEvent .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.originalorganization";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.originalorganization";
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "The Organization that existed before the change."@en;
   shacl:name "original organization"@en;
   shacl:path org:originalOrganization .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.endedattime";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.endedattime";
   shacl:datatype xsd:dateTime;
   shacl:description "The time instant when the state of the organisation update was terminated."@en;
   shacl:name "ended at time"@en;
   shacl:path prov:endedAtTime .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.startedattime";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.startedattime";
   shacl:datatype xsd:dateTime;
   shacl:description "The time instant when the state of the organisation update was initiated."@en;
   shacl:name "started at time"@en;
   shacl:path prov:startedAtTime .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.hasformalframework";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.hasformalframework";
   shacl:class <http://data.europa.eu/m8g/ReferenceFramework>;
   shacl:description "A piece of legislation or a policy document that prompted the change."@en;
   shacl:name "has formal framework"@en;
   shacl:path <http://data.europa.eu/m8g/hasFormalFramework> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.resultingorganization";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.resultingorganization";
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "This property links a Change Event or a Foundation Event to the Organization that resulted from it."@en;
   shacl:name "resulting organization"@en;
   shacl:path org:resultingOrganization .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.description";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.description";
   shacl:datatype rdf:langString;
   shacl:description "A textual explanation of the event."@en;
   shacl:name "description"@en;
   shacl:path dc:description .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#CodeShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#CodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d>;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d>;
   shacl:targetClass <http://data.europa.eu/m8g/ContactPoint> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.openinghours";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.openinghours";
   shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
   shacl:description "The time at which the Contact Point is normally available."@en;
   shacl:name "opening hours"@en;
   shacl:path <http://data.europa.eu/m8g/openingHours> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.contactpage";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.contactpage";
   shacl:class foaf:Document;
   shacl:description "A web page that could be used to reach out the Contact Point."@en;
   shacl:name "contact page"@en;
   shacl:path <http://data.europa.eu/m8g/contactPage> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.availabilityrestriction";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.availabilityrestriction";
   shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
   shacl:description "The time during which the Contact Point is not available."@en;
   shacl:name "availability restriction"@en;
   shacl:path <http://data.europa.eu/m8g/specialOpeningHoursSpecification> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#DateShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DateShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:date .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#DateTimeShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DateTimeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://www.w3.org/2001/XMLSchema#dateTime> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#DocumentShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DocumentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass foaf:Document .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43>;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43>;
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemeURI";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemeURI";
   shacl:datatype xsd:anyURI;
   shacl:description "URI of the scheme used to construct the identifier."@en;
   shacl:name "scheme URI"@en;
   shacl:path dc:conformsTo .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemename";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemename";
   shacl:datatype rdf:langString;
   shacl:description "Name of the scheme used to construct the identifier."@en;
   shacl:name "scheme name"@en;
   shacl:path rdfs:label .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.dateofissue";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.dateofissue";
   shacl:datatype xsd:date;
   shacl:description "The date on which the Identifier was assigned."@en;
   shacl:name "date of issue"@en;
   shacl:path dc:issued .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ImageObjectShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ImageObjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/ImageObject> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#LiteralShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#LiteralShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass rdfs:Literal .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#LocationShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a>;
+  shacl:targetClass dc:Location .
+
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a>;
   shacl:targetClass org:Organization .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.suborganizationof";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.suborganizationof";
   shacl:class org:Organization;
   shacl:description "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization."@en;
   shacl:name "sub organization of"@en;
   shacl:path org:subOrganizationOf .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.hassuborganization";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.hassuborganization";
   shacl:class org:Organization;
   shacl:description "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an organization which is a sub-part or child of this organization."@en;
   shacl:name "has sub organization"@en;
   shacl:path org:hasSubOrganization .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationalUnitShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898>;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898>;
   shacl:targetClass org:OrganizationalUnit .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnit.unitof";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnit.unitof";
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "The Public Organisation of which the Organizational Unit is an operational department."@en;
   shacl:name "unit of"@en;
   shacl:path org:unitOf .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e>;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e>;
   shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasmember";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasmember";
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "An Organization which is a member of another without being a sub organization, they are independent entities."@en;
   shacl:name "has member"@en;
   shacl:path org:hasMember .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.preferredlabel";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.preferredlabel";
   shacl:datatype rdf:langString;
   shacl:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."@en;
   shacl:name "preferred label"@en;
   shacl:path skos:prefLabel .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.changedby";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.changedby";
   shacl:class org:ChangeEvent;
   shacl:description "The Change Event that changed the Organization."@en;
   shacl:name "changed by"@en;
   shacl:path org:changedBy .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.next";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.next";
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."@en;
   shacl:name "next"@en;
   shacl:path xhv:next .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.address";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.address";
   shacl:class <http://www.w3.org/ns/locn#Address>;
   shacl:description "The Address of a Public Organization."@en;
   shacl:name "address"@en;
   shacl:path <http://www.w3.org/ns/locn#address> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasunit";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasunit";
   shacl:class org:OrganizationalUnit;
   shacl:description "An operational department within the Public Organization."@en;
   shacl:name "has unit"@en;
   shacl:path org:hasUnit .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.contactpoint";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.contactpoint";
   shacl:class <http://data.europa.eu/m8g/ContactPoint>;
   shacl:description "The main contact information of the resource."@en;
   shacl:name "contact point"@en;
   shacl:path <http://data.europa.eu/m8g/contactPoint> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.purpose";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.purpose";
   shacl:class skos:Concept;
   shacl:description "This property describes the reasons of existence of an Organization."@en;
   shacl:name "purpose"@en;
   shacl:path org:purpose .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.spatial";
-  shacl:class <http://data.europa.eu/88u/dataset/atu-type>;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.spatial";
+  shacl:class dc:Location;
   shacl:description "This property links an Organization to the Administrative Region(s) that it covers."@en;
   shacl:name "spatial"@en;
   shacl:path dc:spatial .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.classification";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.classification";
   shacl:class skos:Concept;
   shacl:description "The categorisation of the Public Organization."@en;
   shacl:name "classification"@en;
   shacl:path org:classification .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.resultedfrom";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.resultedfrom";
   shacl:class org:ChangeEvent;
   shacl:description "A Change Event from which the Public Organisation resulted."@en;
   shacl:name "resulted from"@en;
   shacl:path org:resultedFrom .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.prev";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.prev";
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed."@en;
   shacl:name "prev"@en;
   shacl:path xhv:prev .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.description";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.description";
   shacl:datatype rdf:langString;
   shacl:description "The textual description of the Public Organization."@en;
   shacl:name "description"@en;
   shacl:path dc:description .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.alternativelabel";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.alternativelabel";
   shacl:datatype rdf:langString;
   shacl:description "An alternative or informal name(s) of a Public Organization, irrespective of language."@en;
   shacl:name "alternative label"@en;
   shacl:path skos:altLabel .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.logo";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.logo";
   shacl:class <http://data.europa.eu/m8g/ImageObject>;
   shacl:description "A graphic symbol to represent the Public Organization."@en;
   shacl:name "logo"@en;
   shacl:path <http://data.europa.eu/m8g/logo> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.identifier";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.identifier";
   shacl:class <http://www.w3.org/ns/adms#Identifier>;
   shacl:description "The unambiguous structured reference for the Public Organization."@en;
   shacl:name "identifier"@en;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.memberof";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.memberof";
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities."@en;
   shacl:name "member of"@en;
   shacl:path org:memberOf .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.homepage";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.homepage";
   shacl:class foaf:Document;
   shacl:description "The official home page of the Public Organization."@en;
   shacl:name "homepage"@en;
   shacl:path foaf:homepage .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ReferenceFrameworkShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1>;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1>;
   shacl:targetClass <http://data.europa.eu/m8g/ReferenceFramework> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFramework.implements";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFramework.implements";
   shacl:class org:ChangeEvent;
   shacl:description "A Change Event linked to relevant legislation or policy documents."@en;
   shacl:name "implements"@en;
   shacl:path <http://purl.org/vocab/cpsv#implements> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>,
-    <https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>,
+    <https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0>;
   shacl:targetClass <http://www.w3.org/2006/time#TemporalEntity> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.frequency";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.frequency";
   shacl:class skos:Concept;
   shacl:description "The recurrence of an instant or period."@en;
   shacl:name "frequency"@en;
   shacl:path <http://data.europa.eu/m8g/frequency> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.description";
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.description";
   shacl:datatype rdf:langString;
   shacl:description "A  textual representation of the Temporal Entity."@en;
   shacl:name "description"@en;
   shacl:path dc:description .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#TextShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TextShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass rdf:langString .
 
-<https://semiceu.github.io/CPOV/releases/2.1.1#URIShape> a shacl:NodeShape;
+<https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#URIShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:anyURI .

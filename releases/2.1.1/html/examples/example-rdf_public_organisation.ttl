@@ -57,6 +57,7 @@ ex:oh a time:TemporalEntity ;
 
 ex:sohs a time:TemporalEntity ;
   dct:description "closed on weekend"@en;
+  cv:frequency <http://publications.europa.eu/resource/authority/frequency/WEEKLY>;
   time:hasBeginning [ a time:Instant;
     time:inDateTime [ a time:DateTimeDescription;
       time:dayOfWeek time:Saturday;

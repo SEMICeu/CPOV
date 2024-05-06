@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://semiceu.github.io/CPOV/releases/2.1.1",
+    "@vocab": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl",
     "qb": "http://purl.org/linked-data/cube#",
     "qb:codeList": {
       "@id": "qb:codeList",
@@ -100,15 +100,15 @@
       "@id": "vl:message"
     }
   },
-  "@id": "https://semiceu.github.io/CPOV/releases/2.1.1",
+  "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl",
   "shapes": [
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/7816fa198c5151c7c5680b445b410afba0f362db",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.openinghours",
           "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
           "sh:description": {
@@ -120,7 +120,7 @@
           "sh:path": "http://data.europa.eu/m8g/openingHours"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/95cf5318d1604f72f1c5d4d22a360ce268437bf0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.contactpage",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
@@ -132,7 +132,7 @@
           "sh:path": "http://data.europa.eu/m8g/contactPage"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ContactPointShape/9825c8e65ddb580b23b763ebb38542de7d6ca58d",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ContactPoint.availabilityrestriction",
           "sh:class": "http://www.w3.org/2006/time#TemporalEntity",
           "sh:description": {
@@ -147,19 +147,19 @@
       "sh:targetClass": "http://data.europa.eu/m8g/ContactPoint"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ImageObjectShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ImageObjectShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://data.europa.eu/m8g/ImageObject"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/09939b0ad16b044cbce79d53c6c97efcc6ad682d",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasmember",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -171,7 +171,7 @@
           "sh:path": "http://www.w3.org/ns/org#hasMember"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.preferredlabel",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -183,7 +183,7 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/3f3e21f044835e2b97fcb93794a3cab84ae4efd0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.changedby",
           "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
           "sh:description": {
@@ -195,7 +195,7 @@
           "sh:path": "http://www.w3.org/ns/org#changedBy"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/5c0c659834c1d6db145269ba427d0e7c8cbb7379",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.next",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -207,7 +207,7 @@
           "sh:path": "http://www.w3.org/1999/xhtml/vocab#next"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.address",
           "sh:class": "http://www.w3.org/ns/locn#Address",
           "sh:description": {
@@ -219,7 +219,7 @@
           "sh:path": "http://www.w3.org/ns/locn#address"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/6698df8a2d713cf66720d7a2b1f4037f7f58d708",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.hasunit",
           "sh:class": "http://www.w3.org/ns/org#OrganizationalUnit",
           "sh:description": {
@@ -231,7 +231,7 @@
           "sh:path": "http://www.w3.org/ns/org#hasUnit"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.contactpoint",
           "sh:class": "http://data.europa.eu/m8g/ContactPoint",
           "sh:description": {
@@ -243,7 +243,7 @@
           "sh:path": "http://data.europa.eu/m8g/contactPoint"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.purpose",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -255,9 +255,9 @@
           "sh:path": "http://www.w3.org/ns/org#purpose"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/8fd1cd7a406ec3816234c1ec0c69f985a9117476",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.spatial",
-          "sh:class": "http://data.europa.eu/88u/dataset/atu-type",
+          "sh:class": "http://purl.org/dc/terms/Location",
           "sh:description": {
             "en": "This property links an Organization to the Administrative Region(s) that it covers."
           },
@@ -267,7 +267,7 @@
           "sh:path": "http://purl.org/dc/terms/spatial"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.classification",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -279,7 +279,7 @@
           "sh:path": "http://www.w3.org/ns/org#classification"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/bb59cfb20ff003100cff4ef2c69e194768f90599",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.resultedfrom",
           "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
           "sh:description": {
@@ -291,7 +291,7 @@
           "sh:path": "http://www.w3.org/ns/org#resultedFrom"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/c1a77ced2c4d7fbf4929c194cd533f31165baa3b",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.prev",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -303,7 +303,7 @@
           "sh:path": "http://www.w3.org/1999/xhtml/vocab#prev"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -315,7 +315,7 @@
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.alternativelabel",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -327,7 +327,7 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#altLabel"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/dce5f0b9ce22d1c7f8f95163ed722d4236e5a3dc",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.logo",
           "sh:class": "http://data.europa.eu/m8g/ImageObject",
           "sh:description": {
@@ -339,7 +339,7 @@
           "sh:path": "http://data.europa.eu/m8g/logo"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.identifier",
           "sh:class": "http://www.w3.org/ns/adms#Identifier",
           "sh:description": {
@@ -351,7 +351,7 @@
           "sh:path": "http://www.w3.org/ns/adms#identifier"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/f6a439dacfd0da602e5b64f14f007fe9ab33a467",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.memberof",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -363,7 +363,7 @@
           "sh:path": "http://www.w3.org/ns/org#memberOf"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#PublicOrganisationShape/fb8568b313de736f9184db23272b6317700e9e7e",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#PublicOrganisation.homepage",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
@@ -378,12 +378,12 @@
       "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ReferenceFrameworkShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ReferenceFrameworkShape/51d41afe5401d1b6a58328411e940a808f944ea1",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ReferenceFramework.implements",
           "sh:class": "http://www.w3.org/ns/org#ChangeEvent",
           "sh:description": {
@@ -398,54 +398,54 @@
       "sh:targetClass": "http://data.europa.eu/m8g/ReferenceFramework"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AdministrativeTerritorialUnitShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#LocationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
-      "sh:targetClass": "http://data.europa.eu/88u/dataset/atu-type"
+      "sh:targetClass": "http://purl.org/dc/terms/Location"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TextShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TextShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#LiteralShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#LiteralShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#URIShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#URIShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#DateShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DateShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2001/XMLSchema#date"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#CodeShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#CodeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.frequency",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
@@ -457,7 +457,7 @@
           "sh:path": "http://data.europa.eu/m8g/frequency"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#TemporalEntityShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#TemporalEntity.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -472,12 +472,12 @@
       "sh:targetClass": "http://www.w3.org/2006/time#TemporalEntity"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/0d2f12fd4ed87d3af4f1300097bea7985cc94745",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemeURI",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
           "sh:description": {
@@ -489,7 +489,7 @@
           "sh:path": "http://purl.org/dc/terms/conformsTo"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/495aa44a236e78566cf7b2f54c299258b29602f9",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.schemename",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -501,7 +501,7 @@
           "sh:path": "http://www.w3.org/2000/01/rdf-schema#label"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#IdentifierShape/b2d3ac00adf57ca47e24b371d036da25f0f2fb43",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Identifier.dateofissue",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#date",
           "sh:description": {
@@ -516,12 +516,12 @@
       "sh:targetClass": "http://www.w3.org/ns/adms#Identifier"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.thoroughfare",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -533,7 +533,7 @@
           "sh:path": "http://www.w3.org/ns/locn#thoroughfare"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel1",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -545,7 +545,7 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.addressarea",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -557,7 +557,7 @@
           "sh:path": "http://www.w3.org/ns/locn#addressArea"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.administrativeunitlevel2",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -569,7 +569,7 @@
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.postname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -581,7 +581,7 @@
           "sh:path": "http://www.w3.org/ns/locn#postName"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.locatorname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -593,7 +593,7 @@
           "sh:path": "http://www.w3.org/ns/locn#locatorName"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Address.fulladdress",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -608,12 +608,12 @@
       "sh:targetClass": "http://www.w3.org/ns/locn#Address"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/5d2e601515b9a8e06ab5fa6ec782a11d62eddb57",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.originalorganization",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -625,7 +625,7 @@
           "sh:path": "http://www.w3.org/ns/org#originalOrganization"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/7725c670cfe75763f0685ddbb3c30119d91a7284",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.endedattime",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
           "sh:description": {
@@ -637,7 +637,7 @@
           "sh:path": "http://www.w3.org/ns/prov#endedAtTime"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/7e2ea4b3bb2450323b9036f07f06a9fc000434b8",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.startedattime",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
           "sh:description": {
@@ -649,7 +649,7 @@
           "sh:path": "http://www.w3.org/ns/prov#startedAtTime"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/8567f2be59cadcbf9fd8c70c66b956e24222a5df",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.hasformalframework",
           "sh:class": "http://data.europa.eu/m8g/ReferenceFramework",
           "sh:description": {
@@ -661,7 +661,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasFormalFramework"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/c5c5bfcd59773771ae7c474c85ff6a8c66fbce0e",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.resultingorganization",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -673,7 +673,7 @@
           "sh:path": "http://www.w3.org/ns/org#resultingOrganization"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#ChangeEventShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#ChangeEvent.description",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -688,12 +688,12 @@
       "sh:targetClass": "http://www.w3.org/ns/org#ChangeEvent"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape/678afe5ba59824ab6bd10b0acd13799900fa2bf3",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.suborganizationof",
           "sh:class": "http://www.w3.org/ns/org#Organization",
           "sh:description": {
@@ -705,7 +705,7 @@
           "sh:path": "http://www.w3.org/ns/org#subOrganizationOf"
         },
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationShape/bbecfa203e6e90f7af31994066ab46b0a8172e2a",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#Organization.hassuborganization",
           "sh:class": "http://www.w3.org/ns/org#Organization",
           "sh:description": {
@@ -720,12 +720,12 @@
       "sh:targetClass": "http://www.w3.org/ns/org#Organization"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationalUnitShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898",
+          "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#OrganizationalUnitShape/c45783ad1c8e58de138faa9d4e93b79b55f94898",
           "rdfs:seeAlso": "https://semiceu.github.io/CPOV/releases/2.1.1#OrganizationalUnit.unitof",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
@@ -740,14 +740,14 @@
       "sh:targetClass": "http://www.w3.org/ns/org#OrganizationalUnit"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#DocumentShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DocumentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
     },
     {
-      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1#DateTimeShape",
+      "@id": "https://semiceu.github.io/CPOV/releases/2.1.1/shacl/core-public-organisation-ap-SHACL.ttl#DateTimeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],

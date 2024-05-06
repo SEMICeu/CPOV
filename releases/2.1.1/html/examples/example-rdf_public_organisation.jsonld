@@ -177,6 +177,9 @@
         "@language": "en",
         "@value": "closed on weekend"
       },
+      "cv:frequency": {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/WEEKLY"
+      },
       "time:hasBeginning": {
         "@id": "_:g4"
       },

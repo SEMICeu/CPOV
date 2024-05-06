@@ -134,9 +134,9 @@
     var respecConfig = {
       postProcess: [quickreference],
       edDraftURI: "https://semiceu.github.io/CPOV/releases/2.1.1",
-      latestVersion: "https://semiceu.github.io/CPOV/releases/2.1.0/",
+      latestVersion: "https://semiceu.github.io/CPOV/releases/2.1.1/",
       specStatus: "LD",
-      publishDate: "2024-01-31",
+      publishDate: "2024-05-06",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/CPOV",
@@ -286,7 +286,7 @@ The Core Public Organisation Vocabulary is a simplified, reusable and extensible
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Core Vocabulary has the status SEMIC Candidate Recommendation published at 2024-01-31.
+            This Core Vocabulary has the status SEMIC Recommendation published at 2024-05-06.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/CPOV/blob/master/releases/2.1.1/Changelog.md">Changelog</a>.
@@ -376,7 +376,6 @@ This specification uses the following prefixes to shorten the URIs for readabili
                             The main entities are supported by:
                             <br />
                             |
-			      <a href="#AdministrativeTerritorialUnit">Administrative Territorial Unit</a> |
 			      <a href="#ChangeEvent">Change Event</a> |
 			      <a href="#Document">Document</a> |
 			      <a href="#ImageObject">Image Object</a> |
@@ -390,7 +389,7 @@ This specification uses the following prefixes to shorten the URIs for readabili
                         <p>
                             And supported by these datatypes:
                             <br />
-                            | <a href="#Code">Code</a> | <a href="#Date">Date</a> | <a href="#DateTime">Date Time</a> | <a href="#Literal">Literal</a> | <a href="#Text">Text</a> | <a href="#URI">URI</a> |
+                            | <a href="#Code">Code</a> | <a href="#Date">Date</a> | <a href="#DateTime">Date Time</a> | <a href="#Literal">Literal</a> | <a href="#Location">Location</a> | <a href="#Text">Text</a> | <a href="#URI">URI</a> |
                         </p>
                 
     </div>
@@ -443,7 +442,7 @@ The main entities are those that form the core of the Core Vocabulary.
                         Usage Note
                     </dt>
                     <dd>
-                        An "address representation" as conceptually defined by the <a href="https://inspire-regadmin.jrc.ec.europa.eu/dataspecification/ScopeObjectDetail.action?objectDetailId=9353">INSPIRE Address Representation data type</a>: "Representation of an address spatial object for use in external application schemas that need to include the basic, address information in a readable way.".
+                        An "address representation" as conceptually defined by the <a href="https://knowledge-base.inspire.ec.europa.eu/publications/inspire-data-specification-addresses-technical-guidelines_en">INSPIRE Address Representation data type</a>: "Representation of an address spatial object for use in external application schemas that need to include the basic, address information in a readable way.".
 <br/><br/>
 The representation of Addresses varies widely from one country's postal system to another. Even within countries, there are almost always examples of Addresses that do not conform to the stated national standard. However, <a href="https://www.iso.org/standard/61710.html">ISO 19160-1</a> provides a method through which different Addresses can be converted from one conceptual model to another.
 <br/><br/>
@@ -1004,8 +1003,6 @@ The key difference between a locator designator and a locator name is that the l
         
     </div>
 </section>
-
-
 
 
 
@@ -2493,7 +2490,7 @@ An example of memberships are the EU member states and other partners which coul
                                 <td>
                                     
                                         
-                                            <a href="#AdministrativeTerritorialUnit" data-placement="right">Administrative Territorial Unit</a>
+                                            <a href="#Location" data-placement="right">Location</a>
                                         
                                     
                                 </td>
@@ -2547,49 +2544,6 @@ property.
 The supportive entities are supporting the main entities in the Core Vocabulary. 
 They are included in the Core Vocabulary because they form the range of properties.
 
-
-
-
-
-
-   
-        <section>
-            <h3 id="AdministrativeTerritorialUnit">
-                <a href="http://data.europa.eu/88u/dataset/atu-type"
-                   data-toggle="tooltip"
-                   data-content="http://data.europa.eu/88u/dataset/atu-type"
-                   data-placement="right">Administrative Territorial Unit</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/CPOV/issues/new?title=Issue%20for%20AdministrativeTerritorialUnit&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    A code from a list that represents the administrative territorial unit of the EU Member States, based on national official / legal information and the ISO 3166-2 standard.
-                </dd>
-                
-                
-                
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                    <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
-                    </dd>
-                
-            </dl>
-        </div>
-        
-    </div>
-</section>
 
 
 
@@ -3790,6 +3744,22 @@ They are included in the Core Vocabulary because they form the range of properti
                     The class of literal values, eg. textual strings and integers.
 		</td></tr>
 		<tr><td>
+                   <a href="https://github.com/SEMICeu/CPOV/issues/new?title=Issue%20for%20Location&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="Location">
+                        <a href="http://purl.org/dc/terms/Location"
+                           data-toggle="tooltip"
+                           data-content="http://purl.org/dc/terms/Location"
+                           data-placement="right">Location</a>
+                    </div>
+                
+		</td><td>
+                    An identifiable geographic place or named place.
+		</td></tr>
+		<tr><td>
                    <a href="https://github.com/SEMICeu/CPOV/issues/new?title=Issue%20for%20Text&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
@@ -3903,7 +3873,7 @@ Each implementation happens within a context, and that context is beyond the SHA
 The shapes can be found <a href="./shacl/core-public-organisation-ap-SHACL.ttl">here</a>.
 
 <h3>RDF representation</h3>
-The RDF representation of the Core Public Organisation Vocabulary is available <a href="./voc/core-public-organisation.ttl">here</a>.
+The RDF representation of the Core Public Organisation Vocabulary is available <a href="./voc/core-public-organisation-ap.ttl">here</a>.
 
 <h3>UML representation</h3>
 The UML representation from which the Core Public Organisation Vocabulary has been build is available <a href="./uml">here</a>.
@@ -4151,17 +4121,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
-				
-			</tr>
-		
-				
-					<tr>
-						<td><a href="#AdministrativeTerritorialUnit">Administrative Territorial Unit</a></td>
-						<td><div class="shorten">http://data.europa.eu/88u/dataset/atu-type</div></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
 				
 			</tr>
 		
