@@ -5,8 +5,7 @@ This is the issue tracker for the maintenance of the Core Public Organisation Vo
 
 The Core Public Organisation Vocabulary (CPOV) is designed to support the exchange of basic information about individual public organisations. It aspires to become a common data model for describing public organisations in the European Union.
 
-The current version of the Core Public Organisation Vocabulary is [2.1.0](https://semiceu.github.io/CPOV/releases/2.1.0/).
-The latest editor draft of the Core Public Organisation Vocabulary is [2.1.1](https://semiceu.github.io/CPOV/releases/2.1.1/).
+The current version of the Core Public Organisation Vocabulary is [2.1.1](https://semiceu.github.io/CPOV/releases/2.1.1/).
 
 Public organisations involve elected representatives but these descriptions are out of scope but may be the focus of future work once the vocabulary is established and used. The vocabulary is not concerned with features associated with commercial entities such as shareholdings and ownership.
 
