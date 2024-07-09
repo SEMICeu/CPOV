@@ -15,7 +15,7 @@ This specification was produced by the Core Vocabularies Working Group (Person T
 Any problems encountered, or suggestions for new functionalities can be submitted as issues on the Core Public Organisation Vocabulary repository on GitHub. A short guideline for submitting issues can be found at https://github.com/SEMICeu/CPOV/wiki.
 
 ## Structure of the repository
-/releases: Core Location releases (1.00, 2.00 etc), each release might have different distributions.
+/releases: Core Public Organisation releases (1.00, 2.00 etc), each release might have different distributions.
 
 ## License
 Copyright © 2024 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the CLV repository on GitHub.
