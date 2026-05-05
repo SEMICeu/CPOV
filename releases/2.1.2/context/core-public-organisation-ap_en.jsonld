@@ -1,0 +1,258 @@
+{
+  "@context": {
+    "Address": "http://www.w3.org/ns/locn#Address",
+    "ChangeEvent": "http://www.w3.org/ns/org#ChangeEvent",
+    "Code": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ContactPoint": "http://data.europa.eu/m8g/ContactPoint",
+    "Date": "http://www.w3.org/2001/XMLSchema#date",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Document": "http://xmlns.com/foaf/0.1/Document",
+    "Identifier": "http://www.w3.org/ns/adms#Identifier",
+    "ImageObject": "http://data.europa.eu/m8g/ImageObject",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Location": "http://purl.org/dc/terms/Location",
+    "Organization": "http://www.w3.org/ns/org#Organization",
+    "OrganizationalUnit": "http://www.w3.org/ns/org#OrganizationalUnit",
+    "PublicOrganisation": "http://data.europa.eu/m8g/PublicOrganisation",
+    "PublicOrganisation.identifier": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "ReferenceFramework": "http://data.europa.eu/m8g/ReferenceFramework",
+    "ReferenceFramework.identifier": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/identifier"
+    },
+    "TemporalEntity": "http://www.w3.org/2006/time#TemporalEntity",
+    "Text": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "address": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "addressArea": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "addressID": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#addressId"
+    },
+    "adminUnit": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/AdminUnit",
+      "@type": "@id"
+    },
+    "adminUnitL1": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "adminUnitL2": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "alternativeLabel": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "availabilityRestriction": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/specialOpeningHoursSpecification",
+      "@type": "@id"
+    },
+    "changedBy": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#changedBy",
+      "@type": "@id"
+    },
+    "classification": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#classification",
+      "@type": "@id"
+    },
+    "contactPage": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/contactPage",
+      "@type": "@id"
+    },
+    "contactPoint": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/contactPoint",
+      "@type": "@id"
+    },
+    "dateIssued": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "endedAtTime": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#endedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "frequency": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/frequency",
+      "@type": "@id"
+    },
+    "fullAddress": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "hasEmail": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/email"
+    },
+    "hasFormalFramework": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasFormalFramework",
+      "@type": "@id"
+    },
+    "hasMember": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasMember",
+      "@type": "@id"
+    },
+    "hasSubOrganization": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
+      "@type": "@id"
+    },
+    "hasTelephone": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/telephone"
+    },
+    "hasUnit": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasUnit",
+      "@type": "@id"
+    },
+    "homepage": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/homepage",
+      "@type": "@id"
+    },
+    "implements": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#implements",
+      "@type": "@id"
+    },
+    "locatorDesignator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator"
+    },
+    "locatorName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "logo": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/logo",
+      "@type": "@id"
+    },
+    "memberOf": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#memberOf",
+      "@type": "@id"
+    },
+    "next": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/1999/xhtml/vocab#next",
+      "@type": "@id"
+    },
+    "notation": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "openingHours": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/openingHours",
+      "@type": "@id"
+    },
+    "originalOrganization": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#originalOrganization",
+      "@type": "@id"
+    },
+    "poBox": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#poBox"
+    },
+    "postCode": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#postCode"
+    },
+    "postName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "preferredLabel": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "prev": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/1999/xhtml/vocab#prev",
+      "@type": "@id"
+    },
+    "purpose": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#purpose",
+      "@type": "@id"
+    },
+    "resultedFrom": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#resultedFrom",
+      "@type": "@id"
+    },
+    "resultingOrganization": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#resultingOrganization",
+      "@type": "@id"
+    },
+    "schemaAgency": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#schemeAgency"
+    },
+    "spatial": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "@id"
+    },
+    "startedAtTime": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#startedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "subOrganizationOf": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "@id"
+    },
+    "thoroughfare": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "unitOf": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#unitOf",
+      "@type": "@id"
+    }
+  }
+}
