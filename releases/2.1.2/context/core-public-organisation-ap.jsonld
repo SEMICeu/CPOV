@@ -1,6 +1,7 @@
 {
   "@context": {
     "Address": "http://www.w3.org/ns/locn#Address",
+    "AdminUnit": "http://data.europa.eu/m8g/AdminUnit",
     "ChangeEvent": "http://www.w3.org/ns/org#ChangeEvent",
     "Code": "http://www.w3.org/2004/02/skos/core#Concept",
     "ContactPoint": "http://data.europa.eu/m8g/ContactPoint",
@@ -76,6 +77,11 @@
       "@id": "http://www.w3.org/ns/org#classification",
       "@type": "@id"
     },
+    "code": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/code",
+      "@type": "@id"
+    },
     "contactPage": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/contactPage",
@@ -149,6 +155,11 @@
       "@id": "http://purl.org/vocab/cpsv#implements",
       "@type": "@id"
     },
+    "level": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/level",
+      "@type": "@id"
+    },
     "locatorDesignator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/locn#locatorDesignator"
@@ -167,6 +178,11 @@
       "@container": "@set",
       "@id": "http://www.w3.org/ns/org#memberOf",
       "@type": "@id"
+    },
+    "name": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "next": {
       "@container": "@set",
