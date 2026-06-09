@@ -9,7 +9,8 @@
 @prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io/CPOV/releases/2.1.2> rdfs:member <https://semiceu.github.io/CPOV/releases/2.1.2#ContactPointShape>,
+<https://semiceu.github.io/CPOV/releases/2.1.2> rdfs:member <https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape>,
+    <https://semiceu.github.io/CPOV/releases/2.1.2#ContactPointShape>,
     <https://semiceu.github.io/CPOV/releases/2.1.2#ImageObjectShape>,
     <https://semiceu.github.io/CPOV/releases/2.1.2#PublicOrganisationShape>,
     <https://semiceu.github.io/CPOV/releases/2.1.2#ReferenceFrameworkShape>,
@@ -102,14 +103,14 @@
   shacl:path <http://www.w3.org/ns/locn#addressArea> .
 
 <https://semiceu.github.io/CPOV/releases/2.1.2#AddressShape/5d7f103641a62a590c3c6d874d2a14987e054924> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#Address.administrativeunit";
-  shacl:description "A detailed administrative unit organized in a hierarchy."@en;
+  shacl:description "The adminUnit relationship links an Address with the Administrative Unit class."@en;
   shacl:name "administrative unit"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/m8g/adminUnit> .
 
 <https://semiceu.github.io/CPOV/releases/2.1.2#AddressShape/60bff98f6076f0828e3b73d73fefc7b1eb56b93a> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#Address.administrativeunit";
   shacl:class <http://data.europa.eu/m8g/AdminUnit>;
-  shacl:description "A detailed administrative unit organized in a hierarchy."@en;
+  shacl:description "The adminUnit relationship links an Address with the Administrative Unit class."@en;
   shacl:name "administrative unit"@en;
   shacl:path <http://data.europa.eu/m8g/adminUnit> .
 
@@ -220,6 +221,59 @@
   shacl:name "post name"@en;
   shacl:nodeKind shacl:Literal;
   shacl:path <http://www.w3.org/ns/locn#postName> .
+
+<https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property <https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/0624f53106f6c8e265a6637987aa84df1f51e3ec>,
+    <https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
+    <https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/34d95733daf7d992483c679b8caea965979b76a8>,
+    <https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/77e1a71f3cfcae1acdb545a44042b811133bc6ee>,
+    <https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/9b437af682d747dd61e73577261bf72c00014cc4>,
+    <https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/9caf9e629daa0e64ece77788576468821d7cff8c>,
+    <https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9>;
+  shacl:targetClass <http://data.europa.eu/m8g/AdminUnit> .
+
+<https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/0624f53106f6c8e265a6637987aa84df1f51e3ec> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#AdministrativeUnit.level";
+  shacl:description "The level of the administrative unit in the hierarchy."@en;
+  shacl:name "level"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/level> .
+
+<https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#AdministrativeUnit.name";
+  shacl:datatype rdf:langString;
+  shacl:description "Official, geographical name of the administrative unit, given in different languages where required."@en;
+  shacl:name "name"@en;
+  shacl:path rdfs:label .
+
+<https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/34d95733daf7d992483c679b8caea965979b76a8> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#AdministrativeUnit.code";
+  shacl:class skos:Concept;
+  shacl:description "The classification of the administrative unit."@en;
+  shacl:name "code"@en;
+  shacl:path <http://data.europa.eu/m8g/code> .
+
+<https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/77e1a71f3cfcae1acdb545a44042b811133bc6ee> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#AdministrativeUnit.code";
+  shacl:description "The classification of the administrative unit."@en;
+  shacl:name "code"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/m8g/code> .
+
+<https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/9b437af682d747dd61e73577261bf72c00014cc4> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#AdministrativeUnit.level";
+  shacl:class skos:Concept;
+  shacl:description "The level of the administrative unit in the hierarchy."@en;
+  shacl:name "level"@en;
+  shacl:path <http://data.europa.eu/m8g/level> .
+
+<https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/9caf9e629daa0e64ece77788576468821d7cff8c> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#AdministrativeUnit.name";
+  shacl:description "Official, geographical name of the administrative unit, given in different languages where required."@en;
+  shacl:name "name"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path rdfs:label .
+
+<https://semiceu.github.io/CPOV/releases/2.1.2#AdminUnitShape/be01df43f1c288b656b3ca3879eb3dd9d8c700b9> rdfs:seeAlso "https://semiceu.github.io/CPOV/releases/2.1.2#AdministrativeUnit.name";
+  shacl:description "Official, geographical name of the administrative unit, given in different languages where required."@en;
+  shacl:name "name"@en;
+  shacl:path rdfs:label;
+  shacl:uniqueLang true .
 
 <https://semiceu.github.io/CPOV/releases/2.1.2#ChangeEventShape> a shacl:NodeShape;
   shacl:closed false;
